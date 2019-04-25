@@ -1,0 +1,138 @@
+[
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\fragment_conversation.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\fragment_conversation.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_edit_account.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_edit_account.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_recording.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_recording.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\contact.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\contact.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_muc_users.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_muc_users.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\keys_card.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\keys_card.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\enter_jid_dialog.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\enter_jid_dialog.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\conversation_list_row.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\conversation_list_row.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\dialog_block_contact.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\dialog_block_contact.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_edit_account2.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_edit_account2.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\dialog_quickedit.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\dialog_quickedit.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\dialog_enter_password.xml",
+        "source": "C:\\work\\astron\\src\\conversations\\res\\layout\\dialog_enter_password.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\account_row.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\account_row.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\dialog_join_conference.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\dialog_join_conference.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\create_public_channel_dialog.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\create_public_channel_dialog.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_conversations.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_conversations.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\create_conference_dialog.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\create_conference_dialog.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\contact_key.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\contact_key.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_muc_details.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_muc_details.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\media_preview.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\media_preview.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\fragment_conversations_overview.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\fragment_conversations_overview.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_start_conversation.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_start_conversation.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_show_location.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_show_location.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\user_preview.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\user_preview.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_trust_keys.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_trust_keys.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_search.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_share_location.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_share_location.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_publish_profile_picture.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_publish_profile_picture.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_media_browser.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_media_browser.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_import_backup.xml",
+        "source": "C:\\work\\astron\\src\\conversations\\res\\layout\\activity_import_backup.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\dialog_presence.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\dialog_presence.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\media.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\media.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_choose_contact.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_choose_contact.xml"
+    },
+    {
+        "merged": "C:\\work\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatDebugResources\\stripped.dir\\layout\\activity_contact_details.xml",
+        "source": "C:\\work\\astron\\src\\main\\res\\layout\\activity_contact_details.xml"
+    }
+]

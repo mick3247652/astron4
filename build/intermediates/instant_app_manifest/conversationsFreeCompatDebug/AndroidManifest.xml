@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ru.astron"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0.0+fcd" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" /> <!-- for android -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+    <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:appCategory="social"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_configuration"
+        android:theme="@style/ConversationsTheme" >
+        <activity
+            android:name="com.ru.astron.ui.ManageAccountActivity"
+            android:label="@string/title_activity_manage_accounts"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ru.astron.ui.WelcomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ru.astron.ui.MagicCreateActivity"
+            android:label="@string/create_account"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ru.astron.ui.ImportBackupActivity"
+            android:label="@string/restore_backup"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.ru.astron.ui.EditAccountActivity2"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <service android:name="com.ru.astron.services.XmppConnectionService" />
+
+        <receiver android:name="com.ru.astron.services.EventReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.media.RINGER_MODE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ru.astron.ui.ShareLocationActivity"
+            android:label="@string/title_activity_share_location" />
+        <activity
+            android:name="com.ru.astron.ui.SearchActivity"
+            android:label="@string/search_messages" />
+        <activity
+            android:name="com.ru.astron.ui.RecordingActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ConversationsTheme.Dialog" />
+        <activity
+            android:name="com.ru.astron.ui.ShowLocationActivity"
+            android:label="@string/title_activity_show_location" />
+        <activity
+            android:name="com.ru.astron.ui.ConversationActivity"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.ConversationsActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:minHeight="300dp"
+            android:minWidth="300dp"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ru.astron.ui.ScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ConversationsTheme.FullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ru.astron.ui.UriHandlerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="xmpp" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="astron.online" />
+                <data android:pathPrefix="/i/" />
+                <data android:pathPrefix="/j/" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="imto" />
+                <data android:host="jabber" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.StartConversationActivity"
+            android:label="@string/title_activity_start_conversation"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.ChooseContactActivity"
+            android:label="@string/title_activity_choose_contact" />
+        <activity
+            android:name="com.ru.astron.ui.BlocklistActivity"
+            android:label="@string/title_activity_block_list" />
+        <activity
+            android:name="com.ru.astron.ui.ChangePasswordActivity"
+            android:label="@string/change_password_on_server" />
+        <activity
+            android:name="com.ru.astron.ui.ChooseAccountForProfilePictureActivity"
+            android:enabled="false"
+            android:label="@string/choose_account" >
+            <intent-filter android:label="@string/set_profile_picture" >
+                <action android:name="android.intent.action.ATTACH_DATA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.ShareViaAccountActivity"
+            android:label="@string/title_activity_share_via_account"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.ru.astron.ui.EditAccountActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.ru.astron.ui.ConferenceDetailsActivity"
+            android:label="@string/action_muc_details"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ru.astron.ui.ContactDetailsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ru.astron.ui.PublishProfilePictureActivity"
+            android:label="@string/mgmt_account_publish_avatar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ru.astron.ui.PublishGroupChatProfilePictureActivity"
+            android:label="@string/group_chat_avatar" />
+        <activity
+            android:name="com.ru.astron.ui.ShareWithActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.chooser.chooser_target_service"
+                android:value=".services.ContactChooserTargetService" />
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.TrustKeysActivity"
+            android:label="@string/trust_omemo_fingerprints"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.ru.astron.ui.AboutActivity"
+            android:parentActivityName="com.ru.astron.ui.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ru.astron.ui.SettingsActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.PREFERENCE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name="com.ru.astron.ui.MemorizingActivity" />
+        <activity
+            android:name="com.ru.astron.ui.MediaBrowserActivity"
+            android:label="@string/media_browser" />
+
+        <service android:name="com.ru.astron.services.ExportBackupService" />
+        <service android:name="com.ru.astron.services.ImportBackupService" />
+        <service
+            android:name="com.ru.astron.services.ContactChooserTargetService"
+            android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.ru.astron.files"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="com.ru.astron.services.BarcodeProvider"
+            android:authorities="com.ru.astron.barcodes"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <activity
+            android:name="com.ru.astron.ui.ShortcutActivity"
+            android:label="@string/contact" >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ru.astron.ui.MucUsersActivity"
+            android:label="@string/group_chat_members" />
+    </application>
+
+</manifest>
