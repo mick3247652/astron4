@@ -1,4 +1,4 @@
-#Thu Apr 25 09:50:52 GMT+04:00 2019
+#Thu Apr 25 12:33:33 GMT+04:00 2019
 base.0=C\:\\android\\astron\\build\\intermediates\\transforms\\r8\\conversationsFreeCompat\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex

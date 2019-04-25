@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_trust_keys.xml",
-        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_trust_keys.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_recording.xml",
         "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_recording.xml"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_trust_keys.xml",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_trust_keys.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\create_public_channel_dialog.xml",

@@ -117,7 +117,7 @@
     <string name="action_edit_contact">Редактировать контакт</string>
     <string name="action_edit_subject">Редактировать тему группы</string>
     <string name="action_end_conversation">Закрыть этот чат</string>
-    <string name="action_muc_details">Подробности группы</string>
+    <string name="action_muc_details">Подробности конференции</string>
     <string name="action_renew_certificate">Обновить сертификат</string>
     <string name="action_secure">Защищённый чат</string>
     <string name="action_settings">Настройки</string>
@@ -145,7 +145,7 @@
     <string name="authenticate_with_certificate">Оставить пустым для входа с сертификатом</string>
     <string name="automatically">Автоматически</string>
     <string name="avatar_has_been_published">Аватар загружен!</string>
-    <string name="ban_from_conference">Заблокировать в чате</string>
+    <string name="ban_from_conference">Заблокировать в группе</string>
     <string name="ban_now">Заблокировать</string>
     <string name="barcode_does_not_contain_fingerprints_for_this_conversation">Штрихкод не содержит отпечатков для данного чата</string>
     <string name="battery_optimizations_enabled">Оптимизации энергопотребления разрешены</string>
@@ -167,7 +167,6 @@
     <string name="certificate_chain_is_not_trusted">Цепочка сертификата не доверенна</string>
     <string name="change_password">Изменить пароль</string>
     <string name="change_password_on_server">Изменить пароль</string>
-    <string name="channel_details">Подробности канала</string>
     <string name="check_x_filesize">Проверить размер %s</string>
     <string name="check_x_filesize_on_host">Проверить размер %1$s на %2$s</string>
     <string name="checking_x">Проверка %s на сервере HTTP</string>
@@ -179,13 +178,13 @@
     <string name="clear_histor_msg">Вы хотите удалить все сообщения в этом чате?\n\n<b>Предупреждение:</b> Данная операция не повлияет на сообщения, хранящиеся на других устройствах или серверах.</string>
     <string name="clear_other_devices">Очистить устройства</string>
     <string name="clear_other_devices_desc">Вы уверены, что хотите очистить все остальные устройства из анонса ключей Секретно I? При соединении устройств в следующий раз новые ключи анонсируются автоматически, но устройства могут не получить сообщения, посланные до этого.</string>
-    <string name="conference_banned">Вы заблокированы в этом чате</string>
-    <string name="conference_creation_failed">Не удалось создать чат!</string>
-    <string name="conference_kicked">Вас удалили из этого чата</string>
-    <string name="conference_members_only">Этот чат — только для участников</string>
-    <string name="conference_requires_password">Канал требует авторизации</string>
-    <string name="conference_shutdown">Чат был удален</string>
-    <string name="conference_unknown_error">Вы больше не состоите в этом чате</string>
+    <string name="conference_banned">Вы заблокированы в этой группе</string>
+    <string name="conference_creation_failed">Не удалось создать группу!</string>
+    <string name="conference_kicked">Вас удалили из этой группы</string>
+    <string name="conference_members_only">Эта группа — только для участников</string>
+    <string name="conference_requires_password">Группа требует авторизации</string>
+    <string name="conference_shutdown">Группа была остановлена</string>
+    <string name="conference_unknown_error">Вы больше не состоите в этой группе</string>
     <string name="confirm">Подтвердить</string>
     <string name="connect">Подключиться</string>
     <string name="connected_accounts">%1$d из %2$d аккаунтов соединены</string>
@@ -204,7 +203,7 @@
     <string name="contacts_are_typing" ns2:ignore="TypographyEllipsis">%s печатает...</string>
     <string name="contacts_have_no_pgp_keys">Astron не может зашифровать сообщения, потому что удалённые пользователи не анонсируют свои открытые ключи.\n\n<small>Пожалуйста, попросите удалённых пользователей установить OpenPGP.</small></string>
     <string name="contacts_have_read_up_to_this_point">%s прочитали</string>
-    <string name="contacts_have_stopped_typing">%s не печатает</string>
+    <string name="contacts_have_stopped_typing">%s перестал печатать</string>
     <string name="copy_fingerprint">Копировать отпечаток</string>
     <string name="copy_omemo_clipboard_description">Скопировать Секретно I отпечаток в буфер обмена</string>
     <string name="copy_original_url">Копировать адрес ссылки</string>
@@ -214,15 +213,15 @@
     <string name="could_not_change_affiliation">Не удалось изменить принадлежность %s</string>
     <string name="could_not_change_password">Не удалось изменить пароль</string>
     <string name="could_not_change_role">Не удалось сменить роль %s</string>
-    <string name="could_not_modify_conference_options">Не удалось изменить настройки чата</string>
+    <string name="could_not_modify_conference_options">Не удалось изменить настройки группы</string>
     <string name="crash_report_message">Отправляя отчёты об ошибках, вы помогаете исправить и улучшить Astron\n<b>Предупреждение:</b> Отчёт будет отправлен разработчику с вашего аккаунта. </string>
     <string name="crash_report_title">Astron был неожиданно остановлен</string>
     <string name="create">Создать</string>
     <string name="create_account">Создать аккаунт</string>
     <string name="create_account_title">Регистрация</string>
-    <string name="create_private_group_chat">Создать групповой чат</string>
-    <string name="create_public_channel">Создать канал</string>
-    <string name="creating_conference">Создание чата…</string>
+    <string name="create_private_group_chat">Создать закрытую группу</string>
+    <string name="create_public_channel">Создать открытый канал</string>
+    <string name="creating_conference">Создание группы…</string>
     <string name="current_password">Текущий пароль</string>
     <string name="data_saver_enabled">Режим экономии трафика включен</string>
     <string name="data_saver_enabled_explained">Ваша операционная система не позволяет Astron получать доступ в Интернет в фоновом режиме. Для получения уведомлений вы должны разрешить Astron неограниченный доступ когда режим экономии трафика включен.\nAstron постарается сохранить трафик когда это возможно.</string>
@@ -312,12 +311,11 @@
     <string name="invalid_barcode">Некорректный 2D штрихкод</string>
     <string name="invalid_muc_nick">Некорректный никнейм</string>
     <string name="invalid_username">Недопустимое имя пользователя</string>
-    <string name="invite">Пригласить</string>
     <string name="invite_again">Пригласить ещё раз</string>
     <string name="invite_contact">Пригласить в чат</string>
     <string name="join">Присоединиться</string>
-    <string name="join_public_channel">Присоединиться к каналу</string>
-    <string name="joining_conference">Вход в чат…</string>
+    <string name="join_public_channel">Присоединиться к открытому каналу</string>
+    <string name="joining_conference">Вход в группу…</string>
     <string name="just_now">только что</string>
     <string name="large">Большой</string>
     <string name="last_seen_day">Присутствие: 1 день назад</string>
@@ -327,7 +325,7 @@
     <string name="last_seen_min">Присутствие: 1 минуту назад</string>
     <string name="last_seen_mins">Присутствие: %d мин. назад</string>
     <string name="last_seen_now">Присутствие: только что</string>
-    <string name="leave">Покинуть чат</string>
+    <string name="leave">Покинуть</string>
     <string name="load_more_messages">Загрузить больше сообщений</string>
     <string name="location">Местоположение</string>
     <string name="login_title">Вход</string>
@@ -353,7 +351,7 @@
     <string name="missing_internet_permission">Доступ в интернет запрещён</string>
     <string name="missing_public_keys">Отсутствие анонсирования открытых ключей</string>
     <string name="moderator">Модератор</string>
-    <string name="modified_conference_options">Настройки чата изменены!</string>
+    <string name="modified_conference_options">Настройки группы изменены!</string>
     <string name="mtm_accept_cert">Принять неизвестный Сертификат?</string>
     <string name="never">Никогда</string>
     <string name="new_password">Новый пароль</string>
@@ -367,7 +365,7 @@
     <string name="no_application_found_to_view_contact">Не найдено приложения для просмотра контакта</string>
     <string name="no_application_to_share_uri">Не найдено приложения для отправки</string>
     <string name="no_camera_permission">Astron требует доступ к камере</string>
-    <string name="no_conference_server_found">Сервер чата не найден</string>
+    <string name="no_conference_server_found">Сервер группы не найден</string>
     <string name="no_keys_just_confirm">Вы уже доверяете этому контакту. Выбрав «готово», вы только подтвердите, что %s является участником конференции.</string>
     <string name="no_more_history_on_server">На сервере больше нет истории</string>
     <string name="no_permission_to_access_x">Нет доступа к %s</string>
@@ -420,7 +418,7 @@
     <string name="payment_required">Требуется оплата</string>
     <string name="pdf_document">PDF-документ</string>
     <string name="perform_action_with">Взаимодействовать с</string>
-    <string name="pgp_message">Секретное сообщение</string>
+    <string name="pgp_message">Написать секр. сообщение</string>
     <string name="pick_your_username">Выберите имя пользователя</string>
     <string name="please_wait">Пожалуйста, подождите…</string>
     <string name="please_wait_for_keys_to_be_fetched">Подождите получения ключей</string>
@@ -502,7 +500,7 @@
     <string name="pref_theme_options_summary">Выбрать цветовую палитру</string>
     <string name="pref_treat_vibrate_as_dnd_summary">Помечать ресурс как "Не беспокоить", когда устройство на вибрации</string>
     <string name="pref_treat_vibrate_as_silent">Не доступен в режиме вибрации</string>
-    <string name="pref_ui_options">Опции</string>
+    <string name="pref_ui_options">Интерфейс</string>
     <string name="pref_use_green_background">Зелёный фон</string>
     <string name="pref_use_green_background_summary">Использовать зелёный фон для полученных сообщений</string>
     <string name="pref_use_indicate_received">Запрос в получении сообщения</string>
@@ -543,8 +541,8 @@
     <string name="registration_please_wait">Регистрация не удалась: повторите попытку позднее</string>
     <string name="remote_server_not_found">Удалённый сервер не найден</string>
     <string name="remove_admin_privileges">Снять административные права</string>
-    <string name="remove_bookmark_text">Вы хотите удалить %s из избранного? Каналы, связанные с данной закладкой будут сохранены</string>
-    <string name="remove_contact_text">Вы хотите удалить %s из своего списка? Каналыы, связанные с этим аккаунтом будут сохранены.</string>
+    <string name="remove_bookmark_text">Вы хотите удалить %s из избранного? Чаты, связанные с данной закладкой будут сохранены</string>
+    <string name="remove_contact_text">Вы хотите удалить %s из своего списка? Чаты, связанные с этим аккаунтом будут сохранены.</string>
     <string name="remove_from_room">Убрать из группы</string>
     <string name="reply">Ответить</string>
     <string name="report_jid_as_spammer">Отправить жалобу на нежелательные сообщения.</string>
@@ -571,9 +569,9 @@
     <string name="send_message_to_x">Сообщение для %s</string>
     <string name="send_never">Больше не спрашивать</string>
     <string name="send_now">Отправить сейчас</string>
-    <string name="send_omemo_message">Секретное сообщение</string>
-    <string name="send_omemo_x509_message">v\\Секретное сообщение</string>
-    <string name="send_pgp_message">Секретное сообщение</string>
+    <string name="send_omemo_message">Написать секретное сообщение</string>
+    <string name="send_omemo_x509_message">v\\Написать секретное сообщение</string>
+    <string name="send_pgp_message">Написать секретное сообщение</string>
     <string name="send_presence_updates">Отправлять присутствие</string>
     <string name="send_private_message">Отправить секретное сообщение</string>
     <string name="send_private_message_to">Приватное сообщение %s</string>
@@ -602,9 +600,9 @@
     <string name="set">Установить</string>
     <string name="share">Поделиться</string>
     <string name="share_as_barcode">Отправить штрихкод</string>
-    <string name="share_as_http">Отправить ссылку</string>
-    <string name="share_as_uri">Отправить XMPP</string>
-    <string name="share_uri_with">Отправить ссылку…</string>
+    <string name="share_as_http">Отправить HTTP ссылку</string>
+    <string name="share_as_uri">Отправить XMPP URI</string>
+    <string name="share_uri_with">Отправить URI…</string>
     <string name="share_with">Поделиться с</string>
     <string name="shared_file_with_x">Файл отправлен %s</string>
     <string name="shared_image_with_x">Изображение отправлено %s</string>
@@ -618,7 +616,7 @@
     <string name="show_qr_code">Показать 2D штрихкод</string>
     <string name="skip">Пропустить</string>
     <string name="small">Маленький</string>
-    <string name="start_conversation">Начать общение</string>
+    <string name="start_conversation">Начать чат</string>
     <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
     <string name="status_message">Статусное собщение</string>
     <string name="sync_with_contacts">Синхронизировать с контактами</string>
@@ -640,7 +638,7 @@
     <string name="title_pref_quiet_hours">Тихие часы</string>
     <string name="title_pref_quiet_hours_end_time">Окончание</string>
     <string name="title_pref_quiet_hours_start_time">Начало</string>
-    <string name="title_undo_swipe_out_conversation">Чат закрыт</string>
+    <string name="title_undo_swipe_out_conversation">Чат окончен</string>
     <string name="toast_message_omemo_fingerprint">Секретно I отпечаток скопирован в буфер обмена!</string>
     <string name="toast_no_trusted_certs">Не найдено сертификатов, подтверждённых вручную</string>
     <string name="today">Сегодня</string>
@@ -672,8 +670,7 @@
     <string name="url_copied_to_clipboard">Ссылка скопирована в буфер обмена</string>
     <string name="use_camera_icon_to_scan_barcode">Используйте камеру для сканирования штрихкода контакта</string>
     <string name="use_own_provider">Вход</string>
-    <string name="use_own_provider2">Регистрация</string>
-    <string name="user_has_left_conference">%1$s покинул чат!</string>
+    <string name="user_has_left_conference">%1$s покинул группу!</string>
     <string name="username">Имя пользователя</string>
     <string name="username_hint">Имя пользователя</string>
     <string name="using_account">используется аккаунт %s</string>
@@ -684,8 +681,7 @@
     <string name="verifying_omemo_keys_trusted_source">Вы потвердите Секретно I ключи %1$s после нажатия на ссылку. Это безопасно только если вы перешли по ссылке из доверенного источника, где только %2$sмог разместить эту ссылку.</string>
     <string name="video">звук</string>
     <string name="view_contact_details">Посмотреть данные контакта</string>
-    <string name="view_conversation">Участники</string>
-    <string name="view_users">Пользователи</string>
+    <string name="view_users">Участники</string>
     <string name="visitor">Посетитель</string>
     <string name="waiting">ожидание…</string>
     <string name="without_mutual_presence_updates"><b>Внимание:</b> Если обновления присутствия не включены на обеих сторонах, это может привести к возникновению неожиданных проблемам.\n\n<small>Уточните сведения о контакте, проверив настройки обновлений присутствия.</small></string>
