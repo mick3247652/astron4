@@ -1,4 +1,4 @@
-package com.app.astron.ui.service;
+package com.ru.astron.ui.service;
 
 import android.content.Context;
 import android.os.Build;
@@ -7,8 +7,8 @@ import android.support.text.emoji.FontRequestEmojiCompatConfig;
 import android.support.v4.provider.FontRequest;
 import android.util.Log;
 
-import com.app.astron.Config;
-import com.app.astron.R;
+import com.ru.astron.Config;
+import com.ru.astron.R;
 
 public class EmojiService {
 

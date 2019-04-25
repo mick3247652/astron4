@@ -219,8 +219,9 @@
     <string name="crash_report_title">Astron был неожиданно остановлен</string>
     <string name="create">Создать</string>
     <string name="create_account">Создать аккаунт</string>
-    <string name="create_private_group_chat">Создать закрытую группу</string>
-    <string name="create_public_channel">Создать открытый канал</string>
+    <string name="create_account_title">Регистрация</string>
+    <string name="create_private_group_chat">Создать групповой чат</string>
+    <string name="create_public_channel">Создать канал</string>
     <string name="creating_conference">Создание чата…</string>
     <string name="current_password">Текущий пароль</string>
     <string name="data_saver_enabled">Режим экономии трафика включен</string>
@@ -315,7 +316,7 @@
     <string name="invite_again">Пригласить ещё раз</string>
     <string name="invite_contact">Пригласить в чат</string>
     <string name="join">Присоединиться</string>
-    <string name="join_public_channel">Присоединиться к открытому каналу</string>
+    <string name="join_public_channel">Присоединиться к каналу</string>
     <string name="joining_conference">Вход в чат…</string>
     <string name="just_now">только что</string>
     <string name="large">Большой</string>
@@ -329,6 +330,7 @@
     <string name="leave">Покинуть чат</string>
     <string name="load_more_messages">Загрузить больше сообщений</string>
     <string name="location">Местоположение</string>
+    <string name="login_title">Вход</string>
     <string name="mam_prefs">Настройки архивирования</string>
     <string name="mark_as_read">Прочитано</string>
     <string name="me">Я</string>
@@ -670,6 +672,7 @@
     <string name="url_copied_to_clipboard">Ссылка скопирована в буфер обмена</string>
     <string name="use_camera_icon_to_scan_barcode">Используйте камеру для сканирования штрихкода контакта</string>
     <string name="use_own_provider">Вход</string>
+    <string name="use_own_provider2">Регистрация</string>
     <string name="user_has_left_conference">%1$s покинул чат!</string>
     <string name="username">Имя пользователя</string>
     <string name="username_hint">Имя пользователя</string>
@@ -682,7 +685,7 @@
     <string name="video">звук</string>
     <string name="view_contact_details">Посмотреть данные контакта</string>
     <string name="view_conversation">Участники</string>
-    <string name="view_users">Участники</string>
+    <string name="view_users">Пользователи</string>
     <string name="visitor">Посетитель</string>
     <string name="waiting">ожидание…</string>
     <string name="without_mutual_presence_updates"><b>Внимание:</b> Если обновления присутствия не включены на обеих сторонах, это может привести к возникновению неожиданных проблемам.\n\n<small>Уточните сведения о контакте, проверив настройки обновлений присутствия.</small></string>

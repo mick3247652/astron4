@@ -1,4 +1,4 @@
-package com.app.astron.utils;
+package com.ru.astron.utils;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,13 +6,13 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.app.astron.Config;
-import com.app.astron.entities.Account;
-import com.app.astron.ui.ConversationsActivity;
-import com.app.astron.ui.EnterPhoneNumberActivity;
-import com.app.astron.ui.StartConversationActivity;
-import com.app.astron.ui.TosActivity;
-import com.app.astron.ui.VerifyActivity;
+import com.ru.astron.Config;
+import com.ru.astron.entities.Account;
+import com.ru.astron.ui.ConversationsActivity;
+import com.ru.astron.ui.EnterPhoneNumberActivity;
+import com.ru.astron.ui.StartConversationActivity;
+import com.ru.astron.ui.TosActivity;
+import com.ru.astron.ui.VerifyActivity;
 
 public class SignupUtils {
 

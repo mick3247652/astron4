@@ -49,6 +49,17 @@
                     android:background="@color/blue_a200"
                     android:text="@string/use_own_provider"
                     android:textColor="?android:textColorSecondary" />
+
+                <Button
+                    android:id="@+id/use_own_provider2"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/blue_a200"
+                    android:text="@string/use_own_provider2"
+                    android:textColor="?android:textColorSecondary" />
             </LinearLayout>
 
             <RelativeLayout

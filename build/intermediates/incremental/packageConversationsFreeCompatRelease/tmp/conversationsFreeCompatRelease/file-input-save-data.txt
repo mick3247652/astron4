@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Apr 19 08:11:26 MSK 2019
+#Thu Apr 25 09:50:53 GMT+04:00 2019
 2.base=C\:\\android\\astron\\build\\intermediates\\transforms\\mergeJniLibs\\conversationsFreeCompat\\release\\0
 5.set=NATIVE_RESOURCE
 0.path=NotoColorEmojiCompat.ttf

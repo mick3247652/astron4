@@ -105,7 +105,7 @@
                             android:alpha="?attr/icon_alpha"
                             android:src="?attr/icon_notifications" />
 
-                        <com.app.astron.ui.widget.UnreadCountCustomView
+                        <com.ru.astron.ui.widget.UnreadCountCustomView
                             android:id="@+id/unread_count"
                             android:layout_width="?attr/IconSize"
                             android:layout_height="?attr/IconSize"

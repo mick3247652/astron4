@@ -1,4 +1,4 @@
-package com.app.astron.ui.service;
+package com.ru.astron.ui.service;
 
 import android.content.Context;
 

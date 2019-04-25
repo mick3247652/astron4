@@ -1,4 +1,4 @@
-package com.app.astron.ui.widget;
+package com.ru.astron.ui.widget;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatEditText;

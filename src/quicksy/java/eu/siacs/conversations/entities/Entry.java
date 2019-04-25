@@ -1,4 +1,4 @@
-package com.app.astron.entities;
+package com.ru.astron.entities;
 
 import android.util.Base64;
 
@@ -9,8 +9,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import com.app.astron.android.PhoneNumberContact;
-import com.app.astron.xml.Element;
+import com.ru.astron.android.PhoneNumberContact;
+import com.ru.astron.xml.Element;
 import rocks.xmpp.addr.Jid;
 
 public class Entry implements Comparable<Entry> {

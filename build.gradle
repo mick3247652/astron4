@@ -37,7 +37,7 @@ dependencies {
         exclude group: 'com.google.firebase', module: 'firebase-measurement-connector'
     }
     implementation 'org.sufficientlysecure:openpgp-api:10.0'
-    implementation ('com.theartofdev.edmodo:android-image-cropper:2.7.+') {
+    implementation('com.theartofdev.edmodo:android-image-cropper:2.7.+') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
         exclude group: 'com.android.support', module: 'exifinterface'
     }
@@ -78,10 +78,10 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 2
+        versionCode 1
         versionName "1.0.0"
         archivesBaseName += "-$versionName"
-        applicationId "com.app.astron"
+        applicationId "com.ru.astron"
         resValue "string", "applicationId", applicationId
         resValue "string", "app_name", "Astron"
         buildConfigField "String", "LOGTAG", "\"astron\""
@@ -191,7 +191,6 @@ android {
             versionNameSuffix "d"
         }
     }
-
 
 
     if (new File("signing.properties").exists()) {

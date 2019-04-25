@@ -1,4 +1,4 @@
-package com.app.astron.android;
+package com.ru.astron.android;
 
 import android.Manifest;
 import android.content.Context;
@@ -14,8 +14,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.app.astron.Config;
-import com.app.astron.utils.PhoneNumberUtilWrapper;
+import com.ru.astron.Config;
+import com.ru.astron.utils.PhoneNumberUtilWrapper;
 import io.michaelrocks.libphonenumber.android.NumberParseException;
 
 public class PhoneNumberContact extends AbstractPhoneContact {

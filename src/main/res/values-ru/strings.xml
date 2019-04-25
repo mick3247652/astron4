@@ -641,15 +641,23 @@
   <string name="please_wait">Пожалуйста, подождите…</string>
   <string name="search_messages">Поиск сообщений</string>
   <string name="bookmarks">Закладки</string>
-    <string name="create_private_group_chat">Создать закрытую группу</string>
-    <string name="create_public_channel">Создать открытый канал</string>
-    <string name="join_public_channel">Присоединиться к открытому каналу</string>
-    <string name="action_end_conversation">Закрыть этот чат</string>
+  <string name="create_private_group_chat">Создать закрытую группу</string>
+  <string name="create_public_channel">Создать открытый канал</string>
+  <string name="join_public_channel">Присоединиться к открытому каналу</string>
+  <string name="action_end_conversation">Закрыть этот чат</string>
   <string name="pref_omemo_setting_summary_default_on">Секретно I будет использоваться по умолчанию для новых разговоров.</string>
   <string name="pref_font_size_summary">Относительный размер шрифта, используемый в приложении.</string>
   <string name="pref_picture_compression">Сжатие изображения</string>
   <string name="pref_picture_compression_summary">Изменение размера и сжатие изображений</string>
   <string name="pref_video_compression">Качество видео</string>
   <string name="pref_video_compression_summary">Низкое качество означает меньшие файлы</string>
+
+  <string name="view_users">Участники</string>
+  <string name="group_chat_members">Участники</string>
+  <string name="no_users_hint_channel">У этого канала нет участников. Приглашайте участников из ваших контактов или используйте кнопку "Поделиться" для распространения.</string>
+  <string name="no_users_hint_group_chat">В этом групповом чате нет участников.</string>
+
+  <string name="login_title">Вход</string>
+  <string name="create_account_title">Регистрация</string>
 
 </resources>

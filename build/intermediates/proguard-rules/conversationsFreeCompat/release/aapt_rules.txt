@@ -1,82 +1,84 @@
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:82
 -keep class android.support.v4.app.CoreComponentFactory { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:307
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:311
 -keep class android.support.v4.content.FileProvider { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:316
--keep class com.app.astron.services.BarcodeProvider { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:299
--keep class com.app.astron.services.ContactChooserTargetService { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:113
--keep class com.app.astron.services.EventReceiver { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:297
--keep class com.app.astron.services.ExportBackupService { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:298
--keep class com.app.astron.services.ImportBackupService { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:111
--keep class com.app.astron.services.XmppConnectionService { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:276
--keep class com.app.astron.ui.AboutActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:207
--keep class com.app.astron.ui.BlocklistActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:210
--keep class com.app.astron.ui.ChangePasswordActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:213
--keep class com.app.astron.ui.ChooseAccountForProfilePictureActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:204
--keep class com.app.astron.ui.ChooseContactActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:233
--keep class com.app.astron.ui.ConferenceDetailsActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:320
+-keep class com.ru.astron.services.BarcodeProvider { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:303
+-keep class com.ru.astron.services.ContactChooserTargetService { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:117
+-keep class com.ru.astron.services.EventReceiver { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:301
+-keep class com.ru.astron.services.ExportBackupService { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:302
+-keep class com.ru.astron.services.ImportBackupService { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:115
+-keep class com.ru.astron.services.XmppConnectionService { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:280
+-keep class com.ru.astron.ui.AboutActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:211
+-keep class com.ru.astron.ui.BlocklistActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:214
+-keep class com.ru.astron.ui.ChangePasswordActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:217
+-keep class com.ru.astron.ui.ChooseAccountForProfilePictureActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:208
+-keep class com.ru.astron.ui.ChooseContactActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:237
--keep class com.app.astron.ui.ContactDetailsActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:135
--keep class com.app.astron.ui.ConversationActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:144
--keep class com.app.astron.ui.ConversationsActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:229
--keep class com.app.astron.ui.EditAccountActivity { <init>(); }
+-keep class com.ru.astron.ui.ConferenceDetailsActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:241
+-keep class com.ru.astron.ui.ContactDetailsActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:139
+-keep class com.ru.astron.ui.ConversationActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:148
+-keep class com.ru.astron.ui.ConversationsActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:233
+-keep class com.ru.astron.ui.EditAccountActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:106
+-keep class com.ru.astron.ui.EditAccountActivity2 { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:102
--keep class com.app.astron.ui.ImportBackupActivity { <init>(); }
+-keep class com.ru.astron.ui.ImportBackupActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:98
--keep class com.app.astron.ui.MagicCreateActivity { <init>(); }
+-keep class com.ru.astron.ui.MagicCreateActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:90
--keep class com.app.astron.ui.ManageAccountActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:293
--keep class com.app.astron.ui.MediaBrowserActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:292
--keep class com.app.astron.ui.MemorizingActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:329
--keep class com.app.astron.ui.MucUsersActivity { <init>(); }
+-keep class com.ru.astron.ui.ManageAccountActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:297
+-keep class com.ru.astron.ui.MediaBrowserActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:296
+-keep class com.ru.astron.ui.MemorizingActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:333
+-keep class com.ru.astron.ui.MucUsersActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:248
+-keep class com.ru.astron.ui.PublishGroupChatProfilePictureActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:244
--keep class com.app.astron.ui.PublishGroupChatProfilePictureActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:240
--keep class com.app.astron.ui.PublishProfilePictureActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:128
--keep class com.app.astron.ui.RecordingActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:151
--keep class com.app.astron.ui.ScanActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:125
--keep class com.app.astron.ui.SearchActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:195
--keep class com.app.astron.ui.SettingsActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:122
--keep class com.app.astron.ui.ShareLocationActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:225
--keep class com.app.astron.ui.ShareViaAccountActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:247
--keep class com.app.astron.ui.ShareWithActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:322
--keep class com.app.astron.ui.ShortcutActivity { <init>(); }
+-keep class com.ru.astron.ui.PublishProfilePictureActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:132
--keep class com.app.astron.ui.ShowLocationActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:187
--keep class com.app.astron.ui.StartConversationActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:272
--keep class com.app.astron.ui.TrustKeysActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:156
--keep class com.app.astron.ui.UriHandlerActivity { <init>(); }
+-keep class com.ru.astron.ui.RecordingActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:155
+-keep class com.ru.astron.ui.ScanActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:129
+-keep class com.ru.astron.ui.SearchActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:199
+-keep class com.ru.astron.ui.SettingsActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:126
+-keep class com.ru.astron.ui.ShareLocationActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:229
+-keep class com.ru.astron.ui.ShareViaAccountActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:251
+-keep class com.ru.astron.ui.ShareWithActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:326
+-keep class com.ru.astron.ui.ShortcutActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:136
+-keep class com.ru.astron.ui.ShowLocationActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:191
+-keep class com.ru.astron.ui.StartConversationActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:276
+-keep class com.ru.astron.ui.TrustKeysActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:160
+-keep class com.ru.astron.ui.UriHandlerActivity { <init>(); }
 # Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:94
--keep class com.app.astron.ui.WelcomeActivity { <init>(); }
-# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:289
+-keep class com.ru.astron.ui.WelcomeActivity { <init>(); }
+# Referenced at C:\android\astron\build\intermediates\merged_manifests\conversationsFreeCompatRelease\AndroidManifest.xml:293
 -keep class com.theartofdev.edmodo.cropper.CropImageActivity { <init>(); }
 # Referenced at C:\Users\MaximusAVS\.gradle\caches\transforms-2\files-2.1\dbe043d8d7c9f02cdb42b70f65df015f\res\layout\design_bottom_navigation_item.xml:27
 -keep class android.support.design.internal.BaselineLayout { <init>(...); }
@@ -124,7 +126,8 @@
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_public_channel_dialog.xml:22
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_conference_dialog.xml:25
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_muc_details.xml:102
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:56
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account2.xml:62
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:62
 # Referenced at C:\android\astron\src\main\res\layout\activity_change_password.xml:31
 -keep class android.support.design.widget.TextInputLayout { <init>(...); }
 
@@ -184,6 +187,7 @@
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_trust_keys.xml:24
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_publish_profile_picture.xml:11
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_muc_details.xml:25
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account2.xml:27
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:27
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_contact_details.xml:26
 # Referenced at C:\android\astron\src\main\res\layout\activity_change_password.xml:16
@@ -233,43 +237,6 @@
 # Referenced at C:\Users\MaximusAVS\.gradle\caches\transforms-2\files-2.1\f4152181c77351ca035cdc01341d7f40\res\layout\abc_alert_dialog_button_bar_material.xml:43
 -keep class android.widget.Space { <init>(...); }
 
-# Referenced at C:\android\astron\src\main\res\xml\preferences.xml:345
--keep class com.app.astron.ui.AboutPreference { <init>(...); }
-
-# Referenced at C:\android\astron\src\main\res\xml\preferences.xml:102
--keep class com.app.astron.ui.TimePreference { <init>(...); }
-
-# Referenced at C:\android\astron\src\main\res\layout\message_content.xml:15
--keep class com.app.astron.ui.widget.CopyTextView { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\fragment_conversation.xml:83
--keep class com.app.astron.ui.widget.EditMessage { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_quickedit.xml:19
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_public_channel_dialog.xml:29
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_conference_dialog.xml:31
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_muc_details.xml:108
--keep class com.app.astron.ui.widget.EmojiWrapperEditText { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_presence.xml:55
--keep class com.app.astron.ui.widget.ImmediateAutoCompleteTextView { <init>(...); }
-
-# Referenced at C:\android\astron\src\main\res\layout\activity_scan.xml:12
--keep class com.app.astron.ui.widget.ScannerView { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\user_preview.xml:3
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\media.xml:3
--keep class com.app.astron.ui.widget.SquareFrameLayout { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_enter_password.xml:36
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:64
-# Referenced at C:\android\astron\src\main\res\layout\activity_change_password.xml:41
--keep class com.app.astron.ui.widget.TextInputEditText { <init>(...); }
-
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\fragment_conversation.xml:42
-# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\conversation_list_row.xml:108
--keep class com.app.astron.ui.widget.UnreadCountCustomView { <init>(...); }
-
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_start_conversation.xml:33
 -keep class com.leinardi.android.speeddial.SpeedDialOverlayLayout { <init>(...); }
 
@@ -282,9 +249,48 @@
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\conversation_list_row.xml:22
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\contact.xml:11
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_muc_details.xml:44
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account2.xml:41
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:41
 # Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\account_row.xml:13
 -keep class com.makeramen.roundedimageview.RoundedImageView { <init>(...); }
+
+# Referenced at C:\android\astron\src\main\res\xml\preferences.xml:345
+-keep class com.ru.astron.ui.AboutPreference { <init>(...); }
+
+# Referenced at C:\android\astron\src\main\res\xml\preferences.xml:102
+-keep class com.ru.astron.ui.TimePreference { <init>(...); }
+
+# Referenced at C:\android\astron\src\main\res\layout\message_content.xml:15
+-keep class com.ru.astron.ui.widget.CopyTextView { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\fragment_conversation.xml:83
+-keep class com.ru.astron.ui.widget.EditMessage { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_quickedit.xml:19
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_public_channel_dialog.xml:29
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\create_conference_dialog.xml:31
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_muc_details.xml:108
+-keep class com.ru.astron.ui.widget.EmojiWrapperEditText { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_presence.xml:55
+-keep class com.ru.astron.ui.widget.ImmediateAutoCompleteTextView { <init>(...); }
+
+# Referenced at C:\android\astron\src\main\res\layout\activity_scan.xml:12
+-keep class com.ru.astron.ui.widget.ScannerView { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\user_preview.xml:3
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\media.xml:3
+-keep class com.ru.astron.ui.widget.SquareFrameLayout { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\dialog_enter_password.xml:36
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account2.xml:70
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\activity_edit_account.xml:70
+# Referenced at C:\android\astron\src\main\res\layout\activity_change_password.xml:41
+-keep class com.ru.astron.ui.widget.TextInputEditText { <init>(...); }
+
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\fragment_conversation.xml:42
+# Referenced at C:\android\astron\build\intermediates\incremental\mergeConversationsFreeCompatReleaseResources\stripped.dir\layout\conversation_list_row.xml:108
+-keep class com.ru.astron.ui.widget.UnreadCountCustomView { <init>(...); }
 
 # Referenced at C:\Users\MaximusAVS\.gradle\caches\transforms-2\files-2.1\8e97945a747bed845b573f58dc500e98\res\layout\crop_image_activity.xml:2
 -keep class com.theartofdev.edmodo.cropper.CropImageView { <init>(...); }

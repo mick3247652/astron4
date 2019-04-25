@@ -53,6 +53,12 @@
                             android:layout_toRightOf="@+id/avater"
                             android:orientation="vertical">
 
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/login_title" />
+
                             <android.support.design.widget.TextInputLayout
                                 android:id="@+id/account_jid_layout"
                                 android:layout_width="match_parent"
@@ -61,7 +67,7 @@
                                 app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
                                 app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
 
-                                <com.app.astron.ui.widget.TextInputEditText
+                                <com.ru.astron.ui.widget.TextInputEditText
                                     android:id="@+id/account_jid"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -82,7 +88,7 @@
                                 app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
                                 app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
 
-                                <com.app.astron.ui.widget.TextInputEditText
+                                <com.ru.astron.ui.widget.TextInputEditText
                                     android:id="@+id/account_password"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -155,7 +161,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
-                                android:text="@string/register_account"/>
+                                android:text="@string/register_account"
+                                android:visibility="gone" />
                         </LinearLayout>
 
                     </RelativeLayout>

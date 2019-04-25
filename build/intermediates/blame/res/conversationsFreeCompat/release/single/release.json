@@ -4,12 +4,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\message_bubble_received_warning.9.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_ic_menu_compass.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable\\ic_menu_compass.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_book_white_48dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_book_white_48dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_ic_menu_compass.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable\\ic_menu_compass.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_mic_black_48dp.png.flat",
@@ -52,20 +52,20 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_group_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_send_videocam_offline.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_send_videocam_offline.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\color_mtrl_tabs_ripple_color.xml.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_tabs_ripple_color.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_play_gif_white.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\play_gif_white.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_send_videocam_offline.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_send_videocam_offline.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_message_bubble_received_warning.9.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\message_bubble_received_warning.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_play_gif_white.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\play_gif_white.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_marker.png.flat",
@@ -200,12 +200,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_attach_camera_white.png.flat",
@@ -236,12 +236,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_send_voice_dnd.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_popup_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_help_white_48dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_help_white_48dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_popup_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_design_layout_tab_text.xml.flat",
@@ -368,12 +368,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_notifications_none_black_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_attach_photo_white.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_attach_photo_white.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\mipmap-xxhdpi_new_launcher.png.flat",
         "source": "C:\\android\\astron\\src\\conversations\\res\\mipmap-xxhdpi\\new_launcher.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_attach_photo_white.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_attach_photo_white.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_send_location_away.png.flat",
@@ -392,12 +392,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_content_copy_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_notifications_paused_black_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_notifications_paused_black_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_marker_default_focused_base.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable\\marker_default_focused_base.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_notifications_paused_black_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_notifications_paused_black_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
@@ -504,16 +504,16 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_btn_text_btn_ripple_color.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_drafts_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_drafts_white_24dp.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_abc_btn_default_mtrl_shape.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_screen_simple.xml.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_abc_btn_default_mtrl_shape.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_drafts_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_drafts_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\anim_sd_fade_and_translate_in.xml.flat",
@@ -554,6 +554,10 @@
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_message_bubble_received_grey.9.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\message_bubble_received_grey.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_activity_edit_account2.xml.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_edit_account2.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_snackbar.xml.flat",
@@ -632,12 +636,12 @@
         "source": "C:\\android\\astron\\src\\conversations\\res\\menu\\welcome_menu.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_osm_ic_ic_map_ortho.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-xxxhdpi-v4\\osm_ic_ic_map_ortho.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_osm_ic_ic_map_ortho.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-xxxhdpi-v4\\osm_ic_ic_map_ortho.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_attach_document.png.flat",
@@ -696,12 +700,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_android_white_48dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\c9b74ad5cfb584b771ab0249278726c3\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi-v4_sharp_add_black_36.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-hdpi-v4\\sharp_add_black_36.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\c9b74ad5cfb584b771ab0249278726c3\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_no_results_background_black.png.flat",
@@ -756,24 +760,24 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\2daf583c2de46a7f67294871b97090c8\\res\\drawable-xxhdpi\\ic_action_cancel_launchersize.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_account_row.xml.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\layout\\account_row.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_send_location_online.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_send_location_online.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_account_row.xml.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\account_row.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_play_arrow_white_36dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_play_arrow_white_36dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_crop_image_menu_flip.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\8e97945a747bed845b573f58dc500e98\\res\\drawable-xxxhdpi-v4\\crop_image_menu_flip.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_crop_image_menu_flip.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\8e97945a747bed845b573f58dc500e98\\res\\drawable-xxxhdpi-v4\\crop_image_menu_flip.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_send_photo_offline.png.flat",
@@ -808,12 +812,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\7728636d30c9f2d5ee9c5f13d8c23a85\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_text_online.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_text_online.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_date_bubble_grey.9.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\date_bubble_grey.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_text_online.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_text_online.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_lock_white_24dp.png.flat",
@@ -900,24 +904,24 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_send_cancel_online.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_voice_online.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_voice_online.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_voice_online.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_voice_online.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_delete_white_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_delete_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\color_abc_search_url_text.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\color\\abc_search_url_text.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_message_bubble_received_white.9.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\message_bubble_received_white.9.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\color_abc_search_url_text.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\color\\abc_search_url_text.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_notifications_none_black_24dp.png.flat",
@@ -932,12 +936,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_videocam_online.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_attach_videocam_white.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_attach_videocam_white.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_my_logo.png.flat",
         "source": "C:\\android\\astron\\build\\generated\\res\\pngs\\conversationsFreeCompat\\release\\drawable-mdpi\\ic_my_logo.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_attach_videocam_white.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_attach_videocam_white.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_message_bubble_received_dark.9.png.flat",
@@ -952,12 +956,12 @@
         "source": "C:\\android\\astron\\src\\conversations\\res\\layout\\magic_create.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_public_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_public_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_public_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_public_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable_abc_ic_go_search_api_material.xml.flat",
@@ -980,16 +984,16 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_attach_camera_white.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_attach_camera_white.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_send_location_online.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_send_location_online.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_scroll_to_end_black.png.flat",
         "source": "C:\\android\\astron\\build\\generated\\res\\pngs\\conversationsFreeCompat\\release\\drawable-mdpi\\ic_scroll_to_end_black.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_send_location_online.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_send_location_online.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_attach_camera_white.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_attach_camera_white.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_notification_template_media_custom.xml.flat",
@@ -1000,12 +1004,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_autorenew_white_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_autorenew_white_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_sharp_remove_black_36.png.flat",
@@ -1044,12 +1048,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_no_results_background_black.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_save_black_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_save_black_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_new_releases_white_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_new_releases_white_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_save_black_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_save_black_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_cancel_black_24dp.png.flat",
@@ -1092,12 +1096,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_file_offline.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_sharp_add_black_36.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-xxhdpi-v4\\sharp_add_black_36.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_action_mode_bar.xml.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_sharp_add_black_36.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-xxhdpi-v4\\sharp_add_black_36.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_archive_white_48dp.png.flat",
@@ -1136,12 +1140,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_notifications_paused_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_notification.png.flat",
-        "source": "C:\\android\\astron\\src\\conversations\\res\\drawable-xxxhdpi\\ic_notification.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_directions_black_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_notification.png.flat",
+        "source": "C:\\android\\astron\\src\\conversations\\res\\drawable-xxxhdpi\\ic_notification.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi-v4_design_ic_visibility_off.png.flat",
@@ -1168,12 +1172,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_qr_code_scan_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_qr_code_scan_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_public_white_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_public_white_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_qr_code_scan_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_qr_code_scan_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_attach_document.png.flat",
@@ -1220,12 +1224,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\layout\\create_conference_dialog.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_room_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_room_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_send_photo_online.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_send_photo_online.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_room_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_room_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_message_bubble_received.9.png.flat",
@@ -1240,12 +1244,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_directions_black_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_directions_black_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_mic_black_48dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_mic_black_48dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_directions_black_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_android_white_48dp.png.flat",
@@ -1268,12 +1272,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_announcement_white_24dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_attach_location_white.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_attach_location_white.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_attach_photo_white.png.flat",
@@ -1384,12 +1388,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_lock_white_18dp.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_search_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_search_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_osm_ic_ic_map_ortho.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\6e8e7496aa0ce433c0099e104ef2dd20\\res\\drawable-mdpi-v4\\osm_ic_ic_map_ortho.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_search_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_search_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -1420,12 +1424,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_attach_record.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_action_menu_layout.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_action_menu_layout.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_action_menu_layout.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_attach_camera.png.flat",
@@ -1608,12 +1612,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\message_bubble_received_grey.9.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\mipmap-xxhdpi_new_launcher_round.png.flat",
-        "source": "C:\\android\\astron\\src\\conversations\\res\\mipmap-xxhdpi\\new_launcher_round.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_no_results_background_white.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_no_results_background_white.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\mipmap-xxhdpi_new_launcher_round.png.flat",
+        "source": "C:\\android\\astron\\src\\conversations\\res\\mipmap-xxhdpi\\new_launcher_round.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_delete_white_24dp.png.flat",
@@ -1636,12 +1640,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_visibility_off.png.flat",
         "source": "C:\\android\\astron\\build\\generated\\res\\pngs\\conversationsFreeCompat\\release\\drawable-xxxhdpi\\ic_visibility_off.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_send_videocam_offline.png.flat",
@@ -1812,12 +1816,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color-v23\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_photo_offline.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_photo_offline.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_refresh_black_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_refresh_black_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_photo_offline.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_photo_offline.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -2180,12 +2184,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\menu\\start_conversation_fab_submenu.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_autorenew_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_autorenew_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\anim_abc_popup_enter.xml.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_autorenew_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_autorenew_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\animator-v21_design_appbar_state_list_animator.xml.flat",
@@ -2264,12 +2268,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_btn_bg_color_selector.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_no_results_background_black.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_no_results_background_black.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_mode_edit_white_18dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_mode_edit_white_18dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_no_results_background_black.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_no_results_background_black.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_notifications_none_white_24dp.png.flat",
@@ -2324,12 +2328,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\color\\abc_tint_edittext.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_forward_white_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_forward_white_24dp.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_attach_camera.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_attach_camera.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxhdpi_ic_forward_white_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxhdpi\\ic_forward_white_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_text_offline.png.flat",
@@ -2368,16 +2372,16 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-mdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_gps_fixed_black_24dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_gps_fixed_black_24dp.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_description_black_48dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_description_black_48dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\f4152181c77351ca035cdc01341d7f40\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_description_black_48dp.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_description_black_48dp.png"
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xxxhdpi_ic_gps_fixed_black_24dp.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-xxxhdpi\\ic_gps_fixed_black_24dp.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -2408,12 +2412,12 @@
         "source": "C:\\android\\astron\\src\\conversations\\res\\drawable-mdpi\\splash_logo.jpg"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\menu_muc_details.xml.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\menu\\muc_details.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-hdpi_ic_new_releases_black_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-hdpi\\ic_new_releases_black_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\menu_muc_details.xml.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\menu\\muc_details.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_forward_white_24dp.png.flat",
@@ -2424,12 +2428,12 @@
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_cancel_offline_white.png"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\color_mtrl_tabs_icon_color_selector.xml.flat",
-        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_tabs_icon_color_selector.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_send_file_offline.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_send_file_offline.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\color_mtrl_tabs_icon_color_selector.xml.flat",
+        "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_date_bubble_white.9.png.flat",
@@ -2600,12 +2604,12 @@
         "source": "C:\\Users\\MaximusAVS\\.gradle\\caches\\transforms-2\\files-2.1\\dbe043d8d7c9f02cdb42b70f65df015f\\res\\animator\\mtrl_btn_state_list_anim.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_photo_offline_dark.png.flat",
-        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_photo_offline_dark.png"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-xhdpi_ic_notifications_black_24dp.png.flat",
         "source": "C:\\android\\astron\\src\\main\\res\\drawable-xhdpi\\ic_notifications_black_24dp.png"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\drawable-mdpi_ic_send_photo_offline_dark.png.flat",
+        "source": "C:\\android\\astron\\src\\main\\res\\drawable-mdpi\\ic_send_photo_offline_dark.png"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\res\\merged\\conversationsFreeCompat\\release\\layout_abc_search_view.xml.flat",

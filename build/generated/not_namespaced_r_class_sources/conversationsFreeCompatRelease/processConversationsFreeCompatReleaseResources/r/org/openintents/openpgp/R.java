@@ -18,9 +18,9 @@ public final class R {
     public static final class string {
         private string() {}
 
-        public static final int openpgp_install_openkeychain_via = 0x7f110219;
-        public static final int openpgp_key_selected = 0x7f11021b;
-        public static final int openpgp_list_preference_none = 0x7f11021c;
-        public static final int openpgp_no_key_selected = 0x7f11021e;
+        public static final int openpgp_install_openkeychain_via = 0x7f11021b;
+        public static final int openpgp_key_selected = 0x7f11021d;
+        public static final int openpgp_list_preference_none = 0x7f11021e;
+        public static final int openpgp_no_key_selected = 0x7f110220;
     }
 }

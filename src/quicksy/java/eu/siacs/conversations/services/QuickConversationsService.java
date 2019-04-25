@@ -1,4 +1,4 @@
-package com.app.astron.services;
+package com.ru.astron.services;
 
 
 import android.content.SharedPreferences;
@@ -31,22 +31,22 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.net.ssl.SSLHandshakeException;
 
-import com.app.astron.Config;
-import com.app.astron.android.JabberIdContact;
-import com.app.astron.android.PhoneNumberContact;
-import com.app.astron.crypto.sasl.Plain;
-import com.app.astron.entities.Account;
-import com.app.astron.entities.Contact;
-import com.app.astron.entities.Entry;
-import com.app.astron.utils.AccountUtils;
-import com.app.astron.utils.CryptoHelper;
-import com.app.astron.utils.PhoneNumberUtilWrapper;
-import com.app.astron.utils.SerialSingleThreadExecutor;
-import com.app.astron.xml.Element;
-import com.app.astron.xml.Namespace;
-import com.app.astron.xmpp.OnIqPacketReceived;
-import com.app.astron.xmpp.XmppConnection;
-import com.app.astron.xmpp.stanzas.IqPacket;
+import com.ru.astron.Config;
+import com.ru.astron.android.JabberIdContact;
+import com.ru.astron.android.PhoneNumberContact;
+import com.ru.astron.crypto.sasl.Plain;
+import com.ru.astron.entities.Account;
+import com.ru.astron.entities.Contact;
+import com.ru.astron.entities.Entry;
+import com.ru.astron.utils.AccountUtils;
+import com.ru.astron.utils.CryptoHelper;
+import com.ru.astron.utils.PhoneNumberUtilWrapper;
+import com.ru.astron.utils.SerialSingleThreadExecutor;
+import com.ru.astron.xml.Element;
+import com.ru.astron.xml.Namespace;
+import com.ru.astron.xmpp.OnIqPacketReceived;
+import com.ru.astron.xmpp.XmppConnection;
+import com.ru.astron.xmpp.stanzas.IqPacket;
 import io.michaelrocks.libphonenumber.android.Phonenumber;
 import rocks.xmpp.addr.Jid;
 

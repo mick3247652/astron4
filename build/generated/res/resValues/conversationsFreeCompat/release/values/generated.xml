@@ -5,6 +5,6 @@
 
     <!-- Values from default config. -->
     <string name="app_name" translatable="false">Astron</string>
-    <string name="applicationId" translatable="false">com.app.astron</string>
+    <string name="applicationId" translatable="false">com.ru.astron</string>
 
 </resources>

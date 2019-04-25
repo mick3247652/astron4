@@ -1,4 +1,4 @@
-package com.app.astron.ui.adapter;
+package com.ru.astron.ui.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import com.app.astron.R;
-import com.app.astron.databinding.CountryItemBinding;
-import com.app.astron.utils.PhoneNumberUtilWrapper;
+import com.ru.astron.R;
+import com.ru.astron.databinding.CountryItemBinding;
+import com.ru.astron.utils.PhoneNumberUtilWrapper;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.CountryViewHolder> {
 

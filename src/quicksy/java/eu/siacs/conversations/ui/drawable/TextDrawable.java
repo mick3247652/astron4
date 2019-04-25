@@ -1,4 +1,4 @@
-package com.app.astron.ui.drawable; /**
+package com.ru.astron.ui.drawable; /**
  * Copyright 2016 Ali Muzaffar
  * <p/>
  * Licensed under the Apache License, Version 2.0 (the "License");

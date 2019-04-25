@@ -1,4 +1,4 @@
-com.app.astron
+com.ru.astron
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1969,6 +1969,7 @@ id textSendButton
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textWatcher
 id text_input_password_toggle
 id textinput
@@ -2001,6 +2002,7 @@ id unread_count_custom_view
 id up
 id useLogo
 id use_own_provider
+id use_own_provider2
 id username
 id users
 id users_wrapper
@@ -2078,6 +2080,7 @@ layout activity_choose_contact
 layout activity_contact_details
 layout activity_conversations
 layout activity_edit_account
+layout activity_edit_account2
 layout activity_import_backup
 layout activity_manage_accounts
 layout activity_media_browser
@@ -2441,6 +2444,7 @@ string crash_report_message
 string crash_report_title
 string create
 string create_account
+string create_account_title
 string create_dialog_channel_name
 string create_dialog_group_chat_name
 string create_group_chat
@@ -2634,6 +2638,7 @@ string load_more_messages
 string location
 string location_disabled
 string logged_in_with_another_device
+string login_title
 string magic_create_text
 string mam_prefs
 string manage_permission
@@ -3113,6 +3118,7 @@ string updating
 string url_copied_to_clipboard
 string use_camera_icon_to_scan_barcode
 string use_own_provider
+string use_own_provider2
 string user_has_left_conference
 string username
 string username_hint

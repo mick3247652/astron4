@@ -864,7 +864,7 @@
     <string name="apk">Android App</string>
     <string name="app_name" translatable="false">Astron</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="applicationId" translatable="false">com.app.astron</string>
+    <string name="applicationId" translatable="false">com.ru.astron</string>
     <string name="application_found_to_open_website">No application found to open website</string>
     <string name="ask_for_presence_updates">Ask for presence updates</string>
     <string name="attach">Attach</string>
@@ -980,6 +980,7 @@
     <string name="crash_report_title">Conversations has crashed</string>
     <string name="create">Create</string>
     <string name="create_account">Create Account</string>
+    <string name="create_account_title">Create new account</string>
     <string name="create_dialog_channel_name">Channel name</string>
     <string name="create_dialog_group_chat_name">Group chat name</string>
     <string name="create_group_chat">Create group chat</string>
@@ -1173,6 +1174,7 @@
     <string name="location">Location</string>
     <string name="location_disabled">Location sharing is disabled</string>
     <string name="logged_in_with_another_device">This phone number is currently logged in with another device.</string>
+    <string name="login_title">Login</string>
     <string name="magic_create_text">We will guide you through the process of creating an account on conversations.im.¹\nWhen picking conversations.im as a provider you will be able to communicate with users of other providers by giving them your full XMPP address.</string>
     <string name="mam_prefs">Archiving preferences</string>
     <string name="manage_permission">Manage privileges</string>
@@ -1687,6 +1689,7 @@
     <string name="url_copied_to_clipboard">Copied URL to clipboard</string>
     <string name="use_camera_icon_to_scan_barcode">Use the camera to scan a contact’s barcode</string>
     <string name="use_own_provider">Login</string>
+    <string name="use_own_provider2">Create new account</string>
     <string name="user_has_left_conference">%1$s has left the group chat!</string>
     <string name="username">Username</string>
     <string name="username_hint">Username</string>

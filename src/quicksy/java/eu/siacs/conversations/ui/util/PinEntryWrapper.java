@@ -1,4 +1,4 @@
-package com.app.astron.ui.util;
+package com.ru.astron.ui.util;
 
 import android.text.Editable;
 import android.text.TextWatcher;

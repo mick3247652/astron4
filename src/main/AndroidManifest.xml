@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.app.astron">
+    package="com.ru.astron">
+
+    <uses-sdk tools:overrideLibrary="net.ypresto.androidtranscoder" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -30,12 +32,9 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <uses-permission
         android:name="android.permission.READ_PHONE_STATE"
         tools:node="remove" />
-
-    <uses-sdk tools:overrideLibrary="net.ypresto.androidtranscoder" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -43,11 +42,9 @@
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false" />
-
 
     <application
         android:allowBackup="true"
@@ -56,20 +53,25 @@
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_configuration"
         android:theme="@style/ConversationsTheme"
+        tools:ignore="AllowBackup"
         tools:replace="android:label"
-        tools:targetApi="o"
-        tools:ignore="AllowBackup">
+        tools:targetApi="o">
+        <activity
+            android:name="com.ru.astron.ui.EditAccountActivity2"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <meta-data
             android:name="com.google.android.gms.car.application"
             android:resource="@xml/automotive_app_desc" />
 
-        <service android:name="com.app.astron.services.XmppConnectionService" />
+        <service android:name="com.ru.astron.services.XmppConnectionService" />
 
-        <receiver android:name="com.app.astron.services.EventReceiver">
+        <receiver android:name="com.ru.astron.services.EventReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
                     tools:ignore="BatteryLife" />
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
                 <action android:name="android.media.RINGER_MODE_CHANGED" />
@@ -77,20 +79,20 @@
         </receiver>
 
         <activity
-            android:name="com.app.astron.ui.ShareLocationActivity"
+            android:name="com.ru.astron.ui.ShareLocationActivity"
             android:label="@string/title_activity_share_location" />
         <activity
-            android:name="com.app.astron.ui.SearchActivity"
+            android:name="com.ru.astron.ui.SearchActivity"
             android:label="@string/search_messages" />
         <activity
-            android:name="com.app.astron.ui.RecordingActivity"
+            android:name="com.ru.astron.ui.RecordingActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/ConversationsTheme.Dialog" />
         <activity
-            android:name="com.app.astron.ui.ShowLocationActivity"
+            android:name="com.ru.astron.ui.ShowLocationActivity"
             android:label="@string/title_activity_show_location" />
         <activity
-            android:name="com.app.astron.ui.ConversationActivity"
+            android:name="com.ru.astron.ui.ConversationActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,19 +101,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.ConversationsActivity"
+            android:name="com.ru.astron.ui.ConversationsActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:minWidth="300dp"
             android:minHeight="300dp"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.app.astron.ui.ScanActivity"
+            android:name="com.ru.astron.ui.ScanActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ConversationsTheme.FullScreen"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.app.astron.ui.UriHandlerActivity"
+            android:name="com.ru.astron.ui.UriHandlerActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -142,7 +144,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.StartConversationActivity"
+            android:name="com.ru.astron.ui.StartConversationActivity"
             android:label="@string/title_activity_start_conversation"
             android:launchMode="singleTop">
             <intent-filter>
@@ -150,60 +152,61 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.SettingsActivity"
+            android:name="com.ru.astron.ui.SettingsActivity"
             android:label="@string/title_activity_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.NOTIFICATION_PREFERENCES" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.ChooseContactActivity"
+            android:name="com.ru.astron.ui.ChooseContactActivity"
             android:label="@string/title_activity_choose_contact" />
         <activity
-            android:name="com.app.astron.ui.BlocklistActivity"
+            android:name="com.ru.astron.ui.BlocklistActivity"
             android:label="@string/title_activity_block_list" />
         <activity
-            android:name="com.app.astron.ui.ChangePasswordActivity"
+            android:name="com.ru.astron.ui.ChangePasswordActivity"
             android:label="@string/change_password_on_server" />
         <activity
-            android:name="com.app.astron.ui.ChooseAccountForProfilePictureActivity"
+            android:name="com.ru.astron.ui.ChooseAccountForProfilePictureActivity"
             android:enabled="false"
             android:label="@string/choose_account">
             <intent-filter android:label="@string/set_profile_picture">
                 <action android:name="android.intent.action.ATTACH_DATA" />
+
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.ShareViaAccountActivity"
+            android:name="com.ru.astron.ui.ShareViaAccountActivity"
             android:label="@string/title_activity_share_via_account"
             android:launchMode="singleTop" />
         <activity
-            android:name="com.app.astron.ui.EditAccountActivity"
+            android:name="com.ru.astron.ui.EditAccountActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.app.astron.ui.ConferenceDetailsActivity"
+            android:name="com.ru.astron.ui.ConferenceDetailsActivity"
             android:label="@string/action_muc_details"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.app.astron.ui.ContactDetailsActivity"
+            android:name="com.ru.astron.ui.ContactDetailsActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.app.astron.ui.PublishProfilePictureActivity"
+            android:name="com.ru.astron.ui.PublishProfilePictureActivity"
             android:label="@string/mgmt_account_publish_avatar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="com.app.astron.ui.PublishGroupChatProfilePictureActivity"
+            android:name="com.ru.astron.ui.PublishGroupChatProfilePictureActivity"
             android:label="@string/group_chat_avatar" />
         <activity
-            android:name="com.app.astron.ui.ShareWithActivity"
+            android:name="com.ru.astron.ui.ShareWithActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop">
-
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
@@ -212,7 +215,6 @@
 
                 <data android:mimeType="text/plain" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
@@ -227,33 +229,34 @@
                 android:value=".services.ContactChooserTargetService" />
         </activity>
         <activity
-            android:name="com.app.astron.ui.TrustKeysActivity"
+            android:name="com.ru.astron.ui.TrustKeysActivity"
             android:label="@string/trust_omemo_fingerprints"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.app.astron.ui.AboutActivity"
-            android:parentActivityName="com.app.astron.ui.SettingsActivity">
+            android:name="com.ru.astron.ui.AboutActivity"
+            android:parentActivityName="com.ru.astron.ui.SettingsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.app.astron.ui.SettingsActivity" />
+                android:value="com.ru.astron.ui.SettingsActivity" />
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.PREFERENCE" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name="com.app.astron.ui.MemorizingActivity" />
-
+        <activity android:name="com.ru.astron.ui.MemorizingActivity" />
         <activity
-            android:name="com.app.astron.ui.MediaBrowserActivity"
+            android:name="com.ru.astron.ui.MediaBrowserActivity"
             android:label="@string/media_browser" />
 
-        <service android:name="com.app.astron.services.ExportBackupService" />
-        <service android:name="com.app.astron.services.ImportBackupService" />
+        <service android:name="com.ru.astron.services.ExportBackupService" />
+        <service android:name="com.ru.astron.services.ImportBackupService" />
         <service
-            android:name="com.app.astron.services.ContactChooserTargetService"
+            android:name="com.ru.astron.services.ContactChooserTargetService"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
                 <action android:name="android.service.chooser.ChooserTargetService" />
@@ -270,20 +273,20 @@
                 android:resource="@xml/file_paths" />
         </provider>
         <provider
-            android:name="com.app.astron.services.BarcodeProvider"
+            android:name="com.ru.astron.services.BarcodeProvider"
             android:authorities="${applicationId}.barcodes"
             android:exported="false"
             android:grantUriPermissions="true" />
 
         <activity
-            android:name="com.app.astron.ui.ShortcutActivity"
+            android:name="com.ru.astron.ui.ShortcutActivity"
             android:label="@string/contact">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.app.astron.ui.MucUsersActivity"
+            android:name="com.ru.astron.ui.MucUsersActivity"
             android:label="@string/group_chat_members" />
     </application>
 

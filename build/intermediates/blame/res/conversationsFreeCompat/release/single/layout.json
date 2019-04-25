@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_recording.xml",
-        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_recording.xml"
-    },
-    {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_trust_keys.xml",
         "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_trust_keys.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\fragment_conversation.xml",
-        "source": "C:\\android\\astron\\src\\main\\res\\layout\\fragment_conversation.xml"
+        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_recording.xml",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_recording.xml"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\create_public_channel_dialog.xml",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\create_public_channel_dialog.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\account_row.xml",
         "source": "C:\\android\\astron\\src\\main\\res\\layout\\account_row.xml"
     },
     {
-        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\create_public_channel_dialog.xml",
-        "source": "C:\\android\\astron\\src\\main\\res\\layout\\create_public_channel_dialog.xml"
+        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\fragment_conversation.xml",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\fragment_conversation.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_edit_account.xml",
@@ -42,6 +42,10 @@
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\media.xml",
         "source": "C:\\android\\astron\\src\\main\\res\\layout\\media.xml"
+    },
+    {
+        "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\activity_edit_account2.xml",
+        "source": "C:\\android\\astron\\src\\main\\res\\layout\\activity_edit_account2.xml"
     },
     {
         "merged": "C:\\android\\astron\\build\\intermediates\\incremental\\mergeConversationsFreeCompatReleaseResources\\stripped.dir\\layout\\fragment_conversations_overview.xml",

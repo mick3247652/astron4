@@ -857,4 +857,8 @@
     <string name="search_participants">Search participants</string>
     <string name="file_too_large">File too large</string>
     <string name="attach">Attach</string>
+
+    <string name="use_own_provider2">Create new account</string>
+    <string name="login_title">Login</string>
+    <string name="create_account_title">Create new account</string>
 </resources>
