@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: me.saket:better-link-movement-method:2.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f7341d21bbe124744f0b97df1b8d865/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0f7341d21bbe124744f0b97df1b8d865/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.saket/better-link-movement-method/2.2.0/ed9a03898956cc246473dd3a84874cb70addbf12/better-link-movement-method-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
