@@ -15,16 +15,19 @@
         <menu>
             <item
                 android:id="@+id/action_share_uri"
-                android:title="@string/share_as_uri"/>
+                android:title="@string/share_as_uri"
+                android:visible="false" />
             <item
                 android:id="@+id/action_share_http"
                 android:title="@string/share_as_http"/>
             <item
                 android:id="@+id/action_share_barcode"
-                android:title="@string/share_as_barcode"/>
+                android:title="@string/share_as_barcode"
+                android:visible="false" />
             <item
                 android:id="@+id/action_show_qr_code"
-                android:title="@string/show_qr_code"/>
+                android:title="@string/show_qr_code"
+                android:visible="false" />
         </menu>
     </item>
 

@@ -172,7 +172,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
                     }
                 }));
         this.mAdvancedMode = getPreferences().getBoolean("advanced_muc_mode", false);
-        this.binding.mucInfoMore.setVisibility(this.mAdvancedMode ? View.VISIBLE : View.GONE);
+        this.binding.mucInfoMore.setVisibility(this.mAdvancedMode ? View.GONE : View.GONE);
         this.binding.notificationStatusButton.setOnClickListener(this.mNotifyStatusClickListener);
         this.binding.yourPhoto.setOnClickListener(v -> {
             final MucOptions mucOptions = mConversation.getMucOptions();
@@ -245,7 +245,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
                 menuItem.setChecked(this.mAdvancedMode);
                 getPreferences().edit().putBoolean("advanced_muc_mode", mAdvancedMode).apply();
                 final boolean online = mConversation != null && mConversation.getMucOptions().online();
-                this.binding.mucInfoMore.setVisibility(this.mAdvancedMode && online ? View.VISIBLE : View.GONE);
+                this.binding.mucInfoMore.setVisibility(View.GONE);
                 invalidateOptionsMenu();
                 updateView();
                 break;
@@ -476,14 +476,14 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         this.binding.mucYourNick.setText(mucOptions.getActualNick());
         if (mucOptions.online()) {
             this.binding.usersWrapper.setVisibility(View.VISIBLE);
-            this.binding.mucInfoMore.setVisibility(this.mAdvancedMode ? View.VISIBLE : View.GONE);
+            this.binding.mucInfoMore.setVisibility(this.mAdvancedMode ? View.GONE : View.GONE);
             this.binding.mucRole.setVisibility(View.VISIBLE);
             this.binding.mucRole.setText(getStatus(self));
             if (mucOptions.getSelf().getAffiliation().ranks(MucOptions.Affiliation.OWNER)) {
-                this.binding.mucSettings.setVisibility(View.VISIBLE);
+                this.binding.mucSettings.setVisibility(View.GONE);
                 this.binding.mucConferenceType.setText(MucConfiguration.describe(this,mucOptions));
             } else if (!mucOptions.isPrivateAndNonAnonymous() && mucOptions.nonanonymous()) {
-                this.binding.mucSettings.setVisibility(View.VISIBLE);
+                this.binding.mucSettings.setVisibility(View.GONE);
                 this.binding.mucConferenceType.setText(R.string.group_chat_will_make_your_jabber_id_public);
             } else {
                 this.binding.mucSettings.setVisibility(View.GONE);
