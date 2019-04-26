@@ -861,4 +861,8 @@
     <string name="use_own_provider2">Create new account</string>
     <string name="login_title">Login</string>
     <string name="create_account_title">Create new account</string>
+
+
+    <string name="action_donate">donate</string>
+    <string name="title_action_donate">donate</string>
 </resources>

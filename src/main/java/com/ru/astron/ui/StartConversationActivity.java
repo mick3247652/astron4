@@ -649,6 +649,10 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 			return false;
 		}
 		switch (item.getItemId()) {
+			case R.id.action_donate:
+				Intent intent = new Intent(this, WebViewActivity.class);
+				startActivity(intent);
+				return true;
 			case android.R.id.home:
 				navigateBack();
 				return true;
