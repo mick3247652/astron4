@@ -660,4 +660,8 @@
   <string name="login_title">Вход</string>
   <string name="create_account_title">Регистрация</string>
 
+  <string name="action_donate">Донат на разработку</string>
+  <string name="title_action_donate">Донат на разработку</string>
+
+
 </resources>
