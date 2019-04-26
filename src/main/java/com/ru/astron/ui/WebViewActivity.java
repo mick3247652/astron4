@@ -47,7 +47,7 @@ public class WebViewActivity extends AppCompatActivity {
 
         binding.webView.setWebViewClient(webViewClient);
         binding.webView.getSettings().setJavaScriptEnabled(true);
-        binding.webView.loadUrl("https://google.com");
+        binding.webView.loadUrl("https://yasobe.ru/na/astron2");
     }
 
     @Override
