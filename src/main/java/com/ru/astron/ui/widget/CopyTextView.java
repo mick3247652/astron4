@@ -5,21 +5,44 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
+import android.text.util.Linkify;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.TextView;
+
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 
 public class CopyTextView extends TextView {
 
 	public CopyTextView(Context context) {
 		super(context);
+		//createLink(context);
 	}
 
 	public CopyTextView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		//createLink(context);
 	}
 
 	public CopyTextView(Context context, AttributeSet attrs, int defStyleAttr) {
 		super(context, attrs, defStyleAttr);
+		//createLink(context);
+	}
+
+	private void createLink(Context context){
+		BetterLinkMovementMethod
+				.linkify(Linkify.ALL, this)
+				.setOnLinkClickListener((textView, url) -> {
+					// Do something.
+					Log.v("YYYYY"," YEA.....");
+					return true;
+				});
+	}
+
+	@Override
+	protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+		super.onLayout(changed, left, top, right, bottom);
+
 	}
 
 	@SuppressWarnings("unused")
@@ -63,4 +86,5 @@ public class CopyTextView extends TextView {
 			}
 		}
 	}
+
 }

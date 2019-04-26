@@ -66,6 +66,8 @@ dependencies {
     implementation 'me.drakeet.support:toastcompat:1.1.0'
     implementation "com.leinardi.android:speed-dial:2.0.1"
     quicksyImplementation 'io.michaelrocks:libphonenumber-android:8.10.1'
+
+    implementation 'me.saket:better-link-movement-method:2.2.0'
 }
 
 ext {

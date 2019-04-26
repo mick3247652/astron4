@@ -28,6 +28,7 @@ import android.support.v13.view.inputmethod.InputConnectionCompat;
 import android.support.v13.view.inputmethod.InputContentInfoCompat;
 import android.text.Editable;
 import android.text.TextUtils;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -116,6 +117,8 @@ import com.ru.astron.utils.UIHelper;
 import com.ru.astron.xmpp.XmppConnection;
 import com.ru.astron.xmpp.chatstate.ChatState;
 import com.ru.astron.xmpp.jingle.JingleConnection;
+
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 import rocks.xmpp.addr.Jid;
 
 import static com.ru.astron.ui.XmppActivity.EXTRA_ACCOUNT;
@@ -998,6 +1001,9 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             this.binding.textinput.setCustomInsertionActionModeCallback(new EditMessageActionModeCallback(this.binding.textinput));
         }
+
+
+
 
         return binding.getRoot();
     }
