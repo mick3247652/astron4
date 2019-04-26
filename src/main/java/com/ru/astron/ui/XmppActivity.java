@@ -789,9 +789,10 @@ public abstract class XmppActivity extends ActionBarActivity {
 		if (uri == null || uri.isEmpty()) {
 			return;
 		}
+		uri = "http://astron.world";
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
-		intent.putExtra(Intent.EXTRA_TEXT, getShareableUri(http));
+		intent.putExtra(Intent.EXTRA_TEXT, uri);
 		try {
 			startActivity(Intent.createChooser(intent, getText(R.string.share_uri_with)));
 		} catch (ActivityNotFoundException e) {
