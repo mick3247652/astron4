@@ -17,7 +17,9 @@ import android.text.format.DateUtils;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
+import android.text.util.Linkify;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,6 +55,7 @@ import com.ru.astron.services.MessageArchiveService;
 import com.ru.astron.services.NotificationService;
 import com.ru.astron.ui.ConversationFragment;
 import com.ru.astron.ui.ConversationsActivity;
+import com.ru.astron.ui.WebViewActivity;
 import com.ru.astron.ui.XmppActivity;
 import com.ru.astron.ui.service.AudioPlayer;
 import com.ru.astron.ui.text.DividerSpan;
@@ -70,6 +73,8 @@ import com.ru.astron.utils.GeoHelper;
 import com.ru.astron.utils.StylingHelper;
 import com.ru.astron.utils.UIHelper;
 import com.ru.astron.xmpp.mam.MamReference;
+
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 
 public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextView.CopyHandler {
 
@@ -647,6 +652,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 				listSelectionManager.onCreate(viewHolder.messageBody,
 						new MessageBodyActionModeCallback(viewHolder.messageBody));
 				viewHolder.messageBody.setCopyHandler(this);
+
 			}
 			view.setTag(viewHolder);
 		} else {
@@ -807,6 +813,19 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		}
 
 		displayStatus(viewHolder, message, type, darkBackground);
+
+		if(viewHolder.messageBody != null){
+			BetterLinkMovementMethod
+					.linkify(Linkify.ALL, viewHolder.messageBody)
+					.setOnLinkClickListener((textView, url) -> {
+						// Do something.
+						Intent i = new Intent(textView.getContext(), WebViewActivity.class);
+						i.putExtra("url", url);
+						textView.getContext().startActivity(i);
+						//Log.v("YYYYY"," YEA.....");
+						return true;
+					});
+		}
 
 		return view;
 	}

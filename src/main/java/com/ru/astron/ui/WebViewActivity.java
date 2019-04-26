@@ -1,6 +1,7 @@
 package com.ru.astron.ui;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +29,11 @@ public class WebViewActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) binding.toolbar;
         setSupportActionBar(toolbar);
         configureActionBar(getSupportActionBar());
-        setTitle(getResources().getString(R.string.title_action_donate));
+
+        Intent i = getIntent();
+        String sUrl = i.getStringExtra("url");
+
+        if(sUrl == null) setTitle(getResources().getString(R.string.title_action_donate));
 
 
         WebViewClient webViewClient = new WebViewClient() {
@@ -47,7 +52,8 @@ public class WebViewActivity extends AppCompatActivity {
 
         binding.webView.setWebViewClient(webViewClient);
         binding.webView.getSettings().setJavaScriptEnabled(true);
-        binding.webView.loadUrl("https://yasobe.ru/na/astron2");
+        if(sUrl == null) binding.webView.loadUrl("https://yasobe.ru/na/astron2");
+        else binding.webView.loadUrl(sUrl);
     }
 
     @Override
