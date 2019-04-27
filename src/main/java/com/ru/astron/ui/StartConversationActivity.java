@@ -1011,7 +1011,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 		}
 		final Jid conferenceJid;
 		try {
-			conferenceJid = Jid.of(jid.getText().toString() + "@" + Config.DOMAIN_LOCK);
+			conferenceJid = Jid.of(jid.getText().toString() + "@conference." + Config.DOMAIN_LOCK);
 		} catch (final IllegalArgumentException e) {
 			jid.setError(getString(R.string.invalid_jid));
 			return;
