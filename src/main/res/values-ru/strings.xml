@@ -399,6 +399,7 @@
   <string name="user_has_left_conference">%1$s покинул группу!</string>
   <string name="username">Имя пользователя</string>
   <string name="username_hint">Имя пользователя</string>
+  <string name="account_settings_jabber_id">Имя</string>
   <string name="invalid_username">Недопустимое имя пользователя</string>
   <string name="download_failed_server_not_found">Загрузка не удалась: сервер не найден</string>
   <string name="download_failed_file_not_found">Загрузка не удалась: файл не найден</string>
@@ -677,7 +678,9 @@
   <string name="xmpp_address">Имя</string>
   <string name="group_chat_name">Имя</string>
   <string name="copy_link">Скопировать ссылку</string>
-  
+  <string name="channel_full_jid_example">имя канала</string>
+  <string name="channel_bare_jid_example">имя канала</string>
+
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
   <string name="create_account_title">Регистрация</string>
