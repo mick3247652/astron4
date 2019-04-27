@@ -789,7 +789,7 @@ public abstract class XmppActivity extends ActionBarActivity {
 		if (uri == null || uri.isEmpty()) {
 			return;
 		}
-		uri = "http://astron.world";
+		uri = "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_TEXT, uri);
