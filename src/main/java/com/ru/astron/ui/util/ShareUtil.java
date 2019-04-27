@@ -53,7 +53,7 @@ public class ShareUtil {
 			shareIntent.putExtra(Intent.EXTRA_TEXT, message.getBody());
 			shareIntent.setType("text/plain");
 		} else if (!message.isFileOrImage()) {
-			shareIntent.putExtra(Intent.EXTRA_TEXT, message.getMergedBody().toString() + "\n\nСкачайте Astron https://play.google.com/store/apps/details?id=com.app.astron");
+			shareIntent.putExtra(Intent.EXTRA_TEXT, message.getMergedBody().toString() + "\n\nСкачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron");
 			shareIntent.setType("text/plain");
 		} else {
 			final DownloadableFile file = activity.xmppConnectionService.getFileBackend().getFile(message);
