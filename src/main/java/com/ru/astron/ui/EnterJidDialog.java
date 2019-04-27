@@ -72,7 +72,7 @@ public class EnterJidDialog extends DialogFragment implements OnBackendConnected
 		builder.setTitle(getArguments().getString(TITLE_KEY));
 		EnterJidDialogBinding binding = DataBindingUtil.inflate(getActivity().getLayoutInflater(), R.layout.enter_jid_dialog, null, false);
 		this.knownHostsAdapter = new KnownHostsAdapter(getActivity(), R.layout.simple_list_item);
-		binding.jid.setAdapter(this.knownHostsAdapter);
+		//binding.jid.setAdapter(this.knownHostsAdapter);
 		String prefilledJid = getArguments().getString(PREFILLED_JID_KEY);
 		if (prefilledJid != null) {
 			binding.jid.append(prefilledJid);
@@ -135,7 +135,7 @@ public class EnterJidDialog extends DialogFragment implements OnBackendConnected
 		}
 		final Jid contactJid;
 		try {
-			contactJid = Jid.of(binding.jid.getText().toString());
+			contactJid = Jid.of(binding.jid.getText().toString() + "@" + Config.DOMAIN_LOCK);
 		} catch (final IllegalArgumentException e) {
 			binding.jid.setError(getActivity().getString(R.string.invalid_jid));
 			return;

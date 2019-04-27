@@ -1001,7 +1001,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 	}
 
 	@Override
-	public void onJoinDialogPositiveClick(Dialog dialog, Spinner spinner, AutoCompleteTextView jid, boolean isBookmarkChecked) {
+	public void onJoinDialogPositiveClick(Dialog dialog, Spinner spinner, EditText jid, boolean isBookmarkChecked) {
 		if (!xmppConnectionServiceBound) {
 			return;
 		}
@@ -1011,7 +1011,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 		}
 		final Jid conferenceJid;
 		try {
-			conferenceJid = Jid.of(jid.getText().toString());
+			conferenceJid = Jid.of(jid.getText().toString() + "@" + Config.DOMAIN_LOCK);
 		} catch (final IllegalArgumentException e) {
 			jid.setError(getString(R.string.invalid_jid));
 			return;

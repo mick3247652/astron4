@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class JoinConferenceDialog extends DialogFragment implements OnBackendCon
 		DialogJoinConferenceBinding binding = DataBindingUtil.inflate(getActivity().getLayoutInflater(), R.layout.dialog_join_conference, null, false);
 		DelayedHintHelper.setHint(R.string.channel_full_jid_example, binding.jid);
 		this.knownHostsAdapter = new KnownHostsAdapter(getActivity(), R.layout.simple_list_item);
-		binding.jid.setAdapter(knownHostsAdapter);
+		//binding.jid.setAdapter(knownHostsAdapter);
 		String prefilledJid = getArguments().getString(PREFILLED_JID_KEY);
 		if (prefilledJid != null) {
 			binding.jid.append(prefilledJid);
@@ -114,6 +115,6 @@ public class JoinConferenceDialog extends DialogFragment implements OnBackendCon
 	}
 
 	public interface JoinConferenceDialogListener {
-		void onJoinDialogPositiveClick(Dialog dialog, Spinner spinner, AutoCompleteTextView jid, boolean isBookmarkChecked);
+		void onJoinDialogPositiveClick(Dialog dialog, Spinner spinner, EditText jid, boolean isBookmarkChecked);
 	}
 }
