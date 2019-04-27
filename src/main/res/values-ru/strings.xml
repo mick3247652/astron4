@@ -211,8 +211,8 @@
   <string name="select">Выбрать</string>
   <string name="contact_already_exists">Контакт уже существует</string>
   <string name="join">Присоединиться</string>
-  <string name="save_as_bookmark">Сохранить закладку</string>
-  <string name="delete_bookmark">Удалить закладку</string>
+  <string name="save_as_bookmark">Сохранить в закладках</string>
+  <string name="delete_bookmark">Удалить из закладок</string>
   <string name="bookmark_already_exists">Такая закладка уже существует</string>
   <string name="action_edit_subject">Редактировать тему группы</string>
   <string name="topic">Тема</string>
@@ -674,7 +674,10 @@
   <string name="media_browser">Медиа</string>
   <string name="also_end_conversation">Закрыть этот чат</string>
   <string name="title_activity_about_x">О приложении</string>
-
+  <string name="xmpp_address">Имя</string>
+  <string name="group_chat_name">Имя</string>
+  <string name="copy_link">Скопировать ссылку</string>
+  
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
   <string name="create_account_title">Регистрация</string>
