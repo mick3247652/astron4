@@ -676,6 +676,7 @@
   <string name="title_activity_about_x">О приложении</string>
   <string name="xmpp_address">Имя</string>
   <string name="group_chat_name">Имя</string>
+  <string name="copy_link">Скопировать ссылку</string>
   
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
