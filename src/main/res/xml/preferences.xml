@@ -71,21 +71,24 @@
             android:key="vibrate_on_notification"
             android:summary="@string/pref_vibrate_summary"
             android:title="@string/pref_vibrate" />
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="@bool/led"
             android:key="led"
             android:summary="@string/pref_led_summary"
-            android:title="@string/pref_led" />
+            android:title="@string/pref_led"
+            android:visibility="gone"/>
         <RingtonePreference
             android:defaultValue="@string/notification_ringtone"
             android:key="notification_ringtone"
             android:ringtoneType="notification"
             android:summary="@string/pref_sound_summary"
-            android:title="@string/pref_sound" />
+            android:title="@string/pref_sound"
+            android:visibility="gone" />
         <PreferenceScreen
             android:key="quiet_hours"
             android:summary="@string/pref_quiet_hours_summary"
-            android:title="@string/title_pref_quiet_hours">
+            android:title="@string/title_pref_quiet_hours"
+            android:visibility="gone">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:targetClass="eu.siacs.conversations.ui.SettingsActivity"
@@ -118,7 +121,8 @@
             android:entryValues="@array/grace_periods_values"
             android:key="grace_period_length"
             android:summary="@string/pref_notification_grace_period_summary"
-            android:title="@string/pref_notification_grace_period" />
+            android:title="@string/pref_notification_grace_period"
+            android:visibility="gone" />-->
     </PreferenceCategory>
     <PreferenceCategory
         android:key="attachments"
@@ -170,11 +174,12 @@
             android:key="font_size"
             android:summary="@string/pref_font_size_summary"
             android:title="@string/pref_font_size" />
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="@bool/send_button_status"
             android:key="send_button_status"
             android:summary="@string/pref_use_send_button_to_indicate_status_summary"
-            android:title="@string/pref_use_send_button_to_indicate_status" />
+            android:title="@string/pref_use_send_button_to_indicate_status"
+            android:visibility="gone" />
         <ListPreference
             android:defaultValue="@string/quick_action"
             android:dialogTitle="@string/choose_quick_action"
@@ -182,20 +187,23 @@
             android:entryValues="@array/quick_action_values"
             android:key="quick_action"
             android:summary="@string/pref_quick_action_summary"
-            android:title="@string/pref_quick_action" />
+            android:title="@string/pref_quick_action"
+            android:visibility="gone" />
         <CheckBoxPreference
             android:defaultValue="@bool/show_dynamic_tags"
             android:key="show_dynamic_tags"
             android:summary="@string/pref_show_dynamic_tags_summary"
-            android:title="@string/pref_show_dynamic_tags" />
+            android:title="@string/pref_show_dynamic_tags"
+            android:visibility="gone" />-->
     </PreferenceCategory>
     <PreferenceCategory
         android:key="advanced"
         android:title="@string/pref_advanced_options">
-        <PreferenceScreen
+        <!--<PreferenceScreen
             android:key="expert"
             android:summary="@string/pref_expert_options_summary"
-            android:title="@string/pref_expert_options">
+            android:title="@string/pref_expert_options"
+            android:visibility="gone">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:targetClass="com.app.astron.ui.SettingsActivity"
@@ -340,7 +348,8 @@
             android:defaultValue="@bool/never_send"
             android:key="never_send"
             android:summary="@string/pref_never_send_crash_summary"
-            android:title="@string/pref_never_send_crash" />
+            android:title="@string/pref_never_send_crash"
+            android:visibility="gone" />-->
     </PreferenceCategory>
     <com.ru.astron.ui.AboutPreference />
 </PreferenceScreen>
