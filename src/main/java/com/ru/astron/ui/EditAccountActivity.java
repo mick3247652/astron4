@@ -978,7 +978,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
         }
         if (this.mAccount.isOnlineAndConnected() && !this.mFetchingAvatar) {
             Features features = this.mAccount.getXmppConnection().getFeatures();
-            this.binding.stats.setVisibility(View.VISIBLE);
+            this.binding.stats.setVisibility(View.GONE);
             boolean showBatteryWarning = !xmppConnectionService.getPushManagementService().available(mAccount) && isOptimizingBattery();
             boolean showDataSaverWarning = isAffectedByDataSaver();
             showOsOptimizationWarning(showBatteryWarning, showDataSaverWarning);
@@ -1083,7 +1083,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
                 }
             }
             if (hasKeys && Config.supportOmemo()) { //TODO: either the button should be visible if we print an active device or the device list should be fed with reactived devices
-                this.binding.otherDeviceKeysCard.setVisibility(View.VISIBLE);
+                this.binding.otherDeviceKeysCard.setVisibility(View.GONE);
                 Set<Integer> otherDevices = mAccount.getAxolotlService().getOwnDeviceIds();
                 if (otherDevices == null || otherDevices.isEmpty()) {
                     binding.clearDevices.setVisibility(View.GONE);
