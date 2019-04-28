@@ -445,7 +445,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         setTitle(mucOptions.isPrivateAndNonAnonymous() ? R.string.action_muc_details : R.string.channel_details);
         this.binding.editMucNameButton.setVisibility((self.getAffiliation().ranks(MucOptions.Affiliation.OWNER) || mucOptions.canChangeSubject()) ? View.VISIBLE : View.GONE);
         this.binding.detailsAccount.setText(getString(R.string.using_account, account));
-        this.binding.jid.setText(mConversation.getJid().asBareJid().toEscapedString());
+        this.binding.jid.setText(mConversation.getJid().asBareJid().toEscapedString().replace("@conference.astron.online",""));
         AvatarWorkerTask.loadAvatar(mConversation, binding.yourPhoto, R.dimen.avatar_on_details_screen_size);
         String roomName = mucOptions.getName();
         String subject = mucOptions.getSubject();
