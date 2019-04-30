@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="pref_about_message" translatable="false">
-			<b>Astron</b> - мессенджер
-
+			<b>Astron</b>
 			\n\nОфициальное бесплатное приложение для быстрого и безопасного обмена сообщениями.
+		\n\nМессенджер использует сквозное шифрование.
+		\n\n<a href="http://astron.world/terms.html">Пользовательское соглашение</a>
+		\n\n<a href="http://astron.world/politica.html">Конфиденциальность</a>
 			\n\nCopyright © 2019
 	</string>
 </resources>

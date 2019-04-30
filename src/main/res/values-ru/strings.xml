@@ -226,7 +226,7 @@
   <string name="contacts_and_n_more_have_read_up_to_this_point">%1$s+ ещё %2$d прочитали</string>
   <string name="everyone_has_read_up_to_this_point">Все прочитали</string>
   <string name="publish">Опубликовать</string>
-  <string name="touch_to_choose_picture">Нажмите на аватар, чтобы выбрать новую фотографию из галереи</string>
+  <string name="touch_to_choose_picture">Нажмите на аватар, чтобы выбрать \n\nновую фотографию из галереи</string>
   <string name="publishing">Опубликование…</string>
   <string name="error_publish_avatar_server_reject">Размещение аватара невозможно</string>
   <string name="error_publish_avatar_converting">В процессе преобразования фотографии возникла ошибка</string>
@@ -319,7 +319,7 @@
   <string name="error_no_keys_to_trust_presence">Нет доступных ключей для данного контакта.\nУбедитесь, что у вас есть подписка на взаимное присутствие.</string>
   <string name="error_trustkeys_title">Что-то пошло не так</string>
   <string name="fetching_history_from_server">Получение истории чата</string>
-  <string name="no_more_history_on_server">История уже загружена</string>
+  <string name="no_more_history_on_server">История чата загружена</string>
   <string name="updating">Обновление…</string>
   <string name="password_changed">Пароль изменён!</string>
   <string name="could_not_change_password">Не удалось изменить пароль</string>
@@ -480,7 +480,7 @@
   <string name="create_account">Создать аккаунт</string>
   <string name="use_own_provider">Вход</string>
   <string name="pick_your_username">Выберите имя пользователя</string>
-  <string name="status_message">Статусное собщение</string>
+  <string name="status_message">Статус</string>
   <string name="presence_chat">Свободен для общения</string>
   <string name="presence_online">В сети</string>
   <string name="presence_away">Отошёл</string>
@@ -629,7 +629,7 @@
   <string name="error_trustkey_device_list">Не удалось загрузить список устройств</string>
   <string name="disable_now">Отключить сейчас</string>
   <string name="draft">Черновик:</string>
-  <string name="pref_omemo_setting">Секретные ключи</string>
+  <string name="pref_omemo_setting">Секретность</string>
   <string name="pref_font_size">Шрифт</string>
   <string name="small">Малый</string>
   <string name="medium">Средний</string>
@@ -683,6 +683,8 @@
   <string name="channel_bare_jid_example">имя канала</string>
   <string name="providing_a_name_is_optional">имя группы</string>
   <string name="create_dialog_group_chat_name">Имя</string>
+    <string name="default_on">Вкл.</string>
+    <string name="default_off">Выкл.</string>
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
