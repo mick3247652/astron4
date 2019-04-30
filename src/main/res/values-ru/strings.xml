@@ -136,7 +136,7 @@
   <string name="account_status_unknown">Неизвестен</string>
   <string name="account_status_disabled">Временно отключён</string>
   <string name="account_status_online">В сети</string>
-  <string name="account_status_connecting">Соединение\u2026</string>
+  <string name="account_status_connecting">Вход\u2026</string>
   <string name="account_status_offline">Не в сети</string>
   <string name="account_status_unauthorized">Неавторизован</string>
   <string name="account_status_not_found">Сервер не найден</string>
