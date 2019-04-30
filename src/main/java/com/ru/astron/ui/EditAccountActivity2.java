@@ -637,7 +637,8 @@ public class EditAccountActivity2 extends OmemoActivity implements OnAccountUpda
             if (!mAccount.getXmppConnection().getFeatures().register()) {
                 changePassword.setVisible(false);
             }
-            mamPrefs.setVisible(mAccount.getXmppConnection().getFeatures().mam());
+            //mamPrefs.setVisible(mAccount.getXmppConnection().getFeatures().mam());
+            mamPrefs.setVisible(false);
             changePresence.setVisible(!mInitMode);
         } else {
             showBlocklist.setVisible(false);
