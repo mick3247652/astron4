@@ -37,13 +37,13 @@
   <string name="moderator">Модератор</string>
   <string name="participant">Участник</string>
   <string name="visitor">Посетитель</string>
-  <string name="remove_contact_text">Вы хотите удалить %s из своего списка? Чаты, связанные с этим аккаунтом будут сохранены.</string>
+  <string name="remove_contact_text">Вы хотите удалить этот контакт из своего списка? Сообщения, связанные с этим аккаунтом будут сохранены.</string>
   <string name="block_contact_text">Вы хотите заблокировать дальнейшие сообщения от %s?</string>
   <string name="unblock_contact_text">Вы хотите разблокировать пользователя %s?</string>
   <string name="block_domain_text">Заблокировать всех пользователей домена %s?</string>
   <string name="unblock_domain_text">Разблокировать всех пользователей домена %s?</string>
   <string name="contact_blocked">Контакт заблокирован</string>
-  <string name="remove_bookmark_text">Вы хотите удалить %s из избранного? Чаты, связанные с данной закладкой будут сохранены</string>
+  <string name="remove_bookmark_text">Вы хотите удалить эту закладку? Сообщения, связанные с данной закладкой будут сохранены</string>
   <string name="register_account">Создать новый аккаунт</string>
   <string name="change_password_on_server">Изменить пароль</string>
   <string name="share_with">Поделиться</string>
@@ -119,7 +119,7 @@
   <string name="pref_confirm_messages">Видимость</string>
   <string name="pref_confirm_messages_summary">Позволяет вашим контактам видеть когда вы получили и прочитали их сообщения</string>
   <string name="pref_ui_options">Интерфейс</string>
-  <string name="accept">Принять</string>
+  <string name="accept">Сохранить</string>
   <string name="error">Произошла ошибка</string>
   <string name="recording_error">Ошибка</string>
   <string name="your_account">Ваш аккаунт</string>
@@ -182,7 +182,7 @@
   <string name="server_info_push">XEP-0357: Push-уведомления</string>
   <string name="server_info_available">доступно</string>
   <string name="server_info_unavailable">недоступно</string>
-  <string name="missing_public_keys">Отсутствие анонсирования открытых ключей</string>
+  <string name="missing_public_keys">Отсутствие открытых ключей</string>
   <string name="last_seen_now">Присутствие: только что</string>
   <string name="last_seen_min">Присутствие: 1 минуту назад</string>
   <string name="last_seen_mins">Присутствие: %d мин. назад</string>
@@ -268,13 +268,13 @@
   <string name="conference_banned">Вы заблокированы в этой группе</string>
   <string name="conference_members_only">Эта группа — только для участников</string>
   <string name="conference_kicked">Вас удалили из этой группы</string>
-  <string name="conference_shutdown">Группа была остановлена</string>
+  <string name="conference_shutdown">Группа была закрыта</string>
   <string name="conference_unknown_error">Вы больше не состоите в этой группе</string>
   <string name="using_account">используется аккаунт %s</string>
   <string name="checking_x">Проверка %s на сервере HTTP</string>
   <string name="not_connected_try_again">Вы неподключены. Попробуйте позже</string>
-  <string name="check_x_filesize">Проверить размер %s</string>
-  <string name="check_x_filesize_on_host">Проверить размер %1$s на %2$s</string>
+  <string name="check_x_filesize">Загрузить %s</string>
+  <string name="check_x_filesize_on_host">Загрузить %1$s</string>
   <string name="message_options">Опции сообщения</string>
   <string name="quote">Цитировать</string>
   <string name="paste_as_quote">Вставить как цитату</string>
@@ -302,9 +302,9 @@
   <string name="cancel_transmission">Отменить передачу</string>
   <string name="file_transmission_failed">передача файла не удалась</string>
   <string name="file_deleted">Файл был удалён</string>
-  <string name="no_application_found_to_open_file">Не найдено приложения для открытия файла</string>
-  <string name="no_application_found_to_open_link">Не найдено приложения, способного открыть эту ссылку</string>
-  <string name="no_application_found_to_view_contact">Не найдено приложения для просмотра контакта</string>
+  <string name="no_application_found_to_open_file">Не найдены приложения для открытия файла</string>
+  <string name="no_application_found_to_open_link">Не найдены приложения, способных открыть эту ссылку</string>
+  <string name="no_application_found_to_view_contact">Не найдены приложения для просмотра контакта</string>
   <string name="pref_show_dynamic_tags">Динамические тэги</string>
   <string name="pref_show_dynamic_tags_summary">Отображать теги только для чтения под контактами</string>
   <string name="enable_notifications">Включить уведомления</string>
@@ -641,7 +641,7 @@
   <string name="title_activity_show_location">Показать местоположение</string>
   <string name="share">Поделиться</string>
   <string name="please_wait">Пожалуйста, подождите…</string>
-  <string name="search_messages">Поиск сообщений</string>
+  <string name="search_messages">Поиск</string>
   <string name="bookmarks">Закладки</string>
   <string name="create_private_group_chat">Создать группу</string>
   <string name="create_public_channel">Создать канал</string>
@@ -667,7 +667,7 @@
   <string name="create_dialog_channel_name">Имя канала</string>
   <string name="please_enter_name">Пожалуйста, укажите название канала</string>
   <string name="creating_channel">Создание канала…</string>
-  <string name="channel_already_exists">Этот канал уже существует</string>
+  <string name="channel_already_exists">Такой канал уже существует</string>
   <string name="joined_an_existing_channel">Вы присоединились к существующему каналу</string>
   <string name="unable_to_set_channel_configuration">Невозможно установить конфигурацию канала</string>
 
@@ -685,6 +685,8 @@
   <string name="create_dialog_group_chat_name">Имя</string>
     <string name="default_on">Вкл.</string>
     <string name="default_off">Выкл.</string>
+  <string name="not_encrypted_for_this_device">Сообщение не было засекречено на вашем устройстве</string>
+  <string name="omemo_decryption_failed">Ошибка секретности сообщения</string>
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
