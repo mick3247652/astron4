@@ -323,7 +323,8 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
             if (http) {
                 return "https://conversations.im/j/" + XmppUri.lameUrlEncode(mConversation.getJid().asBareJid().toEscapedString());
             } else {
-                return "xmpp:" + mConversation.getJid().asBareJid() + "?join";
+                //return "xmpp:" + mConversation.getJid().asBareJid() + "?join";
+                return "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
             }
         } else {
             return null;

@@ -123,19 +123,19 @@ android {
 
         playstore {
             dimension "distribution"
-            versionNameSuffix "+p"
+            versionNameSuffix ""
         }
         free {
             dimension "distribution"
-            versionNameSuffix "+f"
+            versionNameSuffix ""
         }
         system {
             dimension "emoji"
-            versionNameSuffix "s"
+            versionNameSuffix ""
         }
         compat {
             dimension "emoji"
-            versionNameSuffix "c"
+            versionNameSuffix ""
         }
     }
 
@@ -185,13 +185,13 @@ android {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            versionNameSuffix "r"
+            versionNameSuffix ""
         }
         debug {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            versionNameSuffix "d"
+            versionNameSuffix ""
         }
     }
 
