@@ -30,6 +30,12 @@
                 android:visible="false" />
         </menu>
     </item>
+    <item
+        android:id="@+id/action_register"
+        android:icon="?attr/icon_add_person"
+        android:title="@string/use_own_provider2"
+        app:showAsAction="never"
+        />
 
     <item
         android:id="@+id/action_show_block_list"
