@@ -204,6 +204,9 @@ public class ManageAccountActivity extends XmppActivity implements OnAccountUpda
             case R.id.action_add_account:
                 startActivity(new Intent(this, EditAccountActivity.class));
                 break;
+            case R.id.action_register:
+                startActivity(new Intent(this, EditAccountActivity2.class));
+                break;
             case R.id.action_import_backup:
                 if (hasStoragePermission(REQUEST_IMPORT_BACKUP)) {
                     startActivity(new Intent(this, ImportBackupActivity.class));
