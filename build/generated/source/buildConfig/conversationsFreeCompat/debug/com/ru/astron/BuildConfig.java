@@ -8,8 +8,8 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.ru.astron";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "conversationsFreeCompat";
-  public static final int VERSION_CODE = 10;
-  public static final String VERSION_NAME = "1.0.4+fcd";
+  public static final int VERSION_CODE = 12;
+  public static final String VERSION_NAME = "1.0.6";
   public static final String FLAVOR_mode = "conversations";
   public static final String FLAVOR_distribution = "free";
   public static final String FLAVOR_emoji = "compat";
