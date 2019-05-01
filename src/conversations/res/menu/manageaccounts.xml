@@ -8,6 +8,12 @@
 		app:showAsAction="always"
 		android:title="@string/action_add_account"/>
 	<item
+		android:id="@+id/action_register"
+		android:icon="?attr/icon_add_person"
+		android:title="@string/use_own_provider2"
+		app:showAsAction="never"
+		/>
+	<item
 		android:id="@+id/action_import_backup"
 		android:title="@string/restore_backup"
 		android:visible="false"
