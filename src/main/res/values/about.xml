@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="pref_about_message" translatable="false">
-			<b>Astron</b>
-			\n\nОфициальное бесплатное приложение для быстрого и безопасного обмена сообщениями.
-		\n\nМессенджер использует сквозное шифрование.
-		\n\n<a href="http://astron.world/terms.html">Пользовательское соглашение</a>
-		\n\n<a href="http://astron.world/politica.html">Конфиденциальность</a>
-			\n\nCopyright © 2019
+&lt;b>Astron&lt;/b>&lt;br>&lt;br>
+		Официальное бесплатное приложение для быстрого и безопасного обмена сообщениями.&lt;br>&lt;br>
+		Мессенджер использует сквозное шифрование.&lt;br>&lt;br>
+		&lt;a href="http://astron.world/terms.html">Пользовательское соглашение&lt;/a>&lt;br>&lt;br>
+		&lt;a href="http://astron.world/politica.html">Конфиденциальность&lt;/a>&lt;br>&lt;br>
+		Copyright © 2019
 	</string>
 </resources>
