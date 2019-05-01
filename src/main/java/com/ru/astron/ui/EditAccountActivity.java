@@ -618,6 +618,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.editaccount, menu);
         final MenuItem showBlocklist = menu.findItem(R.id.action_show_block_list);
+        final MenuItem showRegister = menu.findItem(R.id.action_register);
         final MenuItem showMoreInfo = menu.findItem(R.id.action_server_info_show_more);
         final MenuItem changePassword = menu.findItem(R.id.action_change_password_on_server);
         final MenuItem renewCertificate = menu.findItem(R.id.action_renew_certificate);
@@ -631,6 +632,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
         if (mAccount != null && mAccount.isOnlineAndConnected()) {
             if (!mAccount.getXmppConnection().getFeatures().blocking()) {
                 showBlocklist.setVisible(false);
+                showRegister.setVisible(false);
             }
 
             if (!mAccount.getXmppConnection().getFeatures().register()) {
@@ -641,6 +643,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
             changePresence.setVisible(!mInitMode);
         } else {
             showBlocklist.setVisible(false);
+            showRegister.setVisible(false);
             showMoreInfo.setVisible(false);
             changePassword.setVisible(false);
             mamPrefs.setVisible(false);
@@ -798,6 +801,9 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
                 final Intent showBlocklistIntent = new Intent(this, BlocklistActivity.class);
                 showBlocklistIntent.putExtra(EXTRA_ACCOUNT, mAccount.getJid().toString());
                 startActivity(showBlocklistIntent);
+                break;
+            case R.id.action_register:
+                startActivity(new Intent(this, EditAccountActivity2.class));
                 break;
             case R.id.action_server_info_show_more:
                 changeMoreTableVisibility(!item.isChecked());
