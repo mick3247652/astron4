@@ -22,7 +22,7 @@ import com.ru.astron.xmpp.stanzas.MessagePacket;
 import rocks.xmpp.addr.Jid;
 
 public class MessageGenerator extends AbstractGenerator {
-	private static final String OMEMO_FALLBACK_MESSAGE = "I sent you an OMEMO encrypted message but your client doesn’t seem to support that. Find more information on https://conversations.im/omemo";
+	private static final String OMEMO_FALLBACK_MESSAGE = "I sent you an OMEMO encrypted message but your client doesn’t seem to support that.";
 	private static final String PGP_FALLBACK_MESSAGE = "I sent you a PGP encrypted message but your client doesn’t seem to support that.";
 
 	public MessageGenerator(XmppConnectionService service) {
