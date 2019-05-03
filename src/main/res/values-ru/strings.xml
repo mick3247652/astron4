@@ -687,6 +687,7 @@
     <string name="default_off">Выкл.</string>
   <string name="not_encrypted_for_this_device">Сообщение не было засекречено на вашем устройстве</string>
   <string name="omemo_decryption_failed">Ошибка секретности сообщения</string>
+  <string name="attach">Прикрепить</string>
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
