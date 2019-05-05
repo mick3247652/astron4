@@ -203,6 +203,7 @@ public class EnterPhoneNumberActivity extends XmppActivity implements QuickConve
         }
     }
 
+    //повторить верификацию через промежуток времени
     private void performRedirectToVerificationActivity(long timestamp) {
         if (redirectInProgress.compareAndSet(false, true)) {
             Intent intent = new Intent(this, VerifyActivity.class);
@@ -212,6 +213,7 @@ public class EnterPhoneNumberActivity extends XmppActivity implements QuickConve
         }
     }
 
+    //выполнить верификацию
     private void performRedirectToVerificationActivity() {
         if (redirectInProgress.compareAndSet(false, true)) {
             startActivity(new Intent(this, VerifyActivity.class));
