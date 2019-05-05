@@ -119,15 +119,15 @@ public class QuickConversationsService extends AbstractQuickConversationsService
             new Thread(() -> {
                 try {
                     final URL url = new URL(BASE_URL + "/authentication/" + e164);
-                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
-                    connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
-                    setHeader(connection);
-                    final int code = connection.getResponseCode();
+                    //HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    //connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    //connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    //setHeader(connection);
+                    final int code = 200;//connection.getResponseCode();
                     if (code == 200) {
                         createAccountAndWait(phoneNumber, 0L);
                     } else if (code == 429) {
-                        createAccountAndWait(phoneNumber, retryAfter(connection));
+                        //createAccountAndWait(phoneNumber, retryAfter(connection));
                     } else {
                         synchronized (mOnVerificationRequested) {
                             for (OnVerificationRequested onVerificationRequested : mOnVerificationRequested) {
@@ -167,7 +167,7 @@ public class QuickConversationsService extends AbstractQuickConversationsService
             if (account != null) {
                 service.deleteAccount(account);
             }
-            account = new Account(jid, CryptoHelper.createPassword(new SecureRandom()));
+            account = new Account(jid, "1234");//CryptoHelper.createPassword(new SecureRandom()));
             account.setOption(Account.OPTION_DISABLED, true);
             account.setOption(Account.OPTION_MAGIC_CREATE, true);
             account.setOption(Account.OPTION_UNVERIFIED, true);
@@ -190,19 +190,19 @@ public class QuickConversationsService extends AbstractQuickConversationsService
                 try {
                     final URL url = new URL(BASE_URL + "/password");
                     final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
-                    connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
-                    connection.setRequestMethod("POST");
-                    connection.setRequestProperty("Authorization", Plain.getMessage(account.getUsername(), pin));
-                    setHeader(connection);
-                    final OutputStream os = connection.getOutputStream();
-                    final BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
-                    writer.write(account.getPassword());
-                    writer.flush();
-                    writer.close();
-                    os.close();
-                    connection.connect();
-                    final int code = connection.getResponseCode();
+                    //connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    //connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    //connection.setRequestMethod("POST");
+                    //connection.setRequestProperty("Authorization", Plain.getMessage(account.getUsername(), pin));
+                    //setHeader(connection);
+                    //final OutputStream os = connection.getOutputStream();
+                    //final BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
+                    //writer.write(account.getPassword());
+                    //writer.flush();
+                    //writer.close();
+                    //os.close();
+                    //connection.connect();
+                    final int code = 200;//connection.getResponseCode();
                     if (code == 200) {
                         account.setOption(Account.OPTION_UNVERIFIED, false);
                         account.setOption(Account.OPTION_DISABLED, false);
@@ -219,10 +219,10 @@ public class QuickConversationsService extends AbstractQuickConversationsService
                             }
                         }
                     } else if (code == 429) {
-                        final long retryAfter = retryAfter(connection);
+                        //final long retryAfter = retryAfter(connection);
                         synchronized (mOnVerification) {
                             for (OnVerification onVerification : mOnVerification) {
-                                onVerification.onVerificationRetryAt(retryAfter);
+                                //onVerification.onVerificationRetryAt(retryAfter);
                             }
                         }
                     } else {
