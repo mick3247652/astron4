@@ -61,9 +61,8 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="backgroundImage" value="C:\Users\MaximusAVS\Desktop\Astron\иконка4.png" />
-                                      <entry key="foregroundImage" value="C:\Users\MaximusAVS\Desktop\Astron\иконка.png" />
+                                      <entry key="foregroundImage" value="C:\Users\MaximusAVS\Desktop\Astron\иконка1.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
