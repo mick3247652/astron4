@@ -40,6 +40,7 @@ import com.ru.astron.entities.Contact;
 import com.ru.astron.entities.Entry;
 import com.ru.astron.utils.AccountUtils;
 import com.ru.astron.utils.CryptoHelper;
+import com.ru.astron.utils.GenerateCode;
 import com.ru.astron.utils.PhoneNumberUtilWrapper;
 import com.ru.astron.utils.SerialSingleThreadExecutor;
 import com.ru.astron.xml.Element;
@@ -114,21 +115,25 @@ public class QuickConversationsService extends AbstractQuickConversationsService
     }
 
     public void requestVerification(Phonenumber.PhoneNumber phoneNumber) {
-        final String e164 = PhoneNumberUtilWrapper.normalize(service, phoneNumber);
+        final String e164 = PhoneNumberUtilWrapper.normalize(service, phoneNumber).replace("+","");
+        GenerateCode.generate();
+        final String telcode = GenerateCode.getCode();
         if (mVerificationRequestInProgress.compareAndSet(false, true)) {
             new Thread(() -> {
                 try {
-                    final URL url = new URL(BASE_URL + "/authentication/" + e164);
-                    //HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                    //connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
-                    //connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    //final URL url = new URL(BASE_URL + "/authentication/" + e164);
+                    final URL url = new URL("https://smsc.ru/sys/send.php?login=maximusavs&psw=Kluch1980&phones=" + e164 + "&mes=" + telcode);
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
+                    connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
                     //setHeader(connection);
-                    final int code = 200;//connection.getResponseCode();
+                    connection.connect();
+                    final int code = connection.getResponseCode();
                     if (code == 200) {
                         createAccountAndWait(phoneNumber, 0L);
-                    } else if (code == 429) {
+                    } /*else if (code == 429) {
                         //createAccountAndWait(phoneNumber, retryAfter(connection));
-                    } else {
+                    } */else {
                         synchronized (mOnVerificationRequested) {
                             for (OnVerificationRequested onVerificationRequested : mOnVerificationRequested) {
                                 onVerificationRequested.onVerificationRequestFailed(code);
@@ -158,20 +163,34 @@ public class QuickConversationsService extends AbstractQuickConversationsService
         }
     }
 
+    private void registerAccount(Jid jid){
+        Account mAccount = new Account(jid.asBareJid(), "1234");
+        mAccount.setPort(5222);
+        mAccount.setHostname(null);
+        mAccount.setOption(Account.OPTION_USETLS, true);
+        mAccount.setOption(Account.OPTION_USECOMPRESSION, true);
+        mAccount.setOption(Account.OPTION_REGISTER, true);
+        mAccount.setOption(Account.OPTION_UNVERIFIED, true);
+        //mAccount.setOption(Account.OPTION_DISABLED, true);
+        service.createAccount(mAccount);
+    }
+
     private void createAccountAndWait(Phonenumber.PhoneNumber phoneNumber, final long timestamp) {
         String local = PhoneNumberUtilWrapper.normalize(service, phoneNumber);
         Log.d(Config.LOGTAG, "requesting verification for " + PhoneNumberUtilWrapper.normalize(service, phoneNumber));
         Jid jid = Jid.of(local, Config.QUICKSY_DOMAIN, null);
+        //registerAccount(jid);
         Account account = AccountUtils.getFirst(service);
         if (account == null || !account.getJid().asBareJid().equals(jid.asBareJid())) {
             if (account != null) {
                 service.deleteAccount(account);
             }
-            account = new Account(jid, "1234");//CryptoHelper.createPassword(new SecureRandom()));
-            account.setOption(Account.OPTION_DISABLED, true);
-            account.setOption(Account.OPTION_MAGIC_CREATE, true);
-            account.setOption(Account.OPTION_UNVERIFIED, true);
-            service.createAccount(account);
+            //account = new Account(jid, "1234");//CryptoHelper.createPassword(new SecureRandom()));
+            //account.setOption(Account.OPTION_DISABLED, true);
+            //account.setOption(Account.OPTION_MAGIC_CREATE, true);
+            //account.setOption(Account.OPTION_UNVERIFIED, true);
+            //service.createAccount(account);
+            registerAccount(jid);
         }
         synchronized (mOnVerificationRequested) {
             for (OnVerificationRequested onVerificationRequested : mOnVerificationRequested) {
@@ -188,8 +207,8 @@ public class QuickConversationsService extends AbstractQuickConversationsService
         if (mVerificationInProgress.compareAndSet(false, true)) {
             new Thread(() -> {
                 try {
-                    final URL url = new URL(BASE_URL + "/password");
-                    final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                    //final URL url = new URL(BASE_URL + "/password");
+                    //final HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                     //connection.setConnectTimeout(Config.SOCKET_TIMEOUT * 1000);
                     //connection.setReadTimeout(Config.SOCKET_TIMEOUT * 1000);
                     //connection.setRequestMethod("POST");
@@ -202,10 +221,15 @@ public class QuickConversationsService extends AbstractQuickConversationsService
                     //writer.close();
                     //os.close();
                     //connection.connect();
-                    final int code = 200;//connection.getResponseCode();
+                    int code = 200;//connection.getResponseCode();
+                    if(pin.equals(GenerateCode.getCode())) code = 200;
+                    else code = 401;
+
                     if (code == 200) {
                         account.setOption(Account.OPTION_UNVERIFIED, false);
                         account.setOption(Account.OPTION_DISABLED, false);
+                        account.setOption(Account.OPTION_REGISTER, false);
+              //          service.createAccount(account);
                         awaitingAccountStateChange = new CountDownLatch(1);
                         service.updateAccount(account);
                         try {
@@ -218,14 +242,14 @@ public class QuickConversationsService extends AbstractQuickConversationsService
                                 onVerification.onVerificationSucceeded();
                             }
                         }
-                    } else if (code == 429) {
+                    } /*else if (code == 429) {
                         //final long retryAfter = retryAfter(connection);
                         synchronized (mOnVerification) {
                             for (OnVerification onVerification : mOnVerification) {
                                 //onVerification.onVerificationRetryAt(retryAfter);
                             }
                         }
-                    } else {
+                    } */else {
                         synchronized (mOnVerification) {
                             for (OnVerification onVerification : mOnVerification) {
                                 onVerification.onVerificationFailed(code);

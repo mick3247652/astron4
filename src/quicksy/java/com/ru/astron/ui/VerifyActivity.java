@@ -194,7 +194,7 @@ public class VerifyActivity extends XmppActivity implements ClipboardManager.OnP
         if (this.account == null) {
             return;
         }
-        if (!account.isOptionSet(Account.OPTION_UNVERIFIED) && !account.isOptionSet(Account.OPTION_DISABLED)) {
+        if (!account.isOptionSet(Account.OPTION_UNVERIFIED) /*&& !account.isOptionSet(Account.OPTION_DISABLED)*/) {
             runOnUiThread(this::performPostVerificationRedirect);
             return;
         }
