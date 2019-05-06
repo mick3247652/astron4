@@ -111,9 +111,9 @@ android {
 
         quicksy {
             dimension "mode"
-            versionName "2.5.0-beta.2"
-            applicationId = "im.quicksy.client"
-            resValue "string", "app_name", "Quicksy"
+            versionName "1.0.7"
+            applicationId = "com.ru.astron"
+            resValue "string", "app_name", "Astron"
             resValue "string", "applicationId", applicationId
             buildConfigField "String", "LOGTAG", "\"quicksy\""
         }
