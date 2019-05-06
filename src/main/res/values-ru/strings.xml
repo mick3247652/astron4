@@ -29,7 +29,7 @@
   <string name="unread_conversations">сообщений не прочитано</string>
   <string name="sending">отправка…</string>
   <string name="message_decrypting">Расшифровка сообщения. Подождите…</string>
-  <string name="pgp_message">Написать секретное сообщение</string>
+  <string name="pgp_message">Секретное сообщение</string>
   <string name="nick_in_use">Имя уже используется</string>
   <string name="invalid_muc_nick">Некорректный никнейм</string>
   <string name="admin">Администратор</string>
@@ -80,12 +80,12 @@
   <string name="delete_file_dialog">Удалить файл</string>
   <string name="delete_file_dialog_msg">Вы уверены, что хотите удалить этот файл?\n\n<b>Предупреждение:</b></string>
   <string name="choose_presence">Выберите устройство</string>
-  <string name="send_unencrypted_message">Написать сообщение</string>
+  <string name="send_unencrypted_message">Сообщение</string>
   <string name="send_message">Сообщение отправлено</string>
   <string name="send_message_to_x">Сообщение для %s</string>
-  <string name="send_omemo_message">Написать секретное сообщение</string>
-  <string name="send_omemo_x509_message">v\\Написать секретное сообщение</string>
-  <string name="send_pgp_message">Написать секретное сообщение</string>
+  <string name="send_omemo_message">Секретное сообщение</string>
+  <string name="send_omemo_x509_message">v\\Секретное сообщение</string>
+  <string name="send_pgp_message">Секретное сообщение</string>
   <string name="your_nick_has_been_changed">Ваш никнейм был изменён</string>
   <string name="send_unencrypted">Отправить открытоe</string>
   <string name="decryption_failed">Расшифровка не удалась. Вероятно, что у вас нет секретного ключа.</string>
@@ -463,7 +463,7 @@
   <string name="notify_paused">Уведомления приостановлены</string>
   <string name="always">Всегда</string>
   <string name="automatically">Автоматически</string>
-  <string name="battery_optimizations_enabled">Оптимизации энергопотребления разрешены</string>
+  <string name="battery_optimizations_enabled">Оптимизация энергопотребления включена</string>
   <string name="battery_optimizations_enabled_explained">Ваше устройство использует оптимизацию энергопотребления.\nРекомендуется его отключить.</string>
   <string name="battery_optimizations_enabled_dialog">Ваше устройство использует оптимизацию энергопотребления.\nСейчас появится предложение его отключить.</string>
   <string name="disable">Запретить</string>
@@ -688,6 +688,20 @@
   <string name="not_encrypted_for_this_device">Сообщение не было засекречено на вашем устройстве</string>
   <string name="omemo_decryption_failed">Ошибка секретности сообщения</string>
   <string name="attach">Прикрепить</string>
+    <string name="welcome_header_quicksy" translatable="false">Добро пожаловать в Астрон</string>
+    <string name="welcome_text_quicksy"><![CDATA[Приложение для обмена сообщениями. Мессенджер использует сквозное шифрование.<br><br>Вы указываете свой номер телефона и Астрон автоматически, на основе телефонных номеров в адресной книге, предложит вам возможные контакты.]]></string>
+    <string name="agree_and_continue">Далее</string>
+    <string name="verify_your_phone_number">Проверьте свой номер телефона</string>
+    <string name="enter_country_code_and_phone_number">Астрон отправит СМС-сообщение (может взиматься плата за доставку) для подтверждения вашего номера телефона. Введите код страны и номер телефона:</string>
+    <string name="phone_number">номер телефона</string>
+  <string name="we_will_be_verifying"><![CDATA[Проверьте номер телефона<br/><br/><b>%s</b><br/><br/>Правильно, или вы хотите изменить номер?]]></string>
+  <string name="back">назад</string>
+  <string name="we_have_sent_you_an_sms_to_x"><![CDATA[Мы отправили вам SMS на<b>%s</b>.]]></string>
+  <string name="please_enter_pin">Введите свой 6-значный pin-код.</string>
+  <string name="resend_sms">Отправить ещё СМС</string>
+  <string name="resend_sms_in">Отправить ещё СМС (%s)</string>
+  <string name="enter_your_name_instructions">Пожалуйста, введите свое имя, чтобы люди, у которых вас нет в своих адресных книгах, знали, кто вы.</string>
+
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>
