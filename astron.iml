@@ -279,6 +279,7 @@
     <orderEntry type="library" name="Gradle: com.android.support:support-media-compat:28.0.0@aar" level="project" />
     <orderEntry type="module" module-name="xmpp-addr" />
     <orderEntry type="module" module-name="xmpp-addr" />
+    <orderEntry type="module" module-name="xmpp-addr" />
     <orderEntry type="library" name="Gradle: io.michaelrocks:libphonenumber-android:8.10.1@aar" level="project" />
     <orderEntry type="module" module-name="xmpp-addr" />
   </component>
