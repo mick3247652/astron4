@@ -63,6 +63,7 @@ import com.ru.astron.ui.util.MenuDoubleTabUtil;
 import com.ru.astron.ui.util.PendingItem;
 import com.ru.astron.ui.util.SoftKeyboardUtils;
 import com.ru.astron.utils.CryptoHelper;
+import com.ru.astron.utils.ParsePhoneNumber;
 import com.ru.astron.utils.Resolver;
 import com.ru.astron.utils.SignupUtils;
 import com.ru.astron.utils.TorServiceUtils;
@@ -765,8 +766,19 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
             this.binding.cancelButton.setEnabled(false);
         }
         if (mUsernameMode) {
-            this.binding.accountJidLayout.setHint(getString(R.string.username_hint));
-            this.binding.accountJid.setHint(R.string.username_hint);
+            //this.binding.accountJidLayout.setHint(getString(R.string.username_hint));
+            //this.binding.accountJid.setHint(R.string.username_hint);
+            this.binding.accountJid.setHint("");
+            //this.binding.accountJid.setText(mAccount.getJid().getLocal());
+            this.binding.accountPhone.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
+            String name = mAccount.getDisplayName();
+            if(name.isEmpty()){
+                this.binding.accountJid.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
+                this.binding.accountPhone.setVisibility(View.GONE);
+            } else {
+                this.binding.accountJid.setText(name);
+                this.binding.accountPhone.setVisibility(View.VISIBLE);
+            }
         } else {
             final KnownHostsAdapter mKnownHostsAdapter = new KnownHostsAdapter(this,
                     R.layout.simple_list_item,
