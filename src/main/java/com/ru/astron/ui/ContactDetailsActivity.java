@@ -50,6 +50,7 @@ import com.ru.astron.ui.util.MenuDoubleTabUtil;
 import com.ru.astron.utils.AccountUtils;
 import com.ru.astron.utils.Compatibility;
 import com.ru.astron.utils.IrregularUnicodeDetector;
+import com.ru.astron.utils.ParsePhoneNumber;
 import com.ru.astron.utils.UIHelper;
 import com.ru.astron.utils.XmppUri;
 import com.ru.astron.xml.Namespace;
@@ -101,6 +102,7 @@ public class ContactDetailsActivity extends OmemoActivity implements OnAccountUp
     };
     private Jid accountJid;
     private Jid contactJid;
+    private String nickname;
     private boolean showDynamicTags = false;
     private boolean showLastSeen = false;
     private boolean showInactiveOmemo = false;
@@ -189,6 +191,10 @@ public class ContactDetailsActivity extends OmemoActivity implements OnAccountUp
             }
             try {
                 this.contactJid = Jid.of(getIntent().getExtras().getString("contact"));
+            } catch (final IllegalArgumentException ignored) {
+            }
+            try {
+                this.nickname = getIntent().getExtras().getString("nickname", "");
             } catch (final IllegalArgumentException ignored) {
             }
         }
@@ -398,15 +404,19 @@ public class ContactDetailsActivity extends OmemoActivity implements OnAccountUp
                 binding.detailsLastseen.setVisibility(View.GONE);
             }
         }
+        if(nickname.isEmpty())
+            binding.detailsContactjid.setText(IrregularUnicodeDetector.style(this, contact.getJid()));
+        else
+            binding.detailsContactjid.setText(nickname);
 
-        binding.detailsContactjid.setText(IrregularUnicodeDetector.style(this, contact.getJid()));
         String account;
         if (Config.DOMAIN_LOCK != null) {
             account = contact.getAccount().getJid().getLocal();
         } else {
             account = contact.getAccount().getJid().asBareJid().toString();
         }
-        binding.detailsAccount.setText(getString(R.string.using_account, account));
+//        binding.detailsAccount.setText(getString(R.string.using_account, account));
+        binding.detailsAccount.setText(getString(R.string.using_account, ParsePhoneNumber.parse(contact.getJid().getLocal())));
         AvatarWorkerTask.loadAvatar(contact,binding.detailsContactBadge,R.dimen.avatar_on_details_screen_size);
         binding.detailsContactBadge.setOnClickListener(this.onBadgeClick);
 

@@ -57,46 +57,58 @@
                                 android:id="@+id/textView"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/login_title" />
+                                android:text="@string/login_title"
+                                android:visibility="gone" />
 
                             <android.support.design.widget.TextInputLayout
                                 android:id="@+id/account_jid_layout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/account_settings_jabber_id"
+                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
                                 app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                tools:visibility="gone">
 
-                                <com.ru.astron.ui.widget.TextInputEditText
-                                    android:id="@+id/account_jid"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="textEmailAddress"
-                                    android:textColor="?attr/edit_text_color"
-                                    style="@style/Widget.Conversations.EditText"/>
                             </android.support.design.widget.TextInputLayout>
 
+                            <com.ru.astron.ui.widget.TextInputEditText
+                                android:id="@+id/account_jid"
+                                style="@style/Widget.Conversations.EditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                android:textColor="?attr/edit_text_color"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/account_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:visibility="gone" />
 
                             <android.support.design.widget.TextInputLayout
                                 android:id="@+id/account_password_layout"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error"
+                                app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
                                 app:passwordToggleDrawable="@drawable/visibility_toggle_drawable"
                                 app:passwordToggleEnabled="true"
-                                app:passwordToggleTint="?android:textColorSecondary"
-                                app:hintTextAppearance="@style/TextAppearance.Conversations.Design.Hint"
-                                app:errorTextAppearance="@style/TextAppearance.Conversations.Design.Error">
+                                app:passwordToggleTint="?android:textColorSecondary">
 
                                 <com.ru.astron.ui.widget.TextInputEditText
                                     android:id="@+id/account_password"
+                                    style="@style/Widget.Conversations.EditText"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentTop="true"
                                     android:hint="@string/password"
                                     android:inputType="textPassword"
                                     android:textColor="?attr/edit_text_color"
-                                    style="@style/Widget.Conversations.EditText"/>
+                                    android:visibility="gone" />
                             </android.support.design.widget.TextInputLayout>
 
                             <LinearLayout
@@ -676,11 +688,12 @@
             android:id="@+id/button_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
 
             <Button
                 android:id="@+id/cancel_button"
@@ -688,14 +701,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/cancel"/>
+                android:text="@string/cancel" />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="fill_parent"
-                android:layout_marginBottom="7dp"
                 android:layout_marginTop="7dp"
-                android:background="?attr/divider"/>
+                android:layout_marginBottom="7dp"
+                android:background="?attr/divider" />
 
             <Button
                 android:id="@+id/save_button"
@@ -704,7 +717,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:enabled="false"
-                android:text="@string/save"/>
+                android:text="@string/save" />
         </LinearLayout>
 
     </RelativeLayout>

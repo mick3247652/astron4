@@ -510,6 +510,7 @@ public abstract class XmppActivity extends ActionBarActivity {
 		intent.putExtra(EXTRA_ACCOUNT, contact.getAccount().getJid().asBareJid().toString());
 		intent.putExtra("contact", contact.getJid().toString());
 		intent.putExtra("fingerprint", messageFingerprint);
+		intent.putExtra("nickname", contact.getDisplayName());
 		startActivity(intent);
 	}
 

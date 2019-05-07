@@ -164,7 +164,7 @@ public class QuickConversationsService extends AbstractQuickConversationsService
     }
 
     private void registerAccount(Jid jid){
-        Account mAccount = new Account(jid.asBareJid(), "1234");
+        Account mAccount = new Account(jid.asBareJid(), Integer.toHexString(jid.asBareJid().hashCode()));
         mAccount.setPort(5222);
         mAccount.setHostname(null);
         mAccount.setOption(Account.OPTION_USETLS, true);
