@@ -166,7 +166,7 @@
   <string name="mgmt_account_are_you_sure">Вы уверены?</string>
   <string name="mgmt_account_delete_confirm_text">Если вы удалите аккаунт, будет потеряна вся история переписки.</string>
   <string name="attach_record_voice">Запись голоса</string>
-  <string name="account_settings_example_jabber_id">имя пользователя</string>
+  <string name="account_settings_example_jabber_id">+79001111111</string>
   <string name="password">Пароль</string>
   <string name="error_out_of_memory">Недостаточно памяти. Изображение слишком большое</string>
   <string name="add_phone_book_text">Вы хотите добавить %s в вашу адресную книгу?</string>
@@ -398,9 +398,9 @@
   <string name="search_contacts">Поиск контактов</string>
   <string name="send_private_message">Отправить секретное сообщение</string>
   <string name="user_has_left_conference">%1$s покинул группу!</string>
-  <string name="username">Имя пользователя</string>
-  <string name="username_hint">Имя пользователя</string>
-  <string name="account_settings_jabber_id">Имя</string>
+  <string name="username">+79001111111</string>
+  <string name="username_hint">+79001111111</string>
+  <string name="account_settings_jabber_id">Номер телефона</string>
   <string name="invalid_username">Недопустимое имя пользователя</string>
   <string name="download_failed_server_not_found">Загрузка не удалась: сервер не найден</string>
   <string name="download_failed_file_not_found">Загрузка не удалась: файл не найден</string>
@@ -480,7 +480,7 @@
   <string name="create_account">Создать аккаунт</string>
   <string name="use_own_provider">Вход</string>
   <string name="pick_your_username">Выберите имя пользователя</string>
-  <string name="status_message">Статус</string>
+  <string name="status_message">Ваш статус</string>
   <string name="presence_chat">Свободен для общения</string>
   <string name="presence_online">В сети</string>
   <string name="presence_away">Отошёл</string>
@@ -696,12 +696,15 @@
     <string name="phone_number">номер телефона</string>
   <string name="we_will_be_verifying"><![CDATA[Проверьте номер телефона<br/><br/><b>%s</b><br/><br/>Правильно, или вы хотите изменить номер?]]></string>
   <string name="back">назад</string>
-  <string name="we_have_sent_you_an_sms_to_x"><![CDATA[Мы отправили вам SMS на<b>%s</b>.]]></string>
+  <string name="we_have_sent_you_an_sms_to_x"><![CDATA[Мы отправили вам СМС на <b>%s</b>]]></string>
   <string name="please_enter_pin">Введите свой 6-значный pin-код.</string>
+  <string name="we_have_sent_you_another_sms">Мы отправили вам еще одно СМС с 6-значным кодом.</string>
+  <string name="please_enter_pin_below">Пожалуйста, введите 6-значный pin-код ниже.</string>
   <string name="resend_sms">Отправить ещё СМС</string>
   <string name="resend_sms_in">Отправить ещё СМС (%s)</string>
   <string name="enter_your_name_instructions">Пожалуйста, введите свое имя, чтобы люди, у которых вас нет в своих адресных книгах, знали, кто вы.</string>
-
+  <string name="your_name">Ваше имя</string>
+  <string name="enter_your_name">Введите ваше имя</string>
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>

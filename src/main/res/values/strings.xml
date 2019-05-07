@@ -173,9 +173,9 @@
     <string name="mgmt_account_are_you_sure">Are you sure?</string>
     <string name="mgmt_account_delete_confirm_text">If you delete your account, your entire chat history will be lost</string>
     <string name="attach_record_voice">Record voice</string>
-    <string name="account_settings_jabber_id">User name</string>
+    <string name="account_settings_jabber_id">Phone number</string>
     <string name="block_jabber_id">Block user name</string>
-    <string name="account_settings_example_jabber_id">user name</string>
+    <string name="account_settings_example_jabber_id">+79001111111</string>
     <string name="password">Password</string>
     <string name="invalid_jid">This is not a valid user name</string>
     <string name="error_out_of_memory">Out of memory. Image is too large</string>
@@ -445,8 +445,8 @@
     <string name="search_bookmarks">Search bookmarks</string>
     <string name="send_private_message">Send private message</string>
     <string name="user_has_left_conference">%1$s has left the group chat!</string>
-    <string name="username">User name</string>
-    <string name="username_hint">User name</string>
+    <string name="username">+79001111111</string>
+    <string name="username_hint">+79001111111</string>
     <string name="invalid_username">This is not a valid user name</string>
     <string name="download_failed_server_not_found">Download failed: Server not found</string>
     <string name="download_failed_file_not_found">Download failed: File not found</string>
