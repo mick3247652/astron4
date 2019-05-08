@@ -16,4 +16,10 @@
         android:id="@+id/create_contact"
         android:title="@string/add_contact"
         android:icon="@drawable/ic_person_white_48dp"/>
+
+    <item
+        android:id="@+id/create_contact_from_address_book"
+        android:title="@string/add_contact_from_address_book"
+        android:icon="@drawable/ic_person_white_48dp"/>
+
 </menu>
