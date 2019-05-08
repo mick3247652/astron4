@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="black">#ff000000</color>
+	<color name="black">#000000</color>
 	<color name="black87">#de000000</color>
 	<color name="black54">#8a000000</color>
 	<color name="black26">#42000000</color>
@@ -40,4 +40,6 @@
 	<color name="blue500">#ff2196f3</color>
 
 	<color name="separator">#898889</color>
+
+	<color name="contact_select">#C0D6FA</color>
 </resources>

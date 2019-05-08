@@ -569,14 +569,14 @@ public class DatabaseBackend extends SQLiteOpenHelper {
         }
         cursor.close();
 
-        // Contact table
+        // ContactPhone table
         cursor = db.rawQuery("select * from " + Contact.TABLENAME, new String[0]);
         while (cursor.moveToNext()) {
             String newJid;
             try {
                 newJid = Jid.of(cursor.getString(cursor.getColumnIndex(Contact.JID))).toString();
             } catch (IllegalArgumentException ignored) {
-                Log.e(Config.LOGTAG, "Failed to migrate Contact JID "
+                Log.e(Config.LOGTAG, "Failed to migrate ContactPhone JID "
                         + cursor.getString(cursor.getColumnIndex(Contact.JID))
                         + ": " + ignored + ". Skipping...");
                 continue;

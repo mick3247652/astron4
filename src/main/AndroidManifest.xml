@@ -56,7 +56,8 @@
         tools:ignore="AllowBackup"
         tools:replace="android:label"
         tools:targetApi="o">
-        <activity android:name=".ui.WebViewActivity"></activity>
+        <activity android:name=".ui.PhoneSelectActivity"/>
+        <activity android:name=".ui.WebViewActivity"/>
         <activity
             android:name=".ui.EditAccountActivity2"
             android:launchMode="singleTop"
@@ -182,7 +183,7 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity
+       <activity
             android:name=".ui.ShareViaAccountActivity"
             android:label="@string/title_activity_share_via_account"
             android:launchMode="singleTop" />
@@ -281,7 +282,7 @@
 
         <activity
             android:name=".ui.ShortcutActivity"
-            android:label="@string/contact">
+            android:label="@string/contactPhone">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
             </intent-filter>

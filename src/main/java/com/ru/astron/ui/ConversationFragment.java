@@ -1281,7 +1281,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
                 break;
             case R.id.encryption_choice_axolotl:
                 Log.d(Config.LOGTAG, AxolotlService.getLogprefix(conversation.getAccount())
-                        + "Enabled axolotl for Contact " + conversation.getContact().getJid());
+                        + "Enabled axolotl for ContactPhone " + conversation.getContact().getJid());
                 updated = conversation.setNextEncryption(Message.ENCRYPTION_AXOLOTL);
                 item.setChecked(true);
                 break;

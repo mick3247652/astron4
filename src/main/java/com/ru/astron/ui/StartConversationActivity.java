@@ -85,6 +85,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 
 	private final int REQUEST_SYNC_CONTACTS = 0x28cf;
 	private final int REQUEST_CREATE_CONFERENCE = 0x39da;
+	private final int REQUEST_CODE_PHONE_SELECT = 0x3777;
 	private final PendingItem<Intent> pendingViewIntent = new PendingItem<>();
 	private final PendingItem<String> mInitialSearchValue = new PendingItem<>();
 	private final AtomicBoolean oneShotKeyboardSuppress = new AtomicBoolean();
@@ -325,6 +326,9 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 				case R.id.create_contact:
 					showCreateContactDialog(prefilled,null);
 					break;
+				case R.id.create_contact_from_address_book:
+					showCreateContactFromAddressBook(prefilled,null);
+					break;
 			}
 			return false;
 		});
@@ -474,6 +478,45 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 		});
 		builder.create().show();
 
+	}
+
+	private void showCreateContactFromAddressBook(final String prefilledJid, final Invite invite){
+		Intent i = new Intent(this, PhoneSelectActivity.class);
+		startActivityForResult(i,REQUEST_CODE_PHONE_SELECT);
+	}
+
+	private boolean addPhoneContact(String cJid, String aJid){
+		Jid accountJid = Jid.of(aJid, Config.DOMAIN_LOCK, null);
+		Jid contactJid = Jid.of(cJid);
+		final Invite invite = null;
+
+		if (!xmppConnectionServiceBound) {
+			return false;
+		}
+
+		final Account account = xmppConnectionService.findAccountByJid(accountJid);
+		if (account == null) {
+			return true;
+		}
+
+		final Contact contact = account.getRoster().getContact(contactJid);
+		if (invite != null && invite.getName() != null) {
+			contact.setServerName(invite.getName());
+		}
+		if (contact.isSelf()) {
+			switchToConversation(contact);
+			return true;
+		} else if (contact.showInRoster()) {
+			//throw new EnterJidDialog.JidError(getString(R.string.contact_already_exists));
+		} else {
+			xmppConnectionService.createContact(contact, true);
+			if (invite != null && invite.hasFingerprints()) {
+				xmppConnectionService.verifyFingerprints(contact, invite.getFingerprints());
+			}
+			switchToConversationDoNotAppend(contact, invite == null ? null : invite.getBody());
+			return true;
+		}
+		return true;
 	}
 
 	@SuppressLint("InflateParams")
@@ -709,7 +752,16 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 							mToast.show();
 						}
 					}
-				}
+				} else if(requestCode == REQUEST_CODE_PHONE_SELECT) {
+                    if(intent != null){
+                        String contactJid = intent.getStringExtra("phone") + "@astron.online";
+                        if(mActivatedAccounts.size() >= 1) {
+                            String accountJid = mActivatedAccounts.get(0);
+                            Log.v("PHONE",accountJid);
+                            addPhoneContact(contactJid, accountJid);
+                        }
+                    }
+                }
 			} else {
 				this.mPostponedActivityResult = new Pair<>(requestCode, intent);
 			}
