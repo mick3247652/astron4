@@ -20,11 +20,13 @@ import com.ru.astron.adapters.PhoneSelectRecyclerAdapter
 import com.ru.astron.models.ContactPhone
 import android.content.Intent
 import android.app.Activity
-
+import android.view.Menu
+import android.provider.ContactsContract
 
 class PhoneSelectActivity : AppCompatActivity() {
     private lateinit var model: PhoneSelectViewModel
     private val REQUEST_PERMISION_CODE = 6688
+    private val REQUEST_ADD_CONTACT_CODE = 7788
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +53,7 @@ class PhoneSelectActivity : AppCompatActivity() {
         //можно читать
         Log.v("Read contacts:","Разрешение на чтение контактов предоставлено пользователем");
         reloadAddressBook()
+        configureRecycler()
     }
 
     private fun reloadAddressBook(){
@@ -61,8 +64,6 @@ class PhoneSelectActivity : AppCompatActivity() {
         if(cursor.getCount() == 0) {finish();return;}//Нету контактов
         model.reloadAddressBook(cursor)
         cursor.close()
-
-        configureRecycler()
     }
 
     private fun onItemClick(phone: String?){
@@ -91,8 +92,24 @@ class PhoneSelectActivity : AppCompatActivity() {
                 finish()
                 return true
             }
+            R.id.action_add_contact -> {
+                val intent = Intent(Intent.ACTION_INSERT)
+                intent.type = ContactsContract.Contacts.CONTENT_TYPE
+                //startActivity(intent)
+                startActivityForResult(intent,REQUEST_ADD_CONTACT_CODE)
+                //finish()
+            }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_ADD_CONTACT_CODE) {
+            reloadAddressBook()
+            (recycler.adapter as PhoneSelectRecyclerAdapter).setItems(model.contactList)
+        }
+
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
@@ -104,5 +121,10 @@ class PhoneSelectActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.phone_select, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
 }
