@@ -50,3 +50,15 @@ class ContactPhone {
         val PHOTO_FULL_URI = ContactsContract.Contacts.PHOTO_URI
     }
 }
+
+object ConvertPhoneNumber {
+    fun convert(number: String?): String? {
+        number?: return null
+        var ret = number
+        //удалить все не цифровые символы
+        ret = number.replace("[^0-9+]+".toRegex(), "")
+        ret = ret.replace("^8".toRegex(), "+7")
+
+        return ret
+    }
+}

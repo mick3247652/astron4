@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.ru.astron.Config;
+import com.ru.astron.models.ConvertPhoneNumber;
+
 import rocks.xmpp.addr.Jid;
 
 public class JabberIdContact extends AbstractPhoneContact {
@@ -22,7 +24,9 @@ public class JabberIdContact extends AbstractPhoneContact {
     private JabberIdContact(Cursor cursor) throws IllegalArgumentException {
         super(cursor);
         try {
-            this.jid = Jid.of(cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Im.DATA)));
+            String number = ConvertPhoneNumber.INSTANCE.convert(cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)));
+            //this.jid = Jid.of(cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Im.DATA)));
+            this.jid = Jid.of(number + "@" + Config.DOMAIN_LOCK);
         } catch (IllegalArgumentException | NullPointerException e) {
             throw new IllegalArgumentException(e);
         }
@@ -40,7 +44,8 @@ public class JabberIdContact extends AbstractPhoneContact {
                 ContactsContract.Data.DISPLAY_NAME,
                 ContactsContract.Data.PHOTO_URI,
                 ContactsContract.Data.LOOKUP_KEY,
-                ContactsContract.CommonDataKinds.Im.DATA};
+                ContactsContract.CommonDataKinds.Im.DATA,
+                ContactsContract.CommonDataKinds.Phone.NUMBER};
 
         final String SELECTION = "(" + ContactsContract.Data.MIMETYPE + "=\""
                 + ContactsContract.CommonDataKinds.Im.CONTENT_ITEM_TYPE
@@ -49,7 +54,8 @@ public class JabberIdContact extends AbstractPhoneContact {
                 + "\")";
         final Cursor cursor;
         try {
-            cursor = context.getContentResolver().query(ContactsContract.Data.CONTENT_URI, PROJECTION, SELECTION, null, null);
+            //cursor = context.getContentResolver().query(ContactsContract.Data.CONTENT_URI, PROJECTION, SELECTION, null, null);
+            cursor = context.getContentResolver().query(ContactsContract.Data.CONTENT_URI, PROJECTION, null, null, null);
         } catch (Exception e) {
             return Collections.emptyMap();
         }
