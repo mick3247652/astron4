@@ -473,10 +473,10 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
             return false;
         }
         switch (item.getItemId()) {
-            case R.id.action_donate:
-                Intent intent = new Intent(this, WebViewActivity.class);
-                startActivity(intent);
-                return true;
+            //case R.id.action_donate:
+                //Intent intent = new Intent(this, WebViewActivity.class);
+                //startActivity(intent);
+            //    return true;
 
             case android.R.id.home:
                 FragmentManager fm = getFragmentManager();

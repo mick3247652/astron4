@@ -22,11 +22,12 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
-    <item
+    <!--<item
         android:id="@+id/action_donate"
         android:orderInCategory="110"
         android:title="@string/action_donate"
-        app:showAsAction="never"/>
+        android:visible="false"
+        app:showAsAction="never" />-->
 
 
 </menu>
