@@ -692,7 +692,7 @@
     <string name="error_trustkey_device_list">Unable to fetch device list</string>
     <string name="error_trustkey_bundle">Unable to fetch device bundles</string>
     <string name="error_trustkey_hint_mutual">Hint: In some cases this can be fixed by adding each other your contactPhone lists.</string>
-    <string name="disable_encryption_message">Are you sure you want to disable Secure encryption for this chat?\nThis will allow administrator to read your messages, but it might be the only way to communicate with people using outdated clients.</string>
+    <string name="disable_encryption_message">Are you sure you want to disable Secure encryption for this chat?</string>
     <string name="disable_now">Disable now</string>
     <string name="draft">Draft:</string>
     <string name="pref_omemo_setting">Secure</string>

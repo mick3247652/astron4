@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.leinardi.android:speed-dial:2.0.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4376e53f504585aef641ea4832200d10/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/903601cee150c787627e6e7dce77f3c1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4376e53f504585aef641ea4832200d10/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4376e53f504585aef641ea4832200d10/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/903601cee150c787627e6e7dce77f3c1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/903601cee150c787627e6e7dce77f3c1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

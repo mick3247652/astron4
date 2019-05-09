@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-emoji-appcompat:28.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a6d583f095c3d1204c3e446d45482ba2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a6d583f095c3d1204c3e446d45482ba2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f390d34b022d51edb9eb1da6bf15df9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f390d34b022d51edb9eb1da6bf15df9/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

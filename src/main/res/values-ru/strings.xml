@@ -466,7 +466,7 @@
   <string name="battery_optimizations_enabled">Оптимизация энергопотребления включена</string>
   <string name="battery_optimizations_enabled_explained">Ваше устройство использует оптимизацию энергопотребления.\nРекомендуется его отключить.</string>
   <string name="battery_optimizations_enabled_dialog">Ваше устройство использует оптимизацию энергопотребления.\nСейчас появится предложение его отключить.</string>
-  <string name="disable">Запретить</string>
+  <string name="disable">Отключить</string>
   <string name="selection_too_large">Выбранная область слишком большая</string>
   <string name="no_accounts">(Нет активных аккаунтов)</string>
   <string name="this_field_is_required">Незаполненное поле</string>
@@ -543,7 +543,7 @@
   <string name="share_as_http">Поделится ссылкой</string>
   <string name="pref_blind_trust_before_verification">Подтверждение секретных ключей</string>
   <string name="pref_blind_trust_before_verification_summary">Автоматически доверять всем новым устройствам контактов, которые не были подтверждены ранее, и запрашивать ручное подтверждение каждый раз когда подтверждённый контакт добавляет новое устройство</string>
-  <string name="blindly_trusted_omemo_keys">Секретные ключи</string>
+  <string name="blindly_trusted_omemo_keys">Секретные ключи получены</string>
   <string name="not_trusted">Недоверенный секретный ключ</string>
   <string name="invalid_barcode">Некорректный 2D штрихкод</string>
   <string name="pref_clean_cache_summary">Очистить кэш (используется камерой)</string>
@@ -626,7 +626,7 @@
   <string name="edit_status_message_title">Редактировать статус</string>
   <string name="edit_status_message">Редактировать статус</string>
   <string name="disable_encryption">Отключить шифрование</string>
-  <string name="error_trustkey_device_list">Не удалось загрузить список устройств</string>
+  <string name="error_trustkey_device_list">Не удалось определить контакт</string>
   <string name="disable_now">Отключить сейчас</string>
   <string name="draft">Черновик:</string>
   <string name="pref_omemo_setting">Секретность</string>
@@ -705,6 +705,10 @@
   <string name="enter_your_name_instructions">Пожалуйста, введите свое имя, чтобы люди, у которых вас нет в своих адресных книгах, знали, кто вы.</string>
   <string name="your_name">Ваше имя</string>
   <string name="enter_your_name">Введите ваше имя</string>
+    <string name="error_trustkey_hint_mutual">Подсказка: в некоторых случаях это может быть исправлено путем добавления контакта</string>
+    <string name="disable_encryption_message">Вы уверены, что хотите отключить шифрование для этого чата?</string>
+    <string name="search_bookmarks">Поиск закладок</string>
+
 
   <string name="use_own_provider2">Регистрация</string>
   <string name="login_title">Вход</string>

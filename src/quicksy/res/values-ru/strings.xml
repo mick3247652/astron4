@@ -15,7 +15,7 @@
     <string name="data_saver_enabled_explained">Your operating system is restricting Астрон from accessing the Internet when in background. To receive notifications of new messages you should allow Астрон unrestricted access when Data saver is on.\nАстрон will still make an effort to save data when possible.</string>
     <string name="device_does_not_support_data_saver">Your device does not support disabling Data saver for Астрон.</string>
     <string name="huawei_protected_apps_summary">To keep receiving notifications, even when the screen is turned off, you need to add Астрон to the list of protected apps.</string>
-    <string name="error_trustkey_general">Астрон is unable to send encrypted messages to %1$s. This may be due to your contactPhone using an outdated server or client that can not handle Секретно.</string>
+    <string name="error_trustkey_general">Не удается отправить секретное сообщение %1$s. Это может быть связано с тем, что контакт не использует режим Секретно.</string>
     <string name="no_microphone_permission">Астрон needs access to the microphone</string>
     <string name="foreground_service_channel_description">This notification category is used to display a permanent notification indicating that Астрон is running.</string>
     <string name="set_profile_picture">Астрон profile picture</string>
