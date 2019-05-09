@@ -721,4 +721,5 @@
   <string name="select_contact_from_address_book_title">Выберите контакт из адресной книги</string>
   <string name="press_to_add_contact">Нажмите еще раз для добавления контакта</string>
 
+  <string name="action_add_contact">Добавить контакт</string>
 </resources>
