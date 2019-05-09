@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: me.drakeet.support:toastcompat:1.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e87c717402676747128c07ba70a18a05/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e87c717402676747128c07ba70a18a05/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3c781a2734c3d763af34ab011bc14314/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3c781a2734c3d763af34ab011bc14314/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
