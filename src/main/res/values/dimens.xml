@@ -35,4 +35,6 @@
 	<dimen name="background_image_opacity">0.12</dimen>
 
 	<dimen name="sd_label_max_width">256dp</dimen>
+
+	<dimen name="nav_avatar_size">80dp</dimen>
 </resources>

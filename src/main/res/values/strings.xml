@@ -870,4 +870,8 @@
     <string name="select_contact_from_address_book_title">Select contactPhone from address book</string>
     <string name="press_to_add_contact">Click to add contactPhone</string>
     <string name="action_add_contact">Add contact</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
