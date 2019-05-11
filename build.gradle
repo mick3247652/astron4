@@ -98,8 +98,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 17
-        versionName "1.0.9"
+        versionCode 21
+        versionName "1.1.0"
         archivesBaseName += "-$versionName"
         applicationId "com.ru.astron"
         resValue "string", "applicationId", applicationId
@@ -129,7 +129,7 @@ android {
 
         quicksy {
             dimension "mode"
-            versionName "1.0.7"
+            versionName "1.1.0"
             applicationId = "com.ru.astron"
             resValue "string", "app_name", "Astron"
             resValue "string", "applicationId", applicationId
