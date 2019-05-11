@@ -42,4 +42,6 @@
 	<color name="separator">#898889</color>
 
 	<color name="contact_select">#C0D6FA</color>
+
+	<color name="nav_header">#527da3</color>
 </resources>
