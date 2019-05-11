@@ -33,7 +33,7 @@ configurations {
 }
 configurations {
     cleanedAnnotations
-    compile.exclude group: 'org.jetbrains' , module:'annotations'
+    compile.exclude group: 'org.jetbrains', module: 'annotations'
 }
 ext {
     supportLibVersion = '28.0.0'
@@ -82,6 +82,9 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    implementation 'com.prof.rssparser:rssparser:2.0.3'
+    implementation "joda-time:joda-time:2.3"
 }
 
 ext {
@@ -110,8 +113,9 @@ android {
 
     dexOptions {
         // Skip pre-dexing when running on Travis CI or when disabled via -Dpre-dex=false.
-        preDexLibraries = preDexEnabled && !travisBuild
-        jumboMode true
+        //preDexLibraries = preDexEnabled && !travisBuild
+        //jumboMode true
+        javaMaxHeapSize "4g"
     }
 
     compileOptions {
@@ -248,4 +252,5 @@ android {
         exclude 'META-INF/BCKEY.DSA'
         exclude 'META-INF/BCKEY.SF'
     }
+
 }

@@ -486,6 +486,9 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
                 case R.id.create_contact_from_address_book:
                     showCreateContactFromAddressBook(null);
                     break;
+                case R.id.news:
+                    startActivity(new Intent(this, NewsActivity.class));
+                    break;
             }
 
 

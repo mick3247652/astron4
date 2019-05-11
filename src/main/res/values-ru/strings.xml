@@ -722,4 +722,6 @@
   <string name="press_to_add_contact">Нажмите еще раз для добавления контакта</string>
 
   <string name="action_add_contact">Добавить контакт</string>
+
+  <string name="news_title">Новости</string>
 </resources>

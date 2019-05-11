@@ -1015,6 +1015,7 @@ public abstract class XmppActivity extends ActionBarActivity {
 	}
 
 	public static XmppActivity find(@NonNull final View view) {
+	    if(view == null) return null;
 		Context context = view.getContext();
 		while (context instanceof ContextWrapper) {
 			if (context instanceof XmppActivity) {
