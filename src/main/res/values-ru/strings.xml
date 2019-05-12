@@ -2,8 +2,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
   <string name="action_settings">Настройки</string>
   <string name="action_add">Новый чат</string>
-  <string name="action_accounts">Управление аккаунтами</string>
-  <string name="action_account">Управление аккаунтом</string>
+  <string name="action_accounts">Аккаунты</string>
+  <string name="action_account">Аккаунт</string>
   <string name="action_contact_details">Сведения о контакте</string>
   <string name="action_muc_details">Подробности группы</string>
   <string name="action_secure">Секретный чат</string>
@@ -284,8 +284,8 @@
   <string name="url_copied_to_clipboard">Ссылка скопирована в буфер обмена</string>
   <string name="scan_qr_code">Сканировать 2D штрихкод</string>
   <string name="show_qr_code">Показать 2D штрихкод</string>
-  <string name="show_block_list">Показать чёрный список</string>
-  <string name="account_details">Сведения об учётной записи</string>
+  <string name="show_block_list">Чёрный список</string>
+  <string name="account_details">Аккаунт</string>
   <string name="confirm">Подтвердить</string>
   <string name="try_again">Повторить</string>
   <string name="pref_keep_foreground_service">Оставить службу на переднем плане</string>
@@ -645,7 +645,7 @@
   <string name="bookmarks">Закладки</string>
   <string name="create_private_group_chat">Создать группу</string>
   <string name="create_public_channel">Создать канал</string>
-  <string name="join_public_channel">Присоединиться к каналу</string>
+  <string name="join_public_channel">Посетить канал</string>
   <string name="action_end_conversation">Закрыть этот чат</string>
   <string name="pref_omemo_setting_summary_default_on">Секретные ключи будут использоваться по умолчанию для новых чатов.</string>
   <string name="pref_font_size_summary">Выбрать размер шрифта</string>
@@ -717,8 +717,8 @@
   <string name="action_donate">Донат на разработку</string>
   <string name="title_action_donate">Донат на разработку</string>
 
-  <string name="add_contact_from_address_book">Добавить контакт из адресной книги</string>
-  <string name="select_contact_from_address_book_title">Выберите контакт из адресной книги</string>
+  <string name="add_contact_from_address_book">Адресная книга</string>
+  <string name="select_contact_from_address_book_title">Выберите контакт</string>
   <string name="press_to_add_contact">Нажмите еще раз для добавления контакта</string>
 
   <string name="action_add_contact">Добавить контакт</string>
