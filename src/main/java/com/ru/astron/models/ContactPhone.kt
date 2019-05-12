@@ -1,6 +1,7 @@
 package com.ru.astron.models
 
 import android.provider.ContactsContract
+import com.ru.astron.utils.ParsePhoneNumber
 
 
 class ContactPhone {
@@ -34,9 +35,9 @@ class ContactPhone {
         var ret = number
         //удалить все не цифровые символы
         ret = number.replace("[^0-9+]+".toRegex(), "")
-        ret = ret.replace("^8".toRegex(), "+7")
+        //ret = ret.replace("^8".toRegex(), "+7")
 
-        return ret
+        return ParsePhoneNumber.parseE164(ret)
     }
 
     companion object {
@@ -57,8 +58,8 @@ object ConvertPhoneNumber {
         var ret = number
         //удалить все не цифровые символы
         ret = number.replace("[^0-9+]+".toRegex(), "")
-        ret = ret.replace("^8".toRegex(), "+7")
+        //ret = ret.replace("^8".toRegex(), "+7")
 
-        return ret
+        return ParsePhoneNumber.parseE164(ret)
     }
 }

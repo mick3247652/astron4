@@ -173,6 +173,9 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
     private Toast messageLoaderToast;
     private ConversationsActivity activity;
     private boolean reInitRequiredOnStart = true;
+    public boolean hideInput = false;
+
+
     private OnClickListener clickToMuc = new OnClickListener() {
 
         @Override
@@ -1884,6 +1887,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
     }
 
     public void reInit(Conversation conversation, Bundle extras) {
+
         QuickLoader.set(conversation.getUuid());
         this.saveMessageDraftStopAudioPlayer();
         this.clearPending();
@@ -1901,6 +1905,18 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 
     private void reInit(Conversation conversation) {
         reInit(conversation, false);
+    }
+
+    private boolean getHideTextInput(){
+        boolean multi = conversation.getMode() == Conversational.MODE_MULTI;
+        boolean channel = !conversation.getMucOptions().isPrivateAndNonAnonymous();
+        MucOptions.Role role = conversation.getMucOptions().getSelf().getRole();
+
+        boolean user = (role == MucOptions.Role.NONE) || (role == MucOptions.Role.PARTICIPANT) || (role == MucOptions.Role.VISITOR);
+
+        if(!multi) return false;
+        if(!channel) return false;
+        return user;
     }
 
     private boolean reInit(final Conversation conversation, final boolean hasExtras) {
@@ -1929,6 +1945,9 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
         setupIme();
 
         final boolean scrolledToBottomAndNoPending = this.scrolledToBottom() && pendingScrollState.peek() == null;
+
+        if(getHideTextInput()) binding.textsend.setVisibility(View.GONE);
+        else binding.textsend.setVisibility(View.VISIBLE);
 
         this.binding.textSendButton.setContentDescription(activity.getString(R.string.send_message_to_x, conversation.getName()));
         this.binding.textinput.setKeyboardListener(null);
@@ -2255,11 +2274,13 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 
     private void updateEditablity() {
         boolean canWrite = this.conversation.getMode() == Conversation.MODE_SINGLE || this.conversation.getMucOptions().participating() || this.conversation.getNextCounterpart() != null;
-        this.binding.textinput.setFocusable(canWrite);
-        this.binding.textinput.setFocusableInTouchMode(canWrite);
-        this.binding.textSendButton.setEnabled(canWrite);
-        this.binding.textinput.setCursorVisible(canWrite);
-        this.binding.textinput.setEnabled(canWrite);
+        if(!getHideTextInput()){
+            this.binding.textinput.setFocusable(canWrite);
+            this.binding.textinput.setFocusableInTouchMode(canWrite);
+            this.binding.textSendButton.setEnabled(canWrite);
+            this.binding.textinput.setCursorVisible(canWrite);
+            this.binding.textinput.setEnabled(canWrite);
+        }
     }
 
     public void updateSendButton() {

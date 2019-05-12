@@ -31,7 +31,7 @@ class PhoneSelectRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
         val phone = v.findViewById<TextView>(R.id.phone)
         name.text = items[position].name
         var phoneValue = items[position].phone ?: ""
-        if (phoneValue.length == 12) phoneValue = ParsePhoneNumber.parse(phoneValue)
+        phoneValue = ParsePhoneNumber.parse(phoneValue)
         phone.text = phoneValue
         try {
             if (items[position].isNoEmptyPhoto)

@@ -649,6 +649,10 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
     }
 
     private void openConversation(Conversation conversation, Bundle extras) {
+        openConversation(conversation, extras, false);
+    }
+
+    private void openConversation(Conversation conversation, Bundle extras, boolean hideInput) {
         ConversationFragment conversationFragment = (ConversationFragment) getFragmentManager().findFragmentById(R.id.secondary_fragment);
         final boolean mainNeedsRefresh;
         if (conversationFragment == null) {
@@ -672,6 +676,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
         } else {
             mainNeedsRefresh = true;
         }
+        conversationFragment.hideInput = hideInput;
         conversationFragment.reInit(conversation, extras == null ? new Bundle() : extras);
         if (mainNeedsRefresh) {
             refreshFragment(R.id.main_fragment);
@@ -876,9 +881,14 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
     }
 
     @Override
-    public void switchToConversation(Conversation conversation) {
+    public void switchToConversation(Conversation conversation){
+        switchToConversation(conversation, false);
+    }
+
+
+    public void switchToConversation(Conversation conversation, boolean hideInput) {
         Log.d(Config.LOGTAG, "override");
-        openConversation(conversation, null);
+        openConversation(conversation, null,hideInput);
     }
 
     protected void switchToConversation(Contact contact) {
@@ -1009,7 +1019,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
             final Conversation conversation = xmppConnectionService
                     .findOrCreateConversation(account, conferenceJid, true, true, true);
             dialog.dismiss();
-            switchToConversation(conversation);
+            switchToConversation(conversation, true);
         }
     }
     private Pair<Integer, Intent> mPostponedActivityResult2;
