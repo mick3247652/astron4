@@ -43,6 +43,10 @@ class NewsActivity : AppCompatActivity() {
         ActionBarActivity.configureActionBar(supportActionBar)
         title = resources.getString(R.string.news_title)
 
+        intent?.let{
+            val t = it.getStringExtra("title")
+            if(t != null) title = t
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

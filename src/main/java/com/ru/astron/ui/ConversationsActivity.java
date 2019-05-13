@@ -489,6 +489,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                 case R.id.channels:
                     Intent intent = new Intent(this, NewsActivity.class);
                     intent.putExtra("url","http://channel.astron.world/feed/");
+                    intent.putExtra("title",getResources().getString(R.string.channels_title));
                     startActivityForResult(intent, ConfigRequests.REQUEST_ADD_CHANNEL);
                     break;
             }
