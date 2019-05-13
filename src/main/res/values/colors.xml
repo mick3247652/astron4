@@ -44,4 +44,19 @@
 	<color name="contact_select">#C0D6FA</color>
 
 	<color name="nav_header">#527da3</color>
+
+	<color name="message_color1">#000000</color>
+	<color name="message_color2">#000000</color>
+	<color name="message_color3">#000000</color>
+	<color name="message_color4">#000000</color>
+	<color name="message_color5">#000000</color>
+	<color name="message_color6">#000000</color>
+	<color name="message_color7">#000000</color>
+	<color name="message_color8">#ff82B1FF</color> <!-- desaturated by 15 -->
+	<color name="message_color9">#000000</color>
+	<color name="message_color10">#000000</color>
+
+
+
+
 </resources>

@@ -164,9 +164,9 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 
 	private int getMessageTextColor(boolean onDark, boolean primary) {
 		if (onDark) {
-			return ContextCompat.getColor(activity, primary ? R.color.white : R.color.white70);
+			return ContextCompat.getColor(activity, primary ? R.color.message_color1 : R.color.message_color2);
 		} else {
-			return ContextCompat.getColor(activity, primary ? R.color.black87 : R.color.black54);
+			return ContextCompat.getColor(activity, primary ? R.color.message_color3 : R.color.message_color4);
 		}
 	}
 
@@ -324,9 +324,9 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 		viewHolder.messageBody.setText(text);
 		if (darkBackground) {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_Secondary_OnDark);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_InfoColor);
 		} else {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_Secondary);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_InfoColor);
 		}
 		viewHolder.messageBody.setTextIsSelectable(false);
 	}
@@ -337,9 +337,9 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.image.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 		if (darkBackground) {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_Emoji_OnDark);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_MessageColor);
 		} else {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_Emoji);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_MessageColor);
 		}
 		Spannable span = new SpannableString(body);
 		float size = Emoticons.isEmoji(body) ? 3.0f : 2.0f;
@@ -358,7 +358,7 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 			body.setSpan(new DividerSpan(false), end, end + 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 		}
 		int color = darkBackground ? this.getMessageTextColor(darkBackground, false)
-				: ContextCompat.getColor(activity, R.color.green700_desaturated);
+				: ContextCompat.getColor(activity, R.color.message_color8);
 		DisplayMetrics metrics = getContext().getResources().getDisplayMetrics();
 		body.setSpan(new QuoteSpan(color, metrics), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 	}
@@ -422,12 +422,12 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		viewHolder.messageBody.setVisibility(View.VISIBLE);
 
 		if (darkBackground) {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_OnDark);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_MessageColor);
 		} else {
-			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1);
+			viewHolder.messageBody.setTextAppearance(getContext(), R.style.TextAppearance_Conversations_Body1_MessageColor);
 		}
 		viewHolder.messageBody.setHighlightColor(ContextCompat.getColor(activity, darkBackground
-				? (type == SENT || !mUseGreenBackground ? R.color.black26 : R.color.grey800) : R.color.grey500));
+				? (type == SENT || !mUseGreenBackground ? R.color.message_color5 : R.color.message_color6) : R.color.message_color7));
 		viewHolder.messageBody.setTypeface(null, Typeface.NORMAL);
 
 		if (message.getBody() != null) {
