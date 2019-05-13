@@ -87,7 +87,7 @@ dependencies {
     implementation "joda-time:joda-time:2.3"
 
     implementation 'io.michaelrocks:libphonenumber-android:8.10.7'
-
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
 
 ext {
