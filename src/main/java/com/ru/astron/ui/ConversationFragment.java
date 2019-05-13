@@ -450,7 +450,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
     private boolean firstWord = false;
     private Message mPendingDownloadableMessage;
 
-    private static ConversationFragment findConversationFragment(Activity activity) {
+    public static ConversationFragment findConversationFragment(Activity activity) {
         Fragment fragment = activity.getFragmentManager().findFragmentById(R.id.main_fragment);
         if (fragment != null && fragment instanceof ConversationFragment) {
             return (ConversationFragment) fragment;
@@ -1909,7 +1909,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
         reInit(conversation, false);
     }
 
-    private boolean getHideTextInput(){
+    public boolean getHideTextInput(){
         boolean multi = conversation.getMode() == Conversational.MODE_MULTI;
         boolean channel = !conversation.getMucOptions().isPrivateAndNonAnonymous();
         MucOptions.Role role = conversation.getMucOptions().getSelf().getRole();

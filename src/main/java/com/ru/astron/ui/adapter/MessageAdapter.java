@@ -70,6 +70,7 @@ import com.ru.astron.ui.widget.ListSelectionManager;
 import com.ru.astron.utils.*;
 import com.ru.astron.xmpp.mam.MamReference;
 
+import com.squareup.picasso.Picasso;
 import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 
 public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextView.CopyHandler {
@@ -515,12 +516,22 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	}
 
 	private void displayDownloadableMessage(ViewHolder viewHolder, final Message message, String text) {
+		//здесь грузится картинка
 		viewHolder.image.setVisibility(View.GONE);
 		viewHolder.messageBody.setVisibility(View.GONE);
 		viewHolder.audioPlayer.setVisibility(View.GONE);
 		viewHolder.download_button.setVisibility(View.VISIBLE);
 		viewHolder.download_button.setText(text);
-		viewHolder.download_button.setOnClickListener(v -> ConversationFragment.downloadFile(activity, message));
+
+		ConversationFragment fragment = ConversationFragment.findConversationFragment(activity);
+		if(fragment != null && fragment.getHideTextInput()) {
+			String imagePath = message.getBody();
+			viewHolder.download_button.setVisibility(View.GONE);
+			viewHolder.image.setVisibility(View.VISIBLE);
+			Picasso.get().load(imagePath).into(viewHolder.image);
+			viewHolder.image.setOnClickListener(v -> ConversationFragment.downloadFile(activity, message));
+		}
+		else viewHolder.download_button.setOnClickListener(v -> ConversationFragment.downloadFile(activity, message));
 	}
 
 	private void displayOpenableMessage(ViewHolder viewHolder, final Message message) {
