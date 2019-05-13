@@ -104,16 +104,7 @@ import com.ru.astron.ui.util.SendButtonTool;
 import com.ru.astron.ui.util.ShareUtil;
 import com.ru.astron.ui.util.ViewUtil;
 import com.ru.astron.ui.widget.EditMessage;
-import com.ru.astron.utils.AccountUtils;
-import com.ru.astron.utils.Compatibility;
-import com.ru.astron.utils.GeoHelper;
-import com.ru.astron.utils.MessageUtils;
-import com.ru.astron.utils.NickValidityChecker;
-import com.ru.astron.utils.Patterns;
-import com.ru.astron.utils.QuickLoader;
-import com.ru.astron.utils.StylingHelper;
-import com.ru.astron.utils.TimeframeUtils;
-import com.ru.astron.utils.UIHelper;
+import com.ru.astron.utils.*;
 import com.ru.astron.xmpp.XmppConnection;
 import com.ru.astron.xmpp.chatstate.ChatState;
 import com.ru.astron.xmpp.jingle.JingleConnection;
@@ -509,6 +500,10 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
     private static Conversation getConversation(Activity activity, @IdRes int res) {
         final Fragment fragment = activity.getFragmentManager().findFragmentById(res);
         if (fragment != null && fragment instanceof ConversationFragment) {
+
+            if(activity instanceof AddChannelListener){
+                ((ConversationFragment) fragment).setAddChannelListener((AddChannelListener) activity);
+            }
             return ((ConversationFragment) fragment).getConversation();
         } else {
             return null;
@@ -997,6 +992,7 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
         messageListAdapter.setOnContactPictureClicked(this);
         messageListAdapter.setOnContactPictureLongClicked(this);
         messageListAdapter.setOnQuoteListener(this::quoteText);
+        messageListAdapter.setAddChannelListener(channelListener);
         binding.messagesView.setAdapter(messageListAdapter);
 
         registerForContextMenu(binding.messagesView);
@@ -1009,6 +1005,12 @@ public class ConversationFragment extends XmppFragment implements EditMessage.Ke
 
 
         return binding.getRoot();
+    }
+
+    private AddChannelListener channelListener = null;
+
+    public void setAddChannelListener(AddChannelListener listener){
+        channelListener = listener;
     }
 
     private void quoteText(String text) {
