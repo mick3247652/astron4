@@ -1,6 +1,7 @@
 package com.ru.astron.ui;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Build;
@@ -15,6 +16,7 @@ import android.webkit.WebViewClient;
 import com.ru.astron.R;
 import com.ru.astron.databinding.ActivityWebViewBinding;
 import com.ru.astron.ui.util.MenuDoubleTabUtil;
+import com.ru.astron.utils.ParseURL;
 
 import static com.ru.astron.ui.ActionBarActivity.configureActionBar;
 
@@ -39,13 +41,22 @@ public class WebViewActivity extends AppCompatActivity {
         WebViewClient webViewClient = new WebViewClient() {
             @SuppressWarnings("deprecation") @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
+                return loadURL(view, url);
             }
 
             @TargetApi(Build.VERSION_CODES.N) @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                view.loadUrl(request.getUrl().toString());
+                return loadURL(view, request.getUrl().toString());
+            }
+
+            private boolean loadURL(WebView view, String url){
+                if(ParseURL.INSTANCE.testDomain(url,"astron")) {
+                    String channel = ParseURL.INSTANCE.getChannel(url);
+                    onAddChannel(channel);
+                    return true;
+                } else {
+                    view.loadUrl(url);
+                }
                 return true;
             }
         };
@@ -54,6 +65,13 @@ public class WebViewActivity extends AppCompatActivity {
         binding.webView.getSettings().setJavaScriptEnabled(true);
         if(sUrl == null) binding.webView.loadUrl("https://yasobe.ru/na/astron2");
         else binding.webView.loadUrl(sUrl);
+    }
+
+    private void onAddChannel(String channel){
+        Intent intent = new Intent();
+        intent.putExtra("channel", channel);
+        setResult(Activity.RESULT_OK, intent);
+        finish() ;
     }
 
     @Override

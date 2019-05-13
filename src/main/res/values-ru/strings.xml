@@ -724,4 +724,5 @@
   <string name="action_add_contact">Добавить контакт</string>
 
   <string name="news_title">Новости</string>
+  <string name="channels_title">Каналы</string>
 </resources>

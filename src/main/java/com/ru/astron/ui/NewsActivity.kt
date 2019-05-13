@@ -1,5 +1,6 @@
 package com.ru.astron.ui
 
+import android.app.Activity
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.databinding.DataBindingUtil
@@ -8,6 +9,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
+import com.ru.astron.ConfigRequests
 import com.ru.astron.R
 import com.ru.astron.databinding.ActivityNewsBinding
 import com.ru.astron.models.ArticleNews
@@ -25,6 +27,12 @@ class NewsActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView<ActivityNewsBinding>(this, R.layout.activity_news)
         model = ViewModelProviders.of(this).get(ArticleViewModel::class.java)
+        intent?.let {
+            val url = it.getStringExtra("url")
+            if(url != null) model.url = url
+        }
+
+        model.reloadNews()
 
         binding.apply {
             recycler.adapter = model.articleAdapter
@@ -52,7 +60,22 @@ class NewsActivity : AppCompatActivity() {
         if(!article.link.isEmpty()){
             val intent = Intent(this, WebViewActivity::class.java)
             intent.putExtra("url", article.link)
-            startActivity(intent)
+            //startActivity(intent)
+            startActivityForResult(intent,ConfigRequests.REQUEST_ADD_CHANNEL);
         }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == ConfigRequests.REQUEST_ADD_CHANNEL && resultCode == Activity.RESULT_OK){
+            data?: return
+            val channel = data.getStringExtra("channel");
+            val intent = Intent()
+            intent.putExtra("channel", channel)
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+        }
+    }
+
 }

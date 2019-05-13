@@ -65,6 +65,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ru.astron.ConfigRequests;
 import com.ru.astron.utils.*;
 import org.openintents.openpgp.util.OpenPgpApi;
 
@@ -483,7 +484,12 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                     showCreateContactFromAddressBook(null);
                     break;
                 case R.id.news:
-                    startActivity(new Intent(this, NewsActivity.class));
+                    startActivityForResult(new Intent(this, NewsActivity.class), ConfigRequests.REQUEST_ADD_CHANNEL);
+                    break;
+                case R.id.channels:
+                    Intent intent = new Intent(this, NewsActivity.class);
+                    intent.putExtra("url","http://channel.astron.world/feed/");
+                    startActivityForResult(intent, ConfigRequests.REQUEST_ADD_CHANNEL);
                     break;
             }
 
@@ -1052,6 +1058,8 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                             addPhoneContact(contactJid, accountJid);
                         }
                     }
+                } else if(requestCode == ConfigRequests.REQUEST_ADD_CHANNEL) {
+                    addChannel(intent.getStringExtra("channel"));
                 }
             } else {
                 this.mPostponedActivityResult2 = new Pair<>(requestCode, intent);

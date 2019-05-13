@@ -875,4 +875,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="news_title">News</string>
+    <string name="channels_title">Channels</string>
 </resources>
