@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group>
         <item
-        android:id="@+id/news"
-        android:icon="@drawable/news"
-        android:title="@string/news_title" />
+                android:id="@+id/news"
+                android:icon="@drawable/news"
+                android:title="@string/news_title" />
+        <item
+                android:id="@+id/channels"
+                android:icon="@drawable/chanel"
+                android:title="@string/channels_title" />
     </group>
     <group>
         <item

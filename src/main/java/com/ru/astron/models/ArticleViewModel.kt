@@ -9,7 +9,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class ArticleViewModel: ViewModel(){
-    private val url = "http://astron.world/blog/feed"
+    var url = "http://astron.world/blog/feed"
     private val viewModelJob = Job()
     private val mainScope = CoroutineScope(Dispatchers.Main + viewModelJob)
     private val articleNews = mutableListOf<ArticleNews>()
@@ -17,7 +17,7 @@ class ArticleViewModel: ViewModel(){
     val articleAdapter = ArticlesListAdapter()
 
     init {
-        reloadNews()
+        //reloadNews()
     }
 
     fun reloadNews(){
