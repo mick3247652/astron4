@@ -216,7 +216,7 @@
   <string name="delete_bookmark">Удалить из закладок</string>
   <string name="bookmark_already_exists">Такая закладка уже существует</string>
   <string name="action_edit_subject">Редактировать тему группы</string>
-  <string name="topic">Тема</string>
+  <string name="topic">Описание</string>
   <string name="joining_conference">Вход в группу…</string>
   <string name="leave">Покинуть</string>
   <string name="contact_added_you">Собеседник добавил вас в список контактов</string>
@@ -375,7 +375,7 @@
   <string name="show_location">Показать местоположение</string>
   <string name="no_application_found_to_display_location">Не найдено приложений для отображения местоположения</string>
   <string name="location">Местоположение</string>
-  <string name="title_undo_swipe_out_conversation">Чат окончен</string>
+  <string name="title_undo_swipe_out_conversation">Выход из чата</string>
   <string name="pref_dont_trust_system_cas_title">Не доверять системным УЦ</string>
   <string name="pref_dont_trust_system_cas_summary">Все сертификаты должны быть подтверждены</string>
   <string name="pref_remove_trusted_certificates_title">Удалить сертификаты</string>
@@ -708,6 +708,8 @@
     <string name="error_trustkey_hint_mutual">Подсказка: в некоторых случаях это может быть исправлено путем добавления контакта</string>
     <string name="disable_encryption_message">Вы уверены, что хотите отключить шифрование для этого чата?</string>
     <string name="search_bookmarks">Поиск закладок</string>
+  <string name="title_undo_swipe_out_group_chat">Выход из группового чата</string>
+  <string name="title_undo_swipe_out_channel">Выход из канала</string>
 
 
   <string name="use_own_provider2">Регистрация</string>
