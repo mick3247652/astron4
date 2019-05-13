@@ -13,12 +13,13 @@
         android:scaleType="centerCrop"/>
 
     <com.ru.astron.ui.widget.CopyTextView
-        android:id="@+id/message_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:longClickable="false"
-        android:textAppearance="@style/TextAppearance.Conversations.Body1"/>
+            android:id="@+id/message_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:longClickable="false"
+            android:textColor="@color/message_color9" android:textColorLink="@color/message_color9"
+            android:textColorHighlight="@color/message_color9" android:textColorHint="@color/message_color9"/>
 
     <Button
         android:id="@+id/download_button"
