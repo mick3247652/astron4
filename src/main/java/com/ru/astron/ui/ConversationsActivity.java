@@ -65,6 +65,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ru.astron.utils.*;
 import org.openintents.openpgp.util.OpenPgpApi;
 
 import java.util.ArrayList;
@@ -91,12 +92,6 @@ import com.ru.astron.ui.util.AvatarWorkerTask;
 import com.ru.astron.ui.util.ConversationMenuConfigurator;
 import com.ru.astron.ui.util.MenuDoubleTabUtil;
 import com.ru.astron.ui.util.PendingItem;
-import com.ru.astron.utils.AccountUtils;
-import com.ru.astron.utils.EmojiWrapper;
-import com.ru.astron.utils.ExceptionHelper;
-import com.ru.astron.utils.ParsePhoneNumber;
-import com.ru.astron.utils.SignupUtils;
-import com.ru.astron.utils.XmppUri;
 import com.ru.astron.xmpp.OnUpdateBlocklist;
 
 import rocks.xmpp.addr.Jid;
@@ -104,7 +99,7 @@ import rocks.xmpp.addr.Jid;
 import static com.ru.astron.ui.ConversationFragment.REQUEST_DECRYPT_PGP;
 import static com.ru.astron.ui.StartConversationActivity.getSelectedAccount;
 
-public class ConversationsActivity extends XmppActivity implements OnConversationSelected, OnConversationArchived, OnConversationsListItemUpdated, OnConversationRead, XmppConnectionService.OnAccountUpdate, XmppConnectionService.OnConversationUpdate, XmppConnectionService.OnRosterUpdate, OnUpdateBlocklist, XmppConnectionService.OnShowErrorToast, XmppConnectionService.OnAffiliationChanged,CreatePrivateGroupChatDialog.CreateConferenceDialogListener, JoinConferenceDialog.JoinConferenceDialogListener, CreatePublicChannelDialog.CreatePublicChannelDialogListener {
+public class ConversationsActivity extends XmppActivity implements AddChannelListener, OnConversationSelected, OnConversationArchived, OnConversationsListItemUpdated, OnConversationRead, XmppConnectionService.OnAccountUpdate, XmppConnectionService.OnConversationUpdate, XmppConnectionService.OnRosterUpdate, OnUpdateBlocklist, XmppConnectionService.OnShowErrorToast, XmppConnectionService.OnAffiliationChanged, CreatePrivateGroupChatDialog.CreateConferenceDialogListener, JoinConferenceDialog.JoinConferenceDialogListener, CreatePublicChannelDialog.CreatePublicChannelDialogListener {
 
     public static final String ACTION_VIEW_CONVERSATION = "eu.siacs.conversations.action.VIEW";
     public static final String EXTRA_CONVERSATION = "conversationUuid";
@@ -380,6 +375,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
 
     private ActionBarDrawerToggle toggle = null;
     private DrawerLayout drawerLayout = null;
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -407,14 +403,14 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
 
         Toolbar toolbar = (Toolbar) binding.toolbar;
 
-        if(!pressBack) {
+        if (!pressBack) {
             toggle = new ActionBarDrawerToggle(
                     this, binding.drawerLayout, (Toolbar) binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
             );
             binding.drawerLayout.addDrawerListener(toggle);
             toggle.setDrawerIndicatorEnabled(true);
             toggle.syncState();
-            toggle.setToolbarNavigationClickListener(new View.OnClickListener(){
+            toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
@@ -451,7 +447,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
         TextView account_name = (TextView) nv.findViewById(R.id.account_name);
 
         String name = mAccount.getDisplayName();
-        phone.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
+        if (phone != null) phone.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
         if (name.isEmpty()) {
             account_name.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
             phone.setVisibility(View.GONE);
@@ -496,6 +492,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
             return true;
         });
     }
+
     @SuppressLint("InflateParams")
     protected void showJoinConferenceDialog(final String prefilledJid) {
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -654,14 +651,17 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
 
     private void openConversation(Conversation conversation, Bundle extras, boolean hideInput) {
         ConversationFragment conversationFragment = (ConversationFragment) getFragmentManager().findFragmentById(R.id.secondary_fragment);
+
         final boolean mainNeedsRefresh;
         if (conversationFragment == null) {
             mainNeedsRefresh = false;
             Fragment mainFragment = getFragmentManager().findFragmentById(R.id.main_fragment);
             if (mainFragment instanceof ConversationFragment) {
                 conversationFragment = (ConversationFragment) mainFragment;
+                conversationFragment.setAddChannelListener(this);
             } else {
                 conversationFragment = new ConversationFragment();
+                conversationFragment.setAddChannelListener(this);
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.main_fragment, conversationFragment);
                 fragmentTransaction.addToBackStack(null);
@@ -676,8 +676,10 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
         } else {
             mainNeedsRefresh = true;
         }
+
         conversationFragment.hideInput = hideInput;
         conversationFragment.reInit(conversation, extras == null ? new Bundle() : extras);
+        conversationFragment.setAddChannelListener(this);
         if (mainNeedsRefresh) {
             refreshFragment(R.id.main_fragment);
         } else {
@@ -819,8 +821,8 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
 
                     actionBar.setTitle(EmojiWrapper.transform(conversation.getName()));
                     actionBar.setDisplayHomeAsUpEnabled(false);
-                    if(drawerLayout!= null) drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-                    if(toggle != null) {
+                    if (drawerLayout != null) drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+                    if (toggle != null) {
                         toggle.setDrawerIndicatorEnabled(false);
                         toggle.syncState();
                     }
@@ -832,8 +834,8 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
             actionBar.setTitle(R.string.app_name);
             actionBar.setDisplayHomeAsUpEnabled(false);
 
-            if(drawerLayout!= null) drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
-            if(toggle != null) {
+            if (drawerLayout != null) drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+            if (toggle != null) {
                 toggle.setDrawerIndicatorEnabled(true);
                 toggle.syncState();
             }
@@ -881,14 +883,14 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
     }
 
     @Override
-    public void switchToConversation(Conversation conversation){
+    public void switchToConversation(Conversation conversation) {
         switchToConversation(conversation, false);
     }
 
 
     public void switchToConversation(Conversation conversation, boolean hideInput) {
         Log.d(Config.LOGTAG, "override");
-        openConversation(conversation, null,hideInput);
+        openConversation(conversation, null, hideInput);
     }
 
     protected void switchToConversation(Contact contact) {
@@ -932,7 +934,9 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
     public void onShowErrorToast(int resId) {
         runOnUiThread(() -> Toast.makeText(this, resId, Toast.LENGTH_SHORT).show());
     }
+
     private final int REQUEST_CREATE_CONFERENCE = 0x39da;
+
     @Override
     public void onCreateDialogPositiveClick(Spinner spinner, String name) {
         if (!xmppConnectionServiceBound) {
@@ -1022,7 +1026,9 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
             switchToConversation(conversation, true);
         }
     }
+
     private Pair<Integer, Intent> mPostponedActivityResult2;
+
     public void onActivityResult2(int requestCode, int resultCode, Intent intent) {
         if (resultCode == RESULT_OK) {
             if (xmppConnectionServiceBound) {
@@ -1037,12 +1043,12 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
                             mToast.show();
                         }
                     }
-                } else if(requestCode == REQUEST_CODE_PHONE_SELECT) {
-                    if(intent != null){
+                } else if (requestCode == REQUEST_CODE_PHONE_SELECT) {
+                    if (intent != null) {
                         String contactJid = intent.getStringExtra("phone") + "@astron.online";
-                        if(mActivatedAccounts.size() >= 1) {
+                        if (mActivatedAccounts.size() >= 1) {
                             String accountJid = mActivatedAccounts.get(0);
-                            Log.v("PHONE",accountJid);
+                            Log.v("PHONE", accountJid);
                             addPhoneContact(contactJid, accountJid);
                         }
                     }
@@ -1074,12 +1080,13 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
         }
     };
     private final int REQUEST_CODE_PHONE_SELECT = 0x3777;
-    private void showCreateContactFromAddressBook(final String prefilledJid){
+
+    private void showCreateContactFromAddressBook(final String prefilledJid) {
         Intent i = new Intent(this, PhoneSelectActivity.class);
-        startActivityForResult(i,REQUEST_CODE_PHONE_SELECT);
+        startActivityForResult(i, REQUEST_CODE_PHONE_SELECT);
     }
 
-    private boolean addPhoneContact(String cJid, String aJid){
+    private boolean addPhoneContact(String cJid, String aJid) {
         Jid accountJid = Jid.of(aJid, Config.DOMAIN_LOCK, null);
         Jid contactJid = Jid.of(cJid);
 
@@ -1096,7 +1103,7 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
         if (contact.isSelf()) {
             switchToConversation(contact);
             return true;
-        }  else {
+        } else {
             xmppConnectionService.createContact(contact, true);
             switchToConversationDoNotAppend(contact, null);
             return true;
@@ -1104,5 +1111,27 @@ public class ConversationsActivity extends XmppActivity implements OnConversatio
     }
 
 
+    @Override
+    public void addChannel(String channel) {
+        //Toast.makeText(this, "Add channel " + channel, Toast.LENGTH_SHORT).show();
+        if (!xmppConnectionServiceBound) {
+            return;
+        }
+        final Account account = mAccount;
+        if (account == null) {
+            return;
+        }
+        final Jid conferenceJid;
+        try {
+            conferenceJid = Jid.of(channel + "@conference." + Config.DOMAIN_LOCK);
+        } catch (final IllegalArgumentException e) {
+            return;
+        }
+
+
+        final Conversation conversation = xmppConnectionService
+                .findOrCreateConversation(account, conferenceJid, true, true, true);
+        switchToConversation(conversation, true);
+    }
 
 }

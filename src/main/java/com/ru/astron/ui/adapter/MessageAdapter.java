@@ -34,6 +34,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -66,12 +67,7 @@ import com.ru.astron.ui.util.ViewUtil;
 import com.ru.astron.ui.widget.ClickableMovementMethod;
 import com.ru.astron.ui.widget.CopyTextView;
 import com.ru.astron.ui.widget.ListSelectionManager;
-import com.ru.astron.utils.CryptoHelper;
-import com.ru.astron.utils.EmojiWrapper;
-import com.ru.astron.utils.Emoticons;
-import com.ru.astron.utils.GeoHelper;
-import com.ru.astron.utils.StylingHelper;
-import com.ru.astron.utils.UIHelper;
+import com.ru.astron.utils.*;
 import com.ru.astron.xmpp.mam.MamReference;
 
 import me.saket.bettermovementmethod.BetterLinkMovementMethod;
@@ -93,6 +89,13 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 	private boolean mIndicateReceived = false;
 	private boolean mUseGreenBackground = false;
 	private OnQuoteListener onQuoteListener;
+
+	private AddChannelListener channelListener = null;
+
+	public void setAddChannelListener(AddChannelListener listener){
+		channelListener = listener;
+	}
+
 	public MessageAdapter(XmppActivity activity, List<Message> messages) {
 		super(activity, 0, messages);
 		this.audioPlayer = new AudioPlayer(this);
@@ -595,6 +598,10 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 		}
 	}
 
+	private void onAddChannel(String channel){
+		if(channelListener != null) channelListener.addChannel(channel);
+	}
+
 	@Override
 	public View getView(int position, View view, ViewGroup parent) {
 		final Message message = getItem(position);
@@ -819,7 +826,14 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 					.linkify(Linkify.ALL, viewHolder.messageBody)
 					.setOnLinkClickListener((textView, url) -> {
 						// Do something.
+						if(ParseURL.INSTANCE.testDomain(url,"astron")) {
+							String channel = ParseURL.INSTANCE.getChannel(url);
+							onAddChannel(channel);
+							return true;
+						}
+
 						Intent i = new Intent(textView.getContext(), WebViewActivity.class);
+
 						i.putExtra("url", url);
 						textView.getContext().startActivity(i);
 						//Log.v("YYYYY"," YEA.....");
