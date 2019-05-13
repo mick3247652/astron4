@@ -83,6 +83,12 @@
     <style name="TextAppearance.Conversations.Body1.Secondary" parent="TextAppearance.Conversations.Body1">
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
+   <style name="TextAppearance.Conversations.Body1.MessageColor" parent="TextAppearance.Conversations.Body1">
+        <item name="android:textColor">@color/message_color9</item>
+    </style>
+   <style name="TextAppearance.Conversations.Body1.InfoColor" parent="TextAppearance.Conversations.Body1">
+        <item name="android:textColor">@color/message_color10</item>
+    </style>
 
     <style name="TextAppearance.Conversations.Body1.Tertiary" parent="TextAppearance.Conversations.Body1">
         <item name="android:textColor">?android:textColorTertiary</item>
