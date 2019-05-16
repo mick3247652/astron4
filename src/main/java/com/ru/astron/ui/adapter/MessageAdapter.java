@@ -72,6 +72,7 @@ import com.ru.astron.xmpp.mam.MamReference;
 
 import com.squareup.picasso.Picasso;
 import me.saket.bettermovementmethod.BetterLinkMovementMethod;
+import org.bouncycastle.util.test.Test;
 
 public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextView.CopyHandler {
 
