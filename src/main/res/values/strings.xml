@@ -770,7 +770,7 @@
     <string name="choose_a_country">Choose a country</string>
     <string name="phone_number">phone number</string>
     <string name="verify_your_phone_number">Verify your phone number</string>
-    <string name="enter_country_code_and_phone_number">Astron will send an SMS message (carrier charges may apply) to verify your phone number. Enter your country code and phone number:</string>
+    <string name="enter_country_code_and_phone_number">Astron will send an SMS message to verify your phone number. Enter your country code and phone number:</string>
     <string name="we_will_be_verifying"><![CDATA[We will be verifying the phone number<br/><br/><b>%s</b><br/><br/>Is this OK, or would you like to edit the number?]]></string>
     <string name="not_a_valid_phone_number">%s is not a valid phone number.</string>
     <string name="please_enter_your_phone_number">Please enter your phone number.</string>
