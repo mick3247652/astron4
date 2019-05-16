@@ -727,4 +727,5 @@
 
   <string name="news_title">Новости</string>
   <string name="channels_title">Каналы</string>
+    <string name="bot_title">Verter</string>
 </resources>

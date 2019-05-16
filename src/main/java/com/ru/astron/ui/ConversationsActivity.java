@@ -496,12 +496,26 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                     intent.putExtra("title",getResources().getString(R.string.channels_title));
                     startActivityForResult(intent, ConfigRequests.REQUEST_ADD_CHANNEL);
                     break;
+                case R.id.bot:
+                    addBotContact();
+                    break;
             }
 
 
             binding.drawerLayout.closeDrawers();
             return true;
         });
+    }
+
+    private void addBotContact(){
+        if (xmppConnectionServiceBound) {
+            String contactJid = "VerterBot@astron.online";
+            if (mActivatedAccounts.size() >= 1) {
+                String accountJid = mActivatedAccounts.get(0);
+                Log.v("PHONE", accountJid);
+                addPhoneContact(contactJid, accountJid);
+            }
+        }
     }
 
     @SuppressLint("InflateParams")
