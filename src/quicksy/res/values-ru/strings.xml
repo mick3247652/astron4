@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="crash_report_title">Астрон has crashed</string>
-    <string name="crash_report_message">By sending in stack traces you are helping the ongoing development of Астрон\n<b>Warning:</b> This will use your XMPP account to send the stack trace to the developer.</string>
+    <string name="crash_report_title">Астрон был неожиданно остановлен</string>
+    <string name="crash_report_message">Произошла непредвиденная ошибка. Перезагрузите приложение.</string>
     <string name="openkeychain_required_long">Астрон utilizes a third party app called <b>OpenKeychain</b> to encrypt and decrypt messages and to manage your public keys.\n\nOpenKeychain is licensed under GPLv3 and available on F-Droid and Google Play.\n\n<small>(Please restart Астрон afterwards.)</small></string>
     <string name="contact_has_no_pgp_key">Астрон is unable to encrypt your messages because your contactPhone is not announcing his or hers public key.\n\n<small>Please ask your contactPhone to setup OpenPGP.</small></string>
     <string name="contacts_have_no_pgp_keys">Астрон is unable to encrypt your messages because your contacts are not announcing their public key.\n\n<small>Please ask your contacts to setup OpenPGP.</small></string>
     <string name="pref_notification_grace_period_summary">The length of time Астрон keeps quiet after seeing activity on another device</string>
-    <string name="pref_never_send_crash_summary">By sending in stack traces you are helping the ongoing development of Астрон</string>
+    <string name="pref_never_send_crash_summary">Отправляя сообщение, вы помогаете развитию Астрон</string>
     <string name="no_storage_permission">Астрон needs access to external storage</string>
     <string name="no_camera_permission">Астрон needs access to the camera</string>
     <string name="battery_optimizations_enabled_explained">Ваше устройство использует оптимизацию энергопотребления.\nРекомендуется его отключить.</string>
