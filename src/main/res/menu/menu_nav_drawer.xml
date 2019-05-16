@@ -12,6 +12,7 @@
                 android:title="@string/channels_title" />
         <item
                 android:id="@+id/bot"
+                android:icon="@drawable/bot"
                 android:title="@string/bot_title" />
     </group>
     <group>
