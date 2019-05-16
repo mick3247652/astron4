@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.ru.astron.Config;
 import com.ru.astron.R;
 import com.ru.astron.databinding.CreatePublicChannelDialogBinding;
 import com.ru.astron.entities.Account;
@@ -104,7 +105,10 @@ public class CreatePublicChannelDialog extends DialogFragment implements OnBacke
         ArrayList<String> mActivatedAccounts = getArguments().getStringArrayList(ACCOUNTS_LIST_KEY);
         StartConversationActivity.populateAccountSpinner(getActivity(), mActivatedAccounts, binding.account);
         builder.setView(binding.getRoot());
-        builder.setPositiveButton(nameEntered ? R.string.create : R.string.next, null);
+
+        builder.setPositiveButton(nameEntered ? R.string.create : R.string.create, null);
+
+        //builder.setPositiveButton(nameEntered ? R.string.create : R.string.next, null);
         builder.setNegativeButton(nameEntered ? R.string.back : R.string.cancel, null);
         DelayedHintHelper.setHint(R.string.channel_bare_jid_example, binding.jid);
         this.knownHostsAdapter = new KnownHostsAdapter(getActivity(), R.layout.simple_list_item);
@@ -170,21 +174,23 @@ public class CreatePublicChannelDialog extends DialogFragment implements OnBacke
     }
 
     private void goBack(AlertDialog dialog, CreatePublicChannelDialogBinding binding) {
-        if (nameEntered) {
+        /*if (nameEntered) {
             nameEntered = false;
             updateInputs(binding, true);
             updateButtons(dialog);
         } else {
             dialog.dismiss();
-        }
+        }*/
+        dialog.dismiss();
     }
 
     private void submit(AlertDialog dialog, CreatePublicChannelDialogBinding binding) {
         final Context context = binding.getRoot().getContext();
         final Editable nameText = binding.groupChatName.getText();
         final String name = nameText == null ? "" : nameText.toString().trim();
-        final Editable addressText = binding.jid.getText();
-        final String address = addressText == null ? "" : addressText.toString().trim();
+        //final Editable addressText = binding.jid.getText();
+        final String address = binding.groupChatName.getText() + "@conference." + Config.DOMAIN_LOCK;//addressText == null ? "" : addressText.toString().trim();
+        nameEntered = true;
         if (nameEntered) {
             binding.nameLayout.setError(null);
             if (address.isEmpty()) {
@@ -243,8 +249,10 @@ public class CreatePublicChannelDialog extends DialogFragment implements OnBacke
     private void updateButtons(AlertDialog dialog) {
         final Button positive = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         final Button negative = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        positive.setText(nameEntered ? R.string.create : R.string.next);
-        negative.setText(nameEntered ? R.string.back : R.string.cancel);
+        //positive.setText(nameEntered ? R.string.create : R.string.next);
+        //negative.setText(nameEntered ? R.string.back : R.string.cancel);
+        positive.setText(R.string.create);
+        negative.setText(R.string.cancel);
     }
 
     @Override
