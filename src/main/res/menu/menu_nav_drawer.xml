@@ -10,6 +10,9 @@
                 android:id="@+id/channels"
                 android:icon="@drawable/chanel"
                 android:title="@string/channels_title" />
+        <item
+                android:id="@+id/bot"
+                android:title="@string/bot_title" />
     </group>
     <group>
         <item
