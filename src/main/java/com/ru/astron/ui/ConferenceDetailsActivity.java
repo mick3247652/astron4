@@ -343,10 +343,10 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         }
         if (mConversation.getBookmark() != null) {
             menuItemSaveBookmark.setVisible(false);
-            menuItemDeleteBookmark.setVisible(true);
+            menuItemDeleteBookmark.setVisible(false);
         } else {
             menuItemDeleteBookmark.setVisible(false);
-            menuItemSaveBookmark.setVisible(true);
+            menuItemSaveBookmark.setVisible(false);
         }
         menuItemDestroyRoom.setVisible(mConversation.getMucOptions().getSelf().getAffiliation().ranks(MucOptions.Affiliation.OWNER));
         return true;
