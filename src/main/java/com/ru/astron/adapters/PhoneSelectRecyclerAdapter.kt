@@ -38,9 +38,9 @@ class PhoneSelectRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 photo.setImageBitmap(MediaStore.Images.Media.getBitmap(v.context.contentResolver,
                         Uri.parse(items[position].photo_thumbanall_uri)))
             else
-                photo.setImageBitmap(null)
+                photo.setImageResource(R.drawable.ic_user)
         } catch (e: IOException) {
-            photo.setImageBitmap(null)
+            photo.setImageResource(R.drawable.ic_user)
         }
         v.setOnClickListener { onItemClick(items[position].phone) }
         //v.setBackgroundColor(v.resources.getColor(R.color.contact_select))

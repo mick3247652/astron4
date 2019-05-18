@@ -41,7 +41,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -212,6 +211,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 			adapter.setDropDownViewResource(R.layout.simple_list_item);
 			spinner.setAdapter(adapter);
 			spinner.setEnabled(true);
+			spinner.setVisibility(View.GONE);
 		} else {
 			ArrayAdapter<String> adapter = new ArrayAdapter<>(context,
 					R.layout.simple_list_item,
@@ -219,6 +219,7 @@ public class StartConversationActivity extends XmppActivity implements XmppConne
 			adapter.setDropDownViewResource(R.layout.simple_list_item);
 			spinner.setAdapter(adapter);
 			spinner.setEnabled(false);
+			spinner.setVisibility(View.GONE);
 		}
 	}
 

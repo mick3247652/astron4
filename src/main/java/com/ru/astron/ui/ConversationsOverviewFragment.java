@@ -64,6 +64,7 @@ import com.ru.astron.ui.util.PendingActionHelper;
 import com.ru.astron.ui.util.PendingItem;
 import com.ru.astron.ui.util.ScrollState;
 import com.ru.astron.ui.util.StyledAttributes;
+import com.ru.astron.utils.ContactDateTimeHelper;
 import com.ru.astron.utils.ThemeHelper;
 
 import static android.support.v7.widget.helper.ItemTouchHelper.LEFT;
@@ -263,9 +264,15 @@ public class ConversationsOverviewFragment extends XmppFragment {
 
 	@Override
 	public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		ContactDateTimeHelper.INSTANCE.updateCurrentDateTime();
 		this.mSwipeEscapeVelocity = getResources().getDimension(R.dimen.swipe_escape_velocity);
 		this.binding = DataBindingUtil.inflate(inflater, R.layout.fragment_conversations_overview, container, false);
-		this.binding.fab.setOnClickListener((view) -> StartConversationActivity.launch(getActivity()));
+		//this.binding.fab.setOnClickListener((view) -> StartConversationActivity.launch(getActivity()));
+		this.binding.fab.setOnClickListener((view) -> {
+			Intent i = new Intent(getActivity(), SelectActionActivity.class);
+			i.putExtra("SHOW_BACK_KEY",true);
+			startActivity(i);
+		});
 
 		this.conversationsAdapter = new ConversationAdapter(this.activity, this.conversations);
 		this.conversationsAdapter.setConversationClickListener((view, conversation) -> {

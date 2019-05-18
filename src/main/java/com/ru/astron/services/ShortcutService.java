@@ -18,6 +18,7 @@ import java.util.List;
 import com.ru.astron.Config;
 import com.ru.astron.entities.Account;
 import com.ru.astron.entities.Contact;
+import com.ru.astron.ui.SelectActionActivity;
 import com.ru.astron.ui.StartConversationActivity;
 import com.ru.astron.utils.ReplacingSerialSingleThreadExecutor;
 import rocks.xmpp.addr.Jid;
@@ -120,7 +121,7 @@ public class ShortcutService {
     }
 
     private Intent getShortcutIntent(Contact contact) {
-        Intent intent = new Intent(xmppConnectionService, StartConversationActivity.class);
+        Intent intent = new Intent(xmppConnectionService, SelectActionActivity.class);
         intent.setAction(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("xmpp:"+contact.getJid().asBareJid().toString()));
         intent.putExtra("account",contact.getAccount().getJid().asBareJid().toString());

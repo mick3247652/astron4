@@ -1182,7 +1182,7 @@ public class EditAccountActivity extends OmemoActivity implements OnAccountUpdat
     }
 
     private void showOsOptimizationWarning(boolean showBatteryWarning, boolean showDataSaverWarning) {
-        this.binding.osOptimization.setVisibility(showBatteryWarning || showDataSaverWarning ? View.VISIBLE : View.GONE);
+        this.binding.osOptimization.setVisibility(showBatteryWarning || showDataSaverWarning ? View.GONE : View.GONE);
         if (showDataSaverWarning && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             this.binding.osOptimizationHeadline.setText(R.string.data_saver_enabled);
             this.binding.osOptimizationBody.setText(R.string.data_saver_enabled_explained);

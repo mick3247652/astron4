@@ -116,7 +116,7 @@ public class UriHandlerActivity extends AppCompatActivity {
                     intent.putExtra("contact", jid.toEscapedString());
                     intent.putExtra("body", body);
                 } else {
-                    intent = new Intent(this, StartConversationActivity.class);
+                    intent = new Intent(this, SelectActionActivity.class);
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(uri);
                     intent.putExtra("account", accounts.get(0).toEscapedString());
@@ -135,7 +135,7 @@ public class UriHandlerActivity extends AppCompatActivity {
             intent.setData(uri);
             intent.putExtra("scanned", scanned);
         } else if (xmppUri.isJidValid()) {
-            intent = new Intent(getApplicationContext(), StartConversationActivity.class);
+            intent = new Intent(getApplicationContext(), SelectActionActivity.class);
             intent.setAction(Intent.ACTION_VIEW);
             intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
             intent.putExtra("scanned", scanned);
