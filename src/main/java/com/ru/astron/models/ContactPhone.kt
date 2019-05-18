@@ -4,7 +4,8 @@ import android.provider.ContactsContract
 import com.ru.astron.utils.ParsePhoneNumber
 
 
-class ContactPhone {
+class ContactPhone : SelectRecyclerItem {
+    override fun getType() = 2
 
     var name: String? = null
         private set

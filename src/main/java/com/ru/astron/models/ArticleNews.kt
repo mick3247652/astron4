@@ -16,7 +16,7 @@ class ArticleNews(article: Article) {
     var link: String = ""
     var pubDate: String = ""
     var image = ""
-    private val shortDateTimeFormat: DateTimeFormatter = DateTimeFormat.mediumDateTime().withLocale(Locale.getDefault())
+    private val shortDateTimeFormat: DateTimeFormatter = DateTimeFormat.shortDate().withLocale(Locale.getDefault())
     init {
         title = if(article.title != null) article.title!! else ""
         author = if(article.author != null) article.author!! else ""

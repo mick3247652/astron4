@@ -8,11 +8,7 @@ import android.util.Log;
 
 import com.ru.astron.Config;
 import com.ru.astron.entities.Account;
-import com.ru.astron.ui.ConversationsActivity;
-import com.ru.astron.ui.EnterPhoneNumberActivity;
-import com.ru.astron.ui.StartConversationActivity;
-import com.ru.astron.ui.TosActivity;
-import com.ru.astron.ui.VerifyActivity;
+import com.ru.astron.ui.*;
 
 public class SignupUtils {
 
@@ -28,7 +24,7 @@ public class SignupUtils {
             if (account.isOptionSet(Account.OPTION_UNVERIFIED)) {
                 intent = new Intent(activity, VerifyActivity.class);
             } else {
-                intent = new Intent(activity, StartConversationActivity.class);
+                intent = new Intent(activity, SelectActionActivity.class);
             }
         } else {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(activity);

@@ -225,7 +225,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             if (ExceptionHelper.checkForCrash(this)) {
                 return;
             }
-            openBatteryOptimizationDialogIfNeeded();
+            //openBatteryOptimizationDialogIfNeeded();
         }
     }
 
@@ -484,9 +484,9 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                 case R.id.create_contact:
                     showCreateContactDialog();
                     break;
-                case R.id.create_contact_from_address_book:
+                /*case R.id.create_contact_from_address_book:
                     showCreateContactFromAddressBook(null);
-                    break;
+                    break;*/
                 case R.id.news:
                     startActivityForResult(new Intent(this, NewsActivity.class), ConfigRequests.REQUEST_ADD_CHANNEL);
                     break;
@@ -499,6 +499,10 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                 case R.id.bot:
                     addBotContact();
                     break;
+                /*case R.id.select:
+                    Intent intent_select = new Intent(this, SelectActionActivity.class);
+                    startActivity(intent_select);
+                    break;*/
             }
 
 
@@ -580,6 +584,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                 null,
                 null,
                 true);
+
 
         dialog.setOnEnterJidDialogPositiveListener((accountJid, contactJid) -> {
             if (!xmppConnectionServiceBound) {

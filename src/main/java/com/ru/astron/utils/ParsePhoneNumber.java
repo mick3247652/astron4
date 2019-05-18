@@ -6,6 +6,7 @@ import io.michaelrocks.libphonenumber.android.Phonenumber;
 
 public class ParsePhoneNumber {
     public static String parse(String number) {
+        if(number == null) return "";
         PhoneNumberUtil phoneUtil = Repo.phoneUtil;
         Phonenumber.PhoneNumber phone = null;
         try {

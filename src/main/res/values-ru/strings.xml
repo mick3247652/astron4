@@ -728,4 +728,17 @@
   <string name="news_title">Новости</string>
   <string name="channels_title">Каналы</string>
     <string name="bot_title">Verter</string>
+  <string name="select_action_title">Выбрать</string>
+  <string name="last_seen">был(а)</string>
+
+  <string name="contacts_separator_title">Контакты</string>
+  <string name="address_book_sepataror_title">Адресная книга</string>
+
+  <string name="contact_online_title">онлайн</string>
+  <string name="lastseen_title">был(а)</string>
+  <string name="yesterday_title">был(а) вчера</string>
+  <string name="today_title">был(а) сегодня</string>
+
+  <string name="minutes_ago_title">мин. назад</string>
+
 </resources>
