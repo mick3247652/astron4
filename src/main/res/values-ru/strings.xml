@@ -88,7 +88,7 @@
   <string name="send_pgp_message">Секретное сообщение</string>
   <string name="your_nick_has_been_changed">Ваш никнейм был изменён</string>
   <string name="send_unencrypted">Отправить открытоe</string>
-  <string name="decryption_failed">Расшифровка не удалась. Вероятно, что у вас нет секретного ключа.</string>
+  <string name="decryption_failed">Расшифровка не удалась. Вероятно, что у вас отключено шифрование.</string>
   <string name="openkeychain_required">Установите OpenKeychain</string>
   <string name="openkeychain_required_long">Astron использует стороннее приложение под названием <b>OpenKeychain</b> для шифрования и расшифрования сообщений и управления открытыми ключами.\nПрограмма OpenKeychain распространяется под лицензией GPLv3 и доступна для загрузки через F-Droid или Google Play.\n\n<small>(Потребуется перезапуск Astron после установки.)</small></string>
   <string name="restart">Перезапуск</string>
@@ -96,7 +96,7 @@
   <string name="openkeychain_not_installed">Пожалуйста, установите OpenKeychain</string>
   <string name="offering">предложение…</string>
   <string name="waiting">ожидание…</string>
-  <string name="no_pgp_key">Нет секретного ключа</string>
+  <string name="no_pgp_key">Нет шифрования</string>
   <string name="contact_has_no_pgp_key">Astron не может зашифровать сообщение, потому что удалённый пользователь не анонсирует свой открытый ключ.\n\n<small>Пожалуйста, попросите удалённого пользователя установить OpenPGP.</small></string>
   <string name="no_pgp_keys">Нет секретных ключей</string>
   <string name="contacts_have_no_pgp_keys">Astron не может зашифровать сообщения, потому что удалённые пользователи не анонсируют свои открытые ключи.\n\n<small>Пожалуйста, попросите удалённых пользователей установить OpenPGP.</small></string>
@@ -153,7 +153,7 @@
   <string name="account_status_stream_opening_error">Ошибка открытия потока</string>
   <string name="encryption_choice_unencrypted">Открытое</string>
   <string name="encryption_choice_otr">OTR</string>
-  <string name="encryption_choice_pgp">Секретно II</string>
+  <string name="encryption_choice_pgp">Секретное</string>
   <string name="encryption_choice_omemo">Секретное</string>
   <string name="mgmt_account_delete">Удалить аккаунт</string>
   <string name="mgmt_account_disable">Временно отключить</string>
@@ -198,8 +198,8 @@
   <string name="omemo_fingerprint_selected_message">Секретный ключ сообщения</string>
   <string name="omemo_fingerprint_x509_selected_message">v\\Секретный ключ сообщения</string>
   <string name="other_devices">Другие устройства</string>
-  <string name="trust_omemo_fingerprints">Секретные ключи</string>
-  <string name="fetching_keys">Получение…</string>
+  <string name="trust_omemo_fingerprints">Шифрование</string>
+  <string name="fetching_keys">Включение…</string>
   <string name="done">Готово</string>
   <string name="decrypt">Расшифровать</string>
   <string name="search">Поиск</string>
@@ -314,7 +314,7 @@
   <string name="copy_omemo_clipboard_description">Скопировать секретный ключ в буфер обмена</string>
   <string name="regenerate_omemo_key">Создать заново секретный ключ</string>
   <string name="clear_other_devices">Очистить все устройства</string>
-  <string name="clear_other_devices_desc">Вы уверены, что хотите очистить все секретные ключи? При соединении устройств в следующий раз новые ключи анонсируются автоматически, но устройства могут не получить сообщения, посланные до этого.</string>
+  <string name="clear_other_devices_desc">Вы уверены, что хотите отключить шифрование? При соединении устройств в следующий раз новые ключи анонсируются автоматически, но устройства могут не получить сообщения, посланные до этого.</string>
   <string name="error_no_keys_to_trust_server_error">Для этого контакта не существует доступных ключей.\nПопытка получения новых ключей с сервера оказалась неудачной. Возможно, что-то не так с сервером вашего собеседника.</string>
   <string name="error_no_keys_to_trust_presence">Нет доступных ключей для данного контакта.\nУбедитесь, что у вас есть подписка на взаимное присутствие.</string>
   <string name="error_trustkeys_title">Что-то пошло не так</string>
@@ -431,7 +431,7 @@
   <string name="captcha_hint">Введите текст с изображения</string>
   <string name="certificate_chain_is_not_trusted">Цепочка сертификата не доверенна</string>
   <string name="action_renew_certificate">Обновить сертификат</string>
-  <string name="error_fetching_omemo_key">Ошибка при получении секретного ключа!</string>
+  <string name="error_fetching_omemo_key">Ошибка при включении шифрования!</string>
   <string name="verified_omemo_key_with_certificate">Проверен секретный ключ с сертификатом!</string>
   <string name="device_does_not_support_certificates">Ваше устройство не поддерживает выбор клиентских сертификатов!</string>
   <string name="pref_connection_options">Подключение</string>
@@ -533,26 +533,26 @@
   <string name="error_unable_to_create_temporary_file">Не удалось создать временный файл</string>
   <string name="this_device_has_been_verified">Это устройство было подтверждено</string>
   <string name="copy_fingerprint">Копировать секретный ключ</string>
-  <string name="all_omemo_keys_have_been_verified">Все секретные ключи были подтверждены</string>
+  <string name="all_omemo_keys_have_been_verified">Шифрование было подтверждено</string>
   <string name="barcode_does_not_contain_fingerprints_for_this_conversation">Штрихкод не содержит отпечатков для данного чата</string>
-  <string name="verified_fingerprints">Подтверждённые секретные ключи</string>
+  <string name="verified_fingerprints">Подтверждённое шифрование</string>
   <string name="use_camera_icon_to_scan_barcode">Используйте камеру для сканирования штрихкода контакта</string>
   <string name="please_wait_for_keys_to_be_fetched">Подождите, получаем секретный ключ</string>
   <string name="share_as_barcode">Отправить штрихкод</string>
   <string name="share_as_uri">Отправить XMPP URI</string>
   <string name="share_as_http">Поделится ссылкой</string>
-  <string name="pref_blind_trust_before_verification">Подтверждение секретных ключей</string>
-  <string name="pref_blind_trust_before_verification_summary">Автоматически доверять всем новым устройствам контактов, которые не были подтверждены ранее, и запрашивать ручное подтверждение каждый раз когда подтверждённый контакт добавляет новое устройство</string>
-  <string name="blindly_trusted_omemo_keys">Секретные ключи получены</string>
-  <string name="not_trusted">Недоверенный секретный ключ</string>
+  <string name="pref_blind_trust_before_verification">Шифрование подтверждено</string>
+  <string name="pref_blind_trust_before_verification_summary">Автоматически доверять всем новым устройствам контактов, которые не были подтверждены ранее, и запрашивать ручное подтверждение каждый раз, когда подтверждённый контакт добавляет новое устройство</string>
+  <string name="blindly_trusted_omemo_keys">Шифрование включено</string>
+  <string name="not_trusted">Шифрование не включено</string>
   <string name="invalid_barcode">Некорректный 2D штрихкод</string>
   <string name="pref_clean_cache_summary">Очистить кэш (используется камерой)</string>
   <string name="pref_clean_cache">Очистить кэш</string>
   <string name="pref_clean_private_storage">Очистить приватное хранилище.</string>
   <string name="pref_clean_private_storage_summary">Очистить закрытое хранилище, где хранятся файлы (Файлы можно заново скачать с сервера)</string>
   <string name="i_followed_this_link_from_a_trusted_source">Открывать ссылки из надёжного источника</string>
-  <string name="verifying_omemo_keys_trusted_source">Вы потвердите секретные ключи %1$s после нажатия на ссылку. Это безопасно только если вы перешли по ссылке из доверенного источника, где только %2$sмог разместить эту ссылку.</string>
-  <string name="verify_omemo_keys">Проверить секретный ключ</string>
+  <string name="verifying_omemo_keys_trusted_source">Вы потвердите шифрование %1$s после нажатия на ссылку. Это безопасно только если вы перешли по ссылке из доверенного источника, где только %2$sмог разместить эту ссылку.</string>
+  <string name="verify_omemo_keys">Проверить шифрование</string>
   <string name="show_inactive_devices">Показывать неактивные</string>
   <string name="hide_inactive_devices">Скрыть неактивные</string>
   <string name="distrust_omemo_key">Нет доверия этому устройству</string>
@@ -629,7 +629,7 @@
   <string name="error_trustkey_device_list">Не удалось определить контакт</string>
   <string name="disable_now">Отключить сейчас</string>
   <string name="draft">Черновик:</string>
-  <string name="pref_omemo_setting">Секретность</string>
+  <string name="pref_omemo_setting">Шифрование</string>
   <string name="pref_font_size">Шрифт</string>
   <string name="small">Малый</string>
   <string name="medium">Средний</string>
@@ -647,7 +647,7 @@
   <string name="create_public_channel">Создать канал</string>
   <string name="join_public_channel">Посетить канал</string>
   <string name="action_end_conversation">Закрыть этот чат</string>
-  <string name="pref_omemo_setting_summary_default_on">Секретные ключи будут использоваться по умолчанию для новых чатов.</string>
+  <string name="pref_omemo_setting_summary_default_on">Шифрование будет использоваться по умолчанию для новых чатов.</string>
   <string name="pref_font_size_summary">Выбрать размер шрифта</string>
   <string name="pref_picture_compression">Изображения</string>
   <string name="pref_picture_compression_summary">Изменение размера и сжатие изображений</string>
@@ -676,17 +676,17 @@
   <string name="media_browser">Медиа</string>
   <string name="also_end_conversation">Закрыть этот чат</string>
   <string name="title_activity_about_x">О приложении</string>
-  <string name="xmpp_address">Имя</string>
-  <string name="group_chat_name">Имя</string>
+  <string name="xmpp_address">Имя канала</string>
+  <string name="group_chat_name">Имя группы</string>
   <string name="copy_link">Скопировать ссылку</string>
-  <string name="channel_full_jid_example">имя канала</string>
-  <string name="channel_bare_jid_example">имя канала</string>
-  <string name="providing_a_name_is_optional">имя группы</string>
-  <string name="create_dialog_group_chat_name">Имя</string>
+  <string name="channel_full_jid_example">astron</string>
+  <string name="channel_bare_jid_example">astron</string>
+  <string name="providing_a_name_is_optional">astron</string>
+  <string name="create_dialog_group_chat_name">Имя группы</string>
     <string name="default_on">Вкл.</string>
     <string name="default_off">Выкл.</string>
   <string name="not_encrypted_for_this_device">Сообщение не было засекречено на вашем устройстве</string>
-  <string name="omemo_decryption_failed">Ошибка секретности сообщения</string>
+  <string name="omemo_decryption_failed">Ошибка шифрования сообщения</string>
   <string name="attach">Прикрепить</string>
     <string name="welcome_header_quicksy" translatable="false">Добро пожаловать в Астрон</string>
     <string name="welcome_text_quicksy"><![CDATA[Приложение для обмена сообщениями. Мессенджер использует сквозное шифрование.<br><br>Вы указываете свой номер телефона и Астрон автоматически, на основе телефонных номеров в адресной книге, предложит вам возможные контакты.]]></string>
@@ -710,6 +710,7 @@
     <string name="search_bookmarks">Поиск закладок</string>
   <string name="title_undo_swipe_out_group_chat">Выход из группового чата</string>
   <string name="title_undo_swipe_out_channel">Выход из канала</string>
+  <string name="abort_registration_procedure">Вы уверены, что хотите отменить процедуру регистрации?</string>
 
 
   <string name="use_own_provider2">Регистрация</string>
