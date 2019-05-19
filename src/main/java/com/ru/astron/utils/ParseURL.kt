@@ -6,7 +6,7 @@ object ParseURL {
     fun testDomain(url: String, domain: String): Boolean {
         val d = getDomain(url)
         val res = d.startsWith(domain)
-        return res
+        return res && !url.contains("com.ru.astron")
     }
 
     fun getChannel(url: String) = url.substringBeforeLast('.').replace("http://","")
