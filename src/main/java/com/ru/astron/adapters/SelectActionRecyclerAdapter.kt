@@ -117,7 +117,7 @@ class SelectActionRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder
     var onContactClick: (ListItem?) -> Unit = { }
     var onAddressBookClick: (String?) -> Unit = { }
     var onMenuClick: (Int) -> Unit = { }
-    var onContactPopUp: (ContactAccount, View) -> Unit = {c,v -> }
+    var onContactPopUp: (ContactAccount, View) -> Unit = {_,_ -> }
 
     fun setItems(list: List<SelectRecyclerItem>) {
         items = list.toMutableList()

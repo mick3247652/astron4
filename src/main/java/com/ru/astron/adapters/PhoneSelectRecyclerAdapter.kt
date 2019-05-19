@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.ru.astron.R
 import android.provider.MediaStore
 import android.net.Uri
+import android.support.v4.content.ContextCompat
 import android.view.View
 import com.ru.astron.models.ContactPhone
 import com.ru.astron.utils.ParsePhoneNumber
@@ -43,33 +44,9 @@ class PhoneSelectRecyclerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
             photo.setImageResource(R.drawable.ic_user)
         }
         v.setOnClickListener { onItemClick(items[position].phone) }
-        //v.setBackgroundColor(v.resources.getColor(R.color.contact_select))
     }
 
     var onItemClick: (String?) -> Unit = { }
-
-    private var selectedItem: ConstraintLayout? = null
-    private var selectedContactPhone: ContactPhone? = null
-
-    private fun selectItem(layout: ConstraintLayout?, contactPhone: ContactPhone?) {
-        if (selectedItem != null) {
-            //убрать выделение с выбранного ранее элемента и назначить ему клик на выделение
-            layout ?: selectedItem?.setBackgroundColor(layout!!.resources.getColor(R.color.white))
-            selectedItem?.setOnClickListener { selectItem(selectedItem, selectedContactPhone) }
-            val t = selectedItem!!.findViewById<TextView>(R.id.title)
-            t.visibility = View.GONE
-
-        }
-
-        selectedItem = layout
-        selectedContactPhone = contactPhone
-        if (layout != null) {
-            selectedItem?.setBackgroundColor(layout.resources.getColor(R.color.contact_select))
-            val t = selectedItem!!.findViewById<TextView>(R.id.title)
-            t.visibility = View.VISIBLE
-        }
-        selectedItem?.setOnClickListener { onItemClick(contactPhone?.phone) }
-    }
 
     private var items = mutableListOf<ContactPhone>()
 

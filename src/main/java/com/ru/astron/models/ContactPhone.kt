@@ -33,9 +33,8 @@ class ContactPhone : SelectRecyclerItem {
 
     private fun convertPhoneNumber(number: String?): String? {
         number?: return null
-        var ret = number
         //удалить все не цифровые символы
-        ret = number.replace("[^0-9+]+".toRegex(), "")
+        val ret = number.replace("[^0-9+]+".toRegex(), "")
         //ret = ret.replace("^8".toRegex(), "+7")
 
         return ParsePhoneNumber.parseE164(ret)
@@ -56,9 +55,8 @@ class ContactPhone : SelectRecyclerItem {
 object ConvertPhoneNumber {
     fun convert(number: String?): String? {
         number?: return null
-        var ret = number
         //удалить все не цифровые символы
-        ret = number.replace("[^0-9+]+".toRegex(), "")
+        val ret = number.replace("[^0-9+]+".toRegex(), "")
         //ret = ret.replace("^8".toRegex(), "+7")
 
         return ParsePhoneNumber.parseE164(ret)

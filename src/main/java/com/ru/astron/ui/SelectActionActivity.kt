@@ -549,7 +549,7 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
                             contact.jid.toEscapedString()
                         )
                     )
-                    builder.setPositiveButton(R.string.delete) { dialog, which ->
+                    builder.setPositiveButton(R.string.delete) { _, _ ->
                         xmppConnectionService.deleteContactOnServer(contact)
                         loadContactList()
                     }
