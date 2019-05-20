@@ -31,13 +31,7 @@ package com.ru.astron.ui;
 
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.app.PendingIntent;
-import android.content.ActivityNotFoundException;
+import android.app.*;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -52,29 +46,15 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.ru.astron.ConfigRequests;
-import com.ru.astron.utils.*;
-import org.openintents.openpgp.util.OpenPgpApi;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-
+import android.widget.*;
 import com.ru.astron.Config;
+import com.ru.astron.ConfigRequests;
 import com.ru.astron.R;
 import com.ru.astron.crypto.OmemoSetting;
 import com.ru.astron.databinding.ActivityConversationsBinding;
@@ -83,19 +63,17 @@ import com.ru.astron.entities.Bookmark;
 import com.ru.astron.entities.Contact;
 import com.ru.astron.entities.Conversation;
 import com.ru.astron.services.XmppConnectionService;
-import com.ru.astron.ui.interfaces.OnBackendConnected;
-import com.ru.astron.ui.interfaces.OnConversationArchived;
-import com.ru.astron.ui.interfaces.OnConversationRead;
-import com.ru.astron.ui.interfaces.OnConversationSelected;
-import com.ru.astron.ui.interfaces.OnConversationsListItemUpdated;
-import com.ru.astron.ui.util.ActivityResult;
-import com.ru.astron.ui.util.AvatarWorkerTask;
-import com.ru.astron.ui.util.ConversationMenuConfigurator;
-import com.ru.astron.ui.util.MenuDoubleTabUtil;
-import com.ru.astron.ui.util.PendingItem;
+import com.ru.astron.ui.interfaces.*;
+import com.ru.astron.ui.util.*;
+import com.ru.astron.utils.*;
 import com.ru.astron.xmpp.OnUpdateBlocklist;
-
+import org.openintents.openpgp.util.OpenPgpApi;
 import rocks.xmpp.addr.Jid;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import static com.ru.astron.ui.ConversationFragment.REQUEST_DECRYPT_PGP;
 import static com.ru.astron.ui.StartConversationActivity.getSelectedAccount;
@@ -129,6 +107,8 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
     private boolean mActivityPaused = true;
     private AtomicBoolean mRedirectInProcess = new AtomicBoolean(false);
     private List<String> mActivatedAccounts = new ArrayList<>();
+
+    private String needOpenChannel = null;
 
     private Account mAccount = null;
 
@@ -190,6 +170,11 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         showDialogsIfMainIsOverview();
         displayAccountInformation();
         fillActivateAccounts();
+
+        if (needOpenChannel != null) {
+            addChannel(needOpenChannel);
+            needOpenChannel = null;
+        }
     }
 
     private boolean performRedirectIfNecessary(boolean noAnimation) {
@@ -222,9 +207,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         }
         final Fragment fragment = getFragmentManager().findFragmentById(R.id.main_fragment);
         if (fragment instanceof ConversationsOverviewFragment) {
-            if (ExceptionHelper.checkForCrash(this)) {
-                return;
-            }
+            ExceptionHelper.checkForCrash(this);
             //openBatteryOptimizationDialogIfNeeded();
         }
     }
@@ -238,30 +221,6 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         getPreferences().edit().putBoolean(getBatteryOptimizationPreferenceKey(), false).apply();
     }
 
-    private void openBatteryOptimizationDialogIfNeeded() {
-        if (hasAccountWithoutPush()
-                && isOptimizingBattery()
-                && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M
-                && getPreferences().getBoolean(getBatteryOptimizationPreferenceKey(), true)) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(R.string.battery_optimizations_enabled);
-            builder.setMessage(R.string.battery_optimizations_enabled_dialog);
-            builder.setPositiveButton(R.string.next, (dialog, which) -> {
-                Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
-                Uri uri = Uri.parse("package:" + getPackageName());
-                intent.setData(uri);
-                try {
-                    startActivityForResult(intent, REQUEST_BATTERY_OP);
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(this, R.string.device_does_not_support_battery_op, Toast.LENGTH_SHORT).show();
-                }
-            });
-            builder.setOnDismissListener(dialog -> setNeverAskForBatteryOptimizationsAgain());
-            final AlertDialog dialog = builder.create();
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.show();
-        }
-    }
 
     private boolean hasAccountWithoutPush() {
         for (Account account : xmppConnectionService.getAccounts()) {
@@ -298,7 +257,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         UriHandlerActivity.onRequestPermissionResult(this, requestCode, grantResults);
         if (grantResults.length > 0) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -392,6 +351,9 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         final Intent intent;
         if (savedInstanceState == null) {
             intent = getIntent();
+
+            openChannelFromIntent(intent);
+
         } else {
             intent = savedInstanceState.getParcelable("intent");
         }
@@ -400,7 +362,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             setIntent(createLauncherIntent(this));
         }
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
 
         Toolbar toolbar = (Toolbar) binding.toolbar;
 
@@ -411,21 +373,17 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             binding.drawerLayout.addDrawerListener(toggle);
             toggle.setDrawerIndicatorEnabled(true);
             toggle.syncState();
-            toggle.setToolbarNavigationClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-                    FragmentManager fm = getFragmentManager();
-                    if (fm.getBackStackEntryCount() > 0) {
-                        try {
-                            fm.popBackStack();
-                        } catch (IllegalStateException e) {
-                            Log.w(Config.LOGTAG, "Unable to pop back stack after pressing home button");
-                        }
-                        return;
+            toggle.setToolbarNavigationClickListener(v -> {
+                FragmentManager fm = getFragmentManager();
+                if (fm.getBackStackEntryCount() > 0) {
+                    try {
+                        fm.popBackStack();
+                    } catch (IllegalStateException e) {
+                        Log.w(Config.LOGTAG, "Unable to pop back stack after pressing home button");
                     }
-                    finish();
+                    return;
                 }
+                finish();
             });
 
             displayAccountInformation();
@@ -440,12 +398,12 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             mAccount = AccountUtils.getFirst(xmppConnectionService);
         }
 
-        NavigationView nv = (NavigationView) findViewById(R.id.nav_view);
-        ImageView iv = (ImageView) nv.findViewById(R.id.photo);
+        NavigationView nv = findViewById(R.id.nav_view);
+        ImageView iv = nv.findViewById(R.id.photo);
         AvatarWorkerTask.loadAvatar(mAccount, iv, R.dimen.nav_avatar_size);
 
-        TextView phone = (TextView) nv.findViewById(R.id.phone);
-        TextView account_name = (TextView) nv.findViewById(R.id.account_name);
+        TextView phone = nv.findViewById(R.id.phone);
+        TextView account_name = nv.findViewById(R.id.account_name);
 
         String name = mAccount.getDisplayName();
         if (phone != null) phone.setText(ParsePhoneNumber.parse(mAccount.getJid().getLocal()));
@@ -560,11 +518,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         this.mActivatedAccounts.clear();
         for (Account account : xmppConnectionService.getAccounts()) {
             if (account.getStatus() != Account.State.DISABLED) {
-                if (Config.DOMAIN_LOCK != null) {
-                    this.mActivatedAccounts.add(account.getJid().getLocal());
-                } else {
-                    this.mActivatedAccounts.add(account.getJid().asBareJid().toString());
-                }
+                this.mActivatedAccounts.add(account.getJid().getLocal());
             }
         }
     }
@@ -635,7 +589,6 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             if (isCameraFeatureAvailable()) {
                 Fragment fragment = getFragmentManager().findFragmentById(R.id.main_fragment);
                 boolean visible = getResources().getBoolean(R.bool.show_qr_code_scan)
-                        && fragment != null
                         && fragment instanceof ConversationsOverviewFragment;
                 qrCodeScanMenuItem.setVisible(visible);
             } else {
@@ -933,7 +886,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         if (!mActivityPaused && pendingViewIntent.peek() == null) {
             xmppConnectionService.sendReadMarker(conversation, upToUuid);
         } else {
-            Log.d(Config.LOGTAG, "ignoring read callback. mActivityPaused=" + Boolean.toString(mActivityPaused));
+            Log.d(Config.LOGTAG, "ignoring read callback. mActivityPaused=" + mActivityPaused);
         }
     }
 
@@ -1166,4 +1119,14 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
         switchToConversation(conversation, true);
     }
 
+    private void openChannelFromIntent(Intent intent) {
+        if (intent == null) return;
+        String action = intent.getAction();
+        String data = intent.getDataString();
+        if (Intent.ACTION_VIEW.equals(action) && data != null) {
+            String channel = data.substring(data.lastIndexOf("/") + 1);
+            if (xmppConnectionServiceBound) addChannel(channel);
+            else needOpenChannel = channel;
+        }
+    }
 }

@@ -113,7 +113,19 @@
                 android:launchMode="singleTask"
                 android:minHeight="300dp"
                 android:minWidth="300dp"
-                android:windowSoftInputMode="stateHidden"/>
+                android:windowSoftInputMode="stateHidden">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="https"/>
+                <data android:host="astron.live"/>
+                <data android:pathPrefix="/channel/"/>
+            </intent-filter>
+        </activity>
         <activity
                 android:name=".ui.ScanActivity"
                 android:screenOrientation="portrait"
@@ -188,10 +200,10 @@
                 <data android:mimeType="image/*"/>
             </intent-filter>
         </activity>
-        <activity
+        <!--<activity
                 android:name=".ui.ShareViaAccountActivity"
                 android:label="@string/title_activity_share_via_account"
-                android:launchMode="singleTop"/>
+                android:launchMode="singleTop"/>-->
         <activity
                 android:name=".ui.EditAccountActivity"
                 android:launchMode="singleTop"
@@ -261,7 +273,7 @@
                 android:label="@string/media_browser"/>
 
         <service android:name=".services.ExportBackupService"/>
-        <service android:name=".services.ImportBackupService"/>
+        <!--<service android:name=".services.ImportBackupService"/>-->
         <service
                 android:name=".services.ContactChooserTargetService"
                 android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
