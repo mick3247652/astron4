@@ -6,9 +6,9 @@
         android:id="@+id/action_share"
         android:icon="?attr/icon_share"
         android:orderInCategory="15"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         android:title="@string/share_uri_with">
-        <menu>
+        <!--<menu>
             <item
                 android:id="@+id/action_share_uri"
                 android:title="@string/share_as_uri"
@@ -20,7 +20,7 @@
                 android:id="@+id/action_show_qr_code"
                 android:title="@string/show_qr_code"
                 android:visible="false" />
-        </menu>
+        </menu>-->
     </item>
 
     <item

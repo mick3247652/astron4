@@ -15,12 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import com.ru.astron.Config;
 import com.ru.astron.R;
 import com.ru.astron.databinding.ActivityMucDetailsBinding;
 import com.ru.astron.entities.Account;
@@ -34,22 +28,14 @@ import com.ru.astron.services.XmppConnectionService.OnMucRosterUpdate;
 import com.ru.astron.ui.adapter.MediaAdapter;
 import com.ru.astron.ui.adapter.UserPreviewAdapter;
 import com.ru.astron.ui.interfaces.OnMediaLoaded;
-import com.ru.astron.ui.util.Attachment;
-import com.ru.astron.ui.util.AvatarWorkerTask;
-import com.ru.astron.ui.util.GridManager;
-import com.ru.astron.ui.util.MenuDoubleTabUtil;
-import com.ru.astron.ui.util.MucConfiguration;
-import com.ru.astron.ui.util.MucDetailsContextMenuHelper;
-import com.ru.astron.ui.util.MyLinkify;
-import com.ru.astron.ui.util.SoftKeyboardUtils;
-import com.ru.astron.utils.AccountUtils;
-import com.ru.astron.utils.Compatibility;
-import com.ru.astron.utils.EmojiWrapper;
-import com.ru.astron.utils.StringUtils;
-import com.ru.astron.utils.StylingHelper;
-import com.ru.astron.utils.XmppUri;
+import com.ru.astron.ui.util.*;
+import com.ru.astron.utils.*;
 import me.drakeet.support.toast.ToastCompat;
 import rocks.xmpp.addr.Jid;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.ru.astron.entities.Bookmark.printableValue;
 import static com.ru.astron.utils.StringUtils.changed;
@@ -69,9 +55,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         @Override
         public void success(Conversation object) {
             displayToast(getString(R.string.your_nick_has_been_changed));
-            runOnUiThread(() -> {
-                updateView();
-            });
+            runOnUiThread(() -> updateView());
 
         }
 
@@ -225,7 +209,10 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
             case android.R.id.home:
                 finish();
                 break;
-            case R.id.action_share_http:
+            case R.id.action_share:
+                shareLink(false);
+                break;
+            /*case R.id.action_share_http:
                 shareLink(true);
                 break;
             case R.id.action_share_uri:
@@ -236,7 +223,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
                 break;
             case R.id.action_delete_bookmark:
                 deleteBookmark();
-                break;
+                break;*/
             case R.id.action_destroy_room:
                 destroyRoom();
                 break;
@@ -321,10 +308,11 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
     protected String getShareableUri(boolean http) {
         if (mConversation != null) {
             if (http) {
-                return "https://conversations.im/j/" + XmppUri.lameUrlEncode(mConversation.getJid().asBareJid().toEscapedString());
+                return "https://astron.live/channel/" + mConversation.getJid().getLocal();
             } else {
                 //return "xmpp:" + mConversation.getJid().asBareJid() + "?join";
-                return "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
+                //return "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
+                return "https://astron.live/channel/" + mConversation.getJid().getLocal();
             }
         } else {
             return null;
@@ -393,9 +381,7 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(groupChat ? R.string.destroy_room : R.string.destroy_channel);
         builder.setMessage(groupChat ? R.string.destroy_room_dialog : R.string.destroy_channel_dialog);
-        builder.setPositiveButton(R.string.ok, (dialog, which) -> {
-            xmppConnectionService.destroyRoom(mConversation, ConferenceDetailsActivity.this);
-        });
+        builder.setPositiveButton(R.string.ok, (dialog, which) -> xmppConnectionService.destroyRoom(mConversation, ConferenceDetailsActivity.this));
         builder.setNegativeButton(R.string.cancel, null);
         final AlertDialog dialog = builder.create();
         dialog.setCanceledOnTouchOutside(false);
@@ -438,15 +424,14 @@ public class ConferenceDetailsActivity extends XmppActivity implements OnConvers
         final MucOptions mucOptions = mConversation.getMucOptions();
         final User self = mucOptions.getSelf();
         String account;
-        if (Config.DOMAIN_LOCK != null) {
-            account = mConversation.getAccount().getJid().getLocal();
-        } else {
-            account = mConversation.getAccount().getJid().asBareJid().toString();
-        }
+        account = mConversation.getAccount().getJid().getLocal();
         setTitle(mucOptions.isPrivateAndNonAnonymous() ? R.string.action_muc_details : R.string.channel_details);
         this.binding.editMucNameButton.setVisibility((self.getAffiliation().ranks(MucOptions.Affiliation.OWNER) || mucOptions.canChangeSubject()) ? View.VISIBLE : View.GONE);
         this.binding.detailsAccount.setText(getString(R.string.using_account, account));
-        this.binding.jid.setText(mConversation.getJid().asBareJid().toEscapedString().replace("@conference.astron.online",""));
+        String jidText = mConversation.getJid().asBareJid().toEscapedString().replace("@conference.astron.online", "");
+        jidText = "https://astron.live/channel/" + jidText;
+
+        this.binding.jid.setText(jidText);
         AvatarWorkerTask.loadAvatar(mConversation, binding.yourPhoto, R.dimen.avatar_on_details_screen_size);
         String roomName = mucOptions.getName();
         String subject = mucOptions.getSubject();

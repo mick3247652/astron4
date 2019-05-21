@@ -4,17 +4,8 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.PendingIntent;
-import android.content.ActivityNotFoundException;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.ContextWrapper;
-import android.content.DialogInterface;
-import android.content.Intent;
+import android.content.*;
 import android.content.IntentSender.SendIntentException;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
@@ -28,13 +19,7 @@ import android.graphics.drawable.Drawable;
 import android.media.AudioManager;
 import android.net.ConnectivityManager;
 import android.net.Uri;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.IBinder;
-import android.os.PowerManager;
-import android.os.SystemClock;
+import android.os.*;
 import android.preference.PreferenceManager;
 import android.support.annotation.BoolRes;
 import android.support.annotation.NonNull;
@@ -50,22 +35,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import java.io.IOException;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.RejectedExecutionException;
-
 import com.ru.astron.Config;
 import com.ru.astron.R;
 import com.ru.astron.crypto.PgpEngine;
 import com.ru.astron.databinding.DialogQuickeditBinding;
-import com.ru.astron.entities.Account;
-import com.ru.astron.entities.Contact;
-import com.ru.astron.entities.Conversation;
 import com.ru.astron.entities.Message;
-import com.ru.astron.entities.Presences;
+import com.ru.astron.entities.*;
 import com.ru.astron.services.AvatarService;
 import com.ru.astron.services.BarcodeProvider;
 import com.ru.astron.services.XmppConnectionService;
@@ -80,6 +55,12 @@ import com.ru.astron.utils.ThemeHelper;
 import com.ru.astron.xmpp.OnKeyStatusUpdated;
 import com.ru.astron.xmpp.OnUpdateBlocklist;
 import rocks.xmpp.addr.Jid;
+
+import java.io.IOException;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.RejectedExecutionException;
 
 public abstract class XmppActivity extends ActionBarActivity {
 
@@ -757,9 +738,7 @@ public abstract class XmppActivity extends ActionBarActivity {
 			dialog.dismiss();
 		}));
 		dialog.setCanceledOnTouchOutside(false);
-		dialog.setOnDismissListener(dialog1 -> {
-			SoftKeyboardUtils.hideSoftKeyboard(binding.inputEditText);
-        });
+		dialog.setOnDismissListener(dialog1 -> SoftKeyboardUtils.hideSoftKeyboard(binding.inputEditText));
 	}
 
 	protected boolean hasStoragePermission(int requestCode) {
@@ -817,7 +796,7 @@ public abstract class XmppActivity extends ActionBarActivity {
 		if (uri == null || uri.isEmpty()) {
 			return;
 		}
-		uri = "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
+		//uri = "Скачайте Astron https://play.google.com/store/apps/details?id=com.ru.astron";
 		Intent intent = new Intent(Intent.ACTION_SEND);
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_TEXT, uri);
