@@ -63,6 +63,8 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
     private val mActivatedAccounts = mutableListOf<String>()
     private var mAccount: Account? = null
 
+    private var needOpenChannel: String? = null
+
     private val mAdhocConferenceCallback = object : UiCallback<Conversation> {
         override fun success(conversation: Conversation) {
             runOnUiThread {
@@ -113,6 +115,11 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
         }
         displayAccountInformation()
 
+        if (needOpenChannel != null) {
+            addChannel(needOpenChannel)
+            needOpenChannel = null
+        }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -148,6 +155,9 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
 
         configureRecycler()
         requestPermissionContact()
+
+        openChannelFromIntent(intent)
+
     }
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -568,12 +578,12 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
             mAccount = AccountUtils.getFirst(xmppConnectionService)
         }
 
-        val nv = findViewById<View>(R.id.nav_view) as NavigationView
-        val iv = nv.findViewById<View>(R.id.photo) as ImageView
+        val nv = findViewById<View>(R.id.nav_view) as NavigationView?
+        val iv = nv?.findViewById<View>(R.id.photo) as ImageView?
         AvatarWorkerTask.loadAvatar(mAccount, iv, R.dimen.nav_avatar_size)
 
-        val phone = nv.findViewById<View>(R.id.phone) as TextView?
-        val account_name = nv.findViewById<View>(R.id.account_name) as TextView?
+        val phone = nv?.findViewById<View>(R.id.phone) as TextView?
+        val account_name = nv?.findViewById<View>(R.id.account_name) as TextView?
 
         val name = mAccount!!.getDisplayName()
         if (phone != null) phone.text = ParsePhoneNumber.parse(mAccount?.getJid()?.getLocal())
@@ -589,7 +599,7 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
             }
         }
 
-        nv.setNavigationItemSelectedListener { menuItem ->
+        nv?.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.action_settings -> startActivity(Intent(this@SelectActionActivity, SettingsActivity::class.java))
                 R.id.action_account -> AccountUtils.launchManageAccount(this@SelectActionActivity)
@@ -691,6 +701,40 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
             xmppConnectionService.createContact(contact, true)
             switchToConversationDoNotAppend(contact, null)
             return true
+        }
+    }
+
+    fun addChannel(channel: String?) {
+        if(channel == null) return
+        //Toast.makeText(this, "Add channel " + channel, Toast.LENGTH_SHORT).show();
+        if (!xmppConnectionServiceBound) {
+            return
+        }
+        val account = mAccount ?: return
+        val conferenceJid: Jid
+        try {
+            conferenceJid = JidUtil.of(channel + "@conference." + Config.DOMAIN_LOCK)
+        } catch (e: IllegalArgumentException) {
+            return
+        }
+
+
+        val conversation = xmppConnectionService
+            .findOrCreateConversation(account, conferenceJid, true, true, true)
+        switchToConversation(conversation)
+    }
+
+
+    private fun openChannelFromIntent(intent: Intent?) {
+        if (intent == null) return
+        val action = intent.action
+        val data = intent.dataString
+        if (Intent.ACTION_VIEW == action && data != null) {
+            val channel = data.substring(data.lastIndexOf("/") + 1)
+            if (xmppConnectionServiceBound)
+                addChannel(channel)
+            else
+                needOpenChannel = channel
         }
     }
 
