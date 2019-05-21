@@ -58,6 +58,16 @@
             tools:replace="android:label"
             tools:targetApi="o">
         <activity android:name=".ui.SelectActionActivity" android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="https"/>
+                <data android:host="astron.live"/>
+                <data android:pathPrefix="/channel/"/>
+            </intent-filter>
 
         </activity>
         <activity android:name=".ui.NewsActivity"/>
@@ -118,12 +128,6 @@
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW"/>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-
-                <data android:scheme="https"/>
-                <data android:host="astron.live"/>
-                <data android:pathPrefix="/channel/"/>
             </intent-filter>
         </activity>
         <activity
@@ -166,9 +170,11 @@
                 android:name=".ui.StartConversationActivity"
                 android:label="@string/title_activity_start_conversation"
                 android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-            </intent-filter>
+
+                <intent-filter android:autoVerify="true">
+                    <action android:name="android.intent.action.VIEW"/>
+
+                </intent-filter>
         </activity>
         <activity
                 android:name=".ui.SettingsActivity"

@@ -54,7 +54,11 @@ public class WebViewActivity extends AppCompatActivity {
                     String channel = ParseURL.INSTANCE.getChannel(url);
                     onAddChannel(channel);
                     return true;
-                } else {
+                } else if(url.startsWith("https://astron.live/channel/")){
+                    onAddChannel(url.replace("https://astron.live/channel/", ""));
+                    return true;
+                }
+                else {
                     view.loadUrl(url);
                 }
                 return true;
