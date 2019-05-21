@@ -842,6 +842,9 @@ public class MessageAdapter extends ArrayAdapter<Message> implements CopyTextVie
 							String channel = ParseURL.INSTANCE.getChannel(url);
 							onAddChannel(channel);
 							return true;
+						} else if(url.startsWith("https://astron.live/channel/")){
+							onAddChannel(url.replace("https://astron.live/channel/", ""));
+							return true;
 						}
 
 						Intent i = new Intent(textView.getContext(), WebViewActivity.class);
