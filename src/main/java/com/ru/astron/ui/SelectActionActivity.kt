@@ -120,6 +120,12 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
             needOpenChannel = null
         }
 
+        if (needSwitchToVerter) {
+            needSwitchToVerter = false
+            addBotContact()
+        }
+
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -673,6 +679,7 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
         dialog.show(ft, XmppActivity.FRAGMENT_TAG_DIALOG)
     }
 
+    private var needSwitchToVerter = false
     private fun addBotContact() {
         if (xmppConnectionServiceBound) {
             val contactJid = "VerterBot@astron.online"
@@ -681,8 +688,10 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
                 Log.v("PHONE", accountJid)
                 addPhoneContact(contactJid, accountJid)
             }
-        }
+        } else
+            needSwitchToVerter = true
     }
+
     private fun addPhoneContact(cJid: String, aJid: String): Boolean {
         val accountJid = JidUtil.of(aJid, Config.DOMAIN_LOCK, null)
         val contactJid = JidUtil.of(cJid)
@@ -706,6 +715,11 @@ class SelectActionActivity : XmppActivity(), XmppConnectionService.OnRosterUpdat
 
     fun addChannel(channel: String?) {
         if(channel == null) return
+        if (channel == "verter") {
+            addBotContact()
+            return
+        }
+
         //Toast.makeText(this, "Add channel " + channel, Toast.LENGTH_SHORT).show();
         if (!xmppConnectionServiceBound) {
             return

@@ -175,6 +175,11 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             addChannel(needOpenChannel);
             needOpenChannel = null;
         }
+
+        if(needSwitchToVerter){
+            needSwitchToVerter = false;
+            addBotContact();
+        }
     }
 
     private boolean performRedirectIfNecessary(boolean noAnimation) {
@@ -468,7 +473,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
             return true;
         });
     }
-
+    private boolean needSwitchToVerter = false;
     private void addBotContact(){
         if (xmppConnectionServiceBound) {
             String contactJid = "VerterBot@astron.online";
@@ -477,7 +482,7 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
                 Log.v("PHONE", accountJid);
                 addPhoneContact(contactJid, accountJid);
             }
-        }
+        } else needSwitchToVerter = true;
     }
 
     @SuppressLint("InflateParams")
@@ -1096,8 +1101,17 @@ public class ConversationsActivity extends XmppActivity implements AddChannelLis
     }
 
 
+    private void switchToVerter(){
+        addBotContact();
+    }
+
     @Override
     public void addChannel(String channel) {
+        if(channel.equals("verter")){
+            switchToVerter();
+            return;
+        }
+
         //Toast.makeText(this, "Add channel " + channel, Toast.LENGTH_SHORT).show();
         if (!xmppConnectionServiceBound) {
             return;
